@@ -8,9 +8,9 @@ import Footer from '../components/footer.js';
 class LoginCreat extends Component {
     state = {
         userItem:{
-            mname:'甲乙丙',
-            mtel:'0912345678',
-            mpid:'1234',          
+            mname:'',
+            mtel:'',
+            mpid:'',          
         }
     }
     render() {
@@ -23,19 +23,19 @@ class LoginCreat extends Component {
                     <div className="loginForm">
                         <p className="loginForm-P">會員註冊</p>
                         <form className="loginForm-T" action="">
-                            <label for="">姓名:</label><br />
+                            <label htmlhtmlhtmlFor="">姓名:</label><br />
                                 <input type="text"   name="mname" value={ this.state.userItem.mname}
                                 onChange={this.mnameChange} /><br />
-                            <label for="">電話號碼:</label><br />
+                            <label htmlhtmlhtmlFor="">電話號碼:</label><br />
                                 <input type="tel"   name="mtel" value={ this.state.userItem.mtel}
                                 onChange={this.mtelChange} /><br />
-                            <label for="">密碼:</label><br />
+                            <label htmlhtmlhtmlFor="">密碼:</label><br />
                                 <input type="password" name="mpid" value={ this.state.userItem.mpid}
                                  onChange={this.mpidChange}/><br />
                             <div className="loginForm-D">
-                                <button className="button" type="button"  >
+                                {/* <button className="button" type="button"  >
                                     登入
-                                </button>
+                                </button> */}
                                 <button className="button" type="button" onClick={this.okClick}>
                                     註冊
                                 </button>
@@ -70,10 +70,10 @@ class LoginCreat extends Component {
          await axios.post(
             "http://localhost:8000/member/creat",
             this.state.userItem
-        )
-         window.location="/"
-        // console.log(this.state.todoItem);
-        // return;
+        ).then(response => {
+            // 处理响应，例如跳转到登录页
+            window.location.href = '/login';
+        })
     }
 }
 

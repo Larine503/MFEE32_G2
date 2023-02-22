@@ -17,36 +17,44 @@ class Member extends Component {
             mimages: ''
         }
     }
+    async componentDidMount() {
+        var result = await axios.get("http://localhost:8000/login");
+        var url = `http://localhost:8000/member/${result.data.user}`;
+        var fromServer = await axios.get(url);
+        var newState = { ...this.state };
+        newState.userItem = fromServer.data;
+        this.setState(newState);
+    }
     render() {
         return (
             <div className="dataImg">
-                <form className="dataImg-d">
+                {/* <form className="dataImg-d">
                     <div className="data-M-img"><img src="" alt="" />
                         <div>上傳</div>
                     </div>
                     <button className="button">
                         上傳
                     </button>
-                </form>
+                </form> */}
                 <form className="memberForm-T" action="/member/edit" method='post'>
                     <div className="memberForm-d">
                         <div className="memberForm-dd">
                             <input type="hidden" id="userItemMtel"
-                                name="mtel" value="0912345678" />
+                                name="mtel" value={this.state.userItem.mtel} />
                             <label htmlFor="">姓名:</label><br />
                             <input type="text" name="mname" value={this.state.userItem.mname}
                                 onChange={this.mnameChange} /><br />
-                            {/* <label htmlFor="">手機號碼:</label><br />
+                            <label htmlFor="">手機號碼:</label><br />
                             <input type="tel" name="mtel" value={this.state.userItem.mtel}
-                                onChange={this.mtelChange} /><br/> */}
+                                onChange={this.mtelChange} /><br/>
                             <label htmlFor="">電子信箱:</label><br />
                             <input type="email" name="email" value={this.state.userItem.email}
                                 onChange={this.emailChange} />
                         </div>
                         <div className="memberForm-dd">
-                            <label htmlFor="">生日:<br />
+                            {/* <label htmlFor="">生日:<br />
                                 <input type="date" name="birthday" value={this.state.userItem.birthday}
-                                onChange={this.birthdayChange} /></label><br />
+                                onChange={this.birthdayChange} /></label><br /> */}
                             <label htmlFor="">地址:<br />
                                 <input type="text" name="address" value={this.state.userItem.address}
                                 onChange={this.addressChange}/></label>
@@ -64,43 +72,39 @@ class Member extends Component {
 
         );
     }
-
+   
     mnameChange=(e)=>{
         var newState = {...this.state};
         newState.userItem.mname = e.target.value;
         this.setState(newState);
     }
+
     emailChange=(e)=>{
         var newState = {...this.state};
         newState.userItem.email = e.target.value;
         this.setState(newState);
     }
-    birthdayChange= (e)=>{
-        var newState = {...this.state};
-        newState.userItem.birthday = e.target.value;
-        this.setState(newState);
-    }
+
+    // birthdayChange= (e)=>{
+    //     var newState = {...this.state};
+    //     newState.userItem.birthday = e.target.value;
+    //     this.setState(newState);
+    // }
+
     addressChange= (e)=>{
         var newState = {...this.state};
         newState.userItem.address = e.target.value;
         this.setState(newState);
     }
+
     okClick = async () => {
-        var fromServer = await axios.put(
-            "http://localhost:8000/member/edit",
-            this.state.userItem
-        )
+        var fromServer = await axios.put("http://localhost:8000/member/edit", {
+          ...this.state.userItem, // 将 mtel 属性一起发送到服务器
+          birthday: new Date(this.state.userItem.birthday), // 将 birthday 字符串转换为 Date 类型
+        });
         console.log(fromServer);
-        window.location = "/member/edit";
-    }
-    async componentDidMount() {
-        // var url = `http://localhost:8000/member/${this.props.match.params.mtel}`;
-         var url = `http://localhost:8000/member/0912345678`;
-        var fromServer = await axios.get(url);
-        var newState = { ...this.state };
-        newState.userItem = fromServer.data;
-        this.setState(newState);
-    }
+        // window.location.reload();
+      };
 
 }
 
