@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap');
+
+:root {
+    --dark-red: #cf121e;
+    --red: #ff3542;
+    --light-red: #ffe1e1;
+    --dark-green: #005743;
+    --green: #538e7a;
+    --light-green: #92d279;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #d9d9d9;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.drinksPicture {
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    width: 20%;
+    height: 75%;
+    background: rgb(255, 225, 225);
+    background: radial-gradient(circle, rgba(255, 225, 225, 1) 55%, rgba(146, 210, 121, 1) 100%);
+    border: 4px dashed var(--green);
+}
+
+.drinksPicture img {
+    padding-top: 20%;
+    width: 90%;
+    height: 100%;
+}
+
+.topping_title {
+    position: absolute;
+    padding-bottom: 50%;
+    writing-mode: vertical-lr;
+}
+
+.topping_content {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    writing-mode: vertical-lr;
+    width: 35%;
+    height: 30%;
+    background-color: ver(--light-red);
+    border: 4px dashed ver(--light-red);
+    border-radius: 20px 90px 90px 20px;
+}
+
+.milkTea_title_area {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(146, 210, 121, 0.9) 68.89%, rgba(251, 224, 221, 0.0315469) 99.99%, rgba(255, 225, 225, 0) 100%);
+    border-radius: 30%;
+    position: absolute;
+    /* padding-left: 60%;
+    padding-top: 15%; */
+}
+
+.milkTea_title {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bolder;
+    font-size: 150%;
+    letter-spacing: 0.5em;
+    text-align: center;
+    padding-top: 8%;
+    margin-bottom: 0%;
+    color: var(--dark-green);
+}
+
+.drinks_menu {
+    position: absolute;
+    padding-top: 20%;
+    padding-left: 100%;
+    font-family: 'Noto Sans TC', sans-serif;
+    text-align: center;
+    writing-mode: vertical-lr;
+}

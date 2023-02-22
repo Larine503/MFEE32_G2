@@ -28,9 +28,10 @@ body {
     /* max-width: 1440px; */
 }
 
-/* section {
+section {
+    width:auto;
     background-color: #005743;
-} */
+}
 
 ul {
     list-style-type: none;
@@ -379,7 +380,7 @@ img {
 
 
 #about {
-    width: 100%;
+    /* width: 100%; */
     padding-bottom: 50px;
     position: relative;
     z-index: 2;
@@ -486,7 +487,7 @@ img {
 }
 
 .menuMain {
-    width: 1240px;
+    /* width: 1240px; */
     text-align: center;
 }
 
@@ -598,7 +599,7 @@ img {
 .newsMain {
     display: flex;
     /* width: 70%; */
-    max-width: 1240px;
+    /* max-width: 1240px; */
     margin: 0 auto;
     padding: 30px 50px;
     z-index: 2;
@@ -658,7 +659,7 @@ img {
 
 .productMain {
     width: 100%;
-    max-width: 1240px;
+    /* max-width: 1240px; */
     display: flex;
     justify-content: space-between;
     padding: 100px 0 100px 100px;
@@ -769,7 +770,7 @@ img {
     position: relative;
     overflow: hidden;
     width: 50%;
-    max-width: 1240px;
+    /* max-width: 1240px; */
     height: 700px;
     margin: 0 auto;
     left: -200px;
@@ -800,7 +801,7 @@ img {
 
 
 .storeText {
-    max-width: 1240px;
+    /* max-width: 1240px; */
     padding: 20px 50px;
 }
 
