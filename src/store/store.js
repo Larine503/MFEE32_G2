@@ -17,7 +17,7 @@ class Store extends Component {
             activeTab: null,
             storeList: [],
             countyList: [],
-            showCountyTab: false
+            // showCountyTab: false
         };
         this.defaultOpenRef = React.createRef();
     }
@@ -67,7 +67,7 @@ class Store extends Component {
                     <button className={` ${activeTab === "tabNorth" ? "active" : ""}`}
                         onClick={(evt) => {
                             this.openIt(evt, "tabNorth");
-                            this.setState({ showCountyTab: true });
+                            // this.setState({ showCountyTab: true });
                         }}
                     >北部</button>
 
@@ -91,7 +91,8 @@ class Store extends Component {
                 <div>
                     {/* 縣市名稱按鈕 */}
                     <div className="countyTab"
-                        style={{ display: this.state.showCountyTab ? "block" : "none" }}
+                        // style={{ display: this.state.showCountyTab ? "block" : "none" }}
+                        style={{ display: activeTab === "tabNorth" ? "block" : "none" }}
                         id="north">
 
                         <button className={`countyName ${activeTab === "tabTaipei" ? "active" : ""}`}
@@ -308,7 +309,7 @@ class Store extends Component {
 
                     {this.state.storeList.map(storeL => (
                         <div key={storeL.storeId} className="storeA oneShop"
-                            style={{ display: activeTab !== null ? "flex" : "none" }} id="allstores"
+                            style={{ display: activeTab === null ? "flex" : "none" }} id="allstores"
                         >
                             <div className="icons">
                                 <div><AiTwotoneShop /></div>
@@ -698,15 +699,15 @@ class Store extends Component {
     }
 
     // { 五區域切換 }
-    openIt = (evt, five) => {
+    openIt = (evt, tabName) => {
         evt.stopPropagation();
         this.setState({
-            activeTab: five,
-            countyList: [],
-            showCountyTab: true
-        },
-            () => {
-                document.getElementById("north").style.display = "block";
+            activeTab: tabName,
+        //     countyList: [],
+        //     showCountyTab: true
+        // },
+        //     () => {
+        //         document.getElementById("north").style.display = "block";
             });
     }
     // { 預設開啟 }
