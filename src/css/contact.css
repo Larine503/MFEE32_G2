@@ -222,12 +222,17 @@ h6 {
 
     font-size: 15px;
     color: #000000;
-
+    box-sizing: content-box;
 }
 
-input[type=text],
-input[type=tel],
-input[type=email] {
+/* input[type=text]
+input[type=tel]
+input[type=email] */
+
+.nameText,
+.telText, 
+.emailText,
+.subText {
     width: 200px;
     border: 3px solid transparent;
     border-bottom-color: #ffe1e1;
@@ -244,12 +249,14 @@ input[type=email] {
     margin: 0;
 }
 
-input[type=text]:hover,
-input[type=text]:focus,
-input[type=tel]:hover,
-input[type=tel]:focus,
-input[type=email]:hover,
-input[type=email]:focus {
+.nameText:hover,
+.nameText:focus,
+.telText:hover,
+.telText:focus,
+.emailText:hover,
+.emailText:focus,
+.subText:hover, 
+.subText:focus {
     /* background: linear-gradient(to right, #ffe1e1,  #ffffff, #92d279); */
     outline: none;
     border-color: #005743;

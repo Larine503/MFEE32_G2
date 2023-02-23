@@ -66,25 +66,25 @@ class Contact extends Component {
                                 <div className="question">
                                     <label htmlFor="name" className="parallelogram">姓名</label> 
                                     <input type="text" defaultValue={this.state.name} onInput={(event) => this.setState({ name: event.target.value })} 
-                                            name="Name" id="nameText" required />
+                                            name="Name" id="nameText" className='nameText' required />
                                 </div>
 
                                 <div className="question">
                                     <label htmlFor="tel" className="parallelogram">電話</label> 
                                     <input type="tel" defaultValue={this.state.tel} onInput={(event) => this.setState({ tel: event.target.value })} 
-                                            name="Phone" id="telText" required />
+                                            name="Phone" id="telText" className='telText' required />
                                 </div>
                                 <div className="question">
                                     <label htmlFor="email" className="parallelogram">e-mail</label> 
                                     <input type="email" defaultValue={this.state.email} onInput={(event) => this.setState({ email: event.target.value })} 
-                                            name="Email" id="emailText" required />
+                                            name="Email" id="emailText" className='emailText' required />
                                 </div>
                             </div>
                             <div className="formRight">
                                 <div className="question">
                                     <label htmlFor="subject" className="parallelogram">主旨</label> 
                                     <input type="text" defaultValue={this.state.subject} onInput={(event) => this.setState({ subject: event.target.value })} 
-                                            name="Subject" id="subText" required />
+                                            name="Subject" id="subText" className='subText' required />
                                 </div>
                                 <div htmlFor="message" className="question">
                                     <label className="parallelogram">訊息</label> 
