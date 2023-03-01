@@ -15,63 +15,109 @@
 
 .drinksPicture {
     position: absolute;
-    top: 12%;
+    top: 115px;
     left: 5%;
-    width: 20%;
-    height: 75%;
+    width: 350px;
+    height: 400px;
     background: rgb(255, 225, 225);
     background: radial-gradient(circle, rgba(255, 225, 225, 1) 55%, rgba(146, 210, 121, 1) 100%);
     border: 4px dashed var(--green);
 }
 
-.drinksPicture img {
-    padding-top: 20%;
-    width: 90%;
+.drinksPicture>img {
+    padding-left: 15px;
+    padding-top: 10px;
+    width: 300px;
     height: 100%;
-}
-
-.topping_title {
-    position: absolute;
-    padding-bottom: 50%;
-    writing-mode: vertical-lr;
 }
 
 .topping_content {
     list-style-type: none;
-    display: flex;
+    width: 100px;
+    height: 100px;
+    padding-top: 20px;
+    /* background-color: ver(--light-red);
+    border: 4px dashed ver(--light-red);
+    border-radius: 20px 90px 90px 20px; */
+}
+
+.topping_title {
+    position: absolute;
+    padding-bottom: 20px;
+    padding-top:  10px;
+}
+
+.toppingText {
+    display: inline-block;
     justify-content: space-between;
     writing-mode: vertical-lr;
-    width: 35%;
-    height: 30%;
-    background-color: ver(--light-red);
-    border: 4px dashed ver(--light-red);
-    border-radius: 20px 90px 90px 20px;
 }
 
 .milkTea_title_area {
     background: radial-gradient(50% 50% at 50% 50%, rgba(146, 210, 121, 0.9) 68.89%, rgba(251, 224, 221, 0.0315469) 99.99%, rgba(255, 225, 225, 0) 100%);
     border-radius: 30%;
     position: absolute;
-    /* padding-left: 60%;
-    padding-top: 15%; */
+    top: 130px;
+    left: 700px;
+    height: 70px;
+    width: 300px;
+    text-align: center;
 }
 
-.milkTea_title {
+.milkTea_titles {
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: bolder;
-    font-size: 150%;
-    letter-spacing: 0.5em;
-    text-align: center;
-    padding-top: 8%;
-    margin-bottom: 0%;
+    font-size: 45px;
+    letter-spacing: 2px;
     color: var(--dark-green);
+    position: absolute;
+    top: 250px;
 }
 
-.drinks_menu {
+/* .drinks_menu {
     position: absolute;
-    padding-top: 20%;
-    padding-left: 100%;
+    top: 300px;
+    left: 800px;
     font-family: 'Noto Sans TC', sans-serif;
-    text-align: center;
+    text-align: center; 
     writing-mode: vertical-lr;
+} */
+
+.cell_drinkList {
+    position: absolute;
+    top: 200px;
+    left: 800px;
+}
+
+.cell_1 {
+    position: absolute;
+    writing-mode: vertical-lr;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 420px;
+}
+
+.cell_2 {
+    position: absolute;
+    writing-mode: vertical-lr;
+    /* top: 50px;
+    left: 280px */
+    padding-top: 20px;
+}
+
+/* .cell_drink_title {
+    position: absolute;
+} */
+
+.cell_line {
+    height: 80px;
+    width: 50px;
+    background-image: url(../images/story/about_us_images/green_short_straight_line.png);
+    background-repeat: no-repeat;
+}
+
+.cell_drink_note {
+    padding-top: 90px;
+    padding-right: 0px;
+    height: 420px;
 }
