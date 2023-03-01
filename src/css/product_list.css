@@ -1,18 +1,33 @@
-.bodyProduct {
+:root {
+    --dark-red: #cf121e;
+    --red: #ff3542;
+    --light-red: #ffe1e1;
+    --dark-green: #005743;
+    --green: #538e7a;
+    --light-green: #92d279;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #d9d9d9;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #000000;
     background-color: #FFFFFF;
-    font-family: "Noto Sans TC";
-    color: black;
-    /* margin: 0; */
-    /* padding: 0; */
 }
 
+.BodyProduct {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+
+
+/* product_list */
 .banner {
     height: 290px;
     margin: 25px 0px;
     vertical-align: middle;
     width: 100%;
+    /* width: 1000px; */
     /* border: 1px solid red; */
-    /* padding-top: 100px; */
 }
 
 .typ {
@@ -23,23 +38,20 @@
     /* border: 1px solid red; */
 }
 
-hr {
+.separate1 {
     /* margin: 10px 30px 0px 30px; */
     width: 1150px;
     vertical-align: middle;
 }
 
-.product_img {
+.product_list_img {
     width: 225px;
     height: 225px;
+    display: block;
+    margin: auto auto 20px auto;
 }
 
-/* h5 {
-    width: 225px;
-    text-align: center;
-} */
-
-.product {
+.product_list {
     /* 上 右 下 左 */
     margin: 15px 100px 0px 100px;
     /* 1. 設定 display: grid，改變指定元素的顯示方式 */
@@ -50,27 +62,27 @@ hr {
     grid-template-rows: 300px;
 }
 
-.product>div {
+.product_list_title:hover {
+    color: var(--green);
+}
+
+.product_list>div {
     margin: 5px;
+    /* text-align: center; */
+    /* vertical-align: middle; */
 }
 
-.product_img {
-    display: block;
-    margin: auto; 
-}
-
-.title {
+.product_title {
     font-size: 18px;
-    color: black;
+    color: var(--black);
     text-align: center;
     text-decoration: none;
     display: block;
     margin: 15px auto 0px auto;
+    /* background: none; */
 }
 
-.title:hover {
-    color: #538E7A;
-}
+
 
 .name {
     font-size: 20px;
@@ -92,19 +104,20 @@ hr {
     box-sizing: border-box
 }
 
-/* .mySlides {
-    width: 100%;
+/* .mySlides_banner {
+    width: 1000px;
     display: none;
+    vertical-align: middle;
     border: 1px solid blue;
 } */
 
 /* Slideshow container */
 /* bug */
-.slideshow-container {
+.slideshow-container-banner {
     /* width: 100%; */
     /* height: 290px; */
     /* position: relative; */
-    /* margin: 25px 100px; */
+    /* margin: 1125px auto; */
     margin: auto;
     padding-top: 100px;
     /* border: 1px solid red; */
@@ -112,7 +125,8 @@ hr {
 
 /* Next & previous buttons */
 
-.prev, .next {
+.prev_banner,
+.next_banner {
     cursor: pointer;
     position: absolute;
     top: 45%;
@@ -125,50 +139,23 @@ hr {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    background: none;
-    border: 0px;
 }
 
-/* .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 45%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-} */
-
 /* Position the "next button" to the right */
-.next {
+.next_banner {
     right: 0px;
     border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
+.prev_banner:hover,
+.next_banner:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
 
 /* The dots/bullets/indicators */
-.dot {
+.dot_banner {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -180,20 +167,20 @@ hr {
     transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
+.active_banner,
+.dot_banner:hover {
     /* background-color: #717171; */
     background-color: #538E7A;
 }
 
 /* Fading animation */
-.fade {
+.fade_banner {
     animation-name: fade;
     animation-duration: 1.5s;
 }
 
-.dots {
-    text-align:center;
+.dots_banner {
+    text-align: center;
     /* border: 1px solid red; */
 }
 
@@ -210,13 +197,259 @@ hr {
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
 
-    .prev,
-    .next,
-    .text {
+    .prev_banner,
+    .next_banner {
         font-size: 11px
     }
 }
 
-.test {
-    color: red;
+/* ----------------------------- */
+
+/* product_intro */
+.img_big {
+    border: 1p solid black;
+    margin: 30px 0px 0px 45px;
+    position: absolute;
+    z-index: 1;
+    background-color: #D9D9D9;
+}
+
+.img_big>img {
+    width: 500px;
+    height: 500px;
+}
+
+.ContentProduct {
+    width: 700px;
+    height: 510px;
+    background-color: #538E7A;
+    position: relative;
+    top: 40px;
+    left: 500px;
+}
+
+.img_small {
+    width: 525px;
+    margin: 30px 0px 20px 40px;
+    /* border: 1px solid black; */
+    /* 1. 設定 display: grid，改變指定元素的顯示方式 */
+    display: grid;
+    /* 2. 設定 grid-template-columns 指定有多少欄 */
+    grid-template-columns: 150px 150px 150px;
+    /* 3. 設定 grid-template-rows 設定列高 */
+    grid-template-rows: 90px;
+    /* z-index: 99; */
+}
+
+.img_small>img {
+    width: 105px;
+    height: 90px;
+    display: block;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+
+.ProductTitle {
+    text-align: center;
+    font-size: 38px;
+    padding: 20px 0px 0px 0px;
+    /* border: 1px solid black; */
+}
+
+.ProductIntro {
+    width: 550px;
+    margin: 0px 0px 0px 90px;
+    color: #D9D9D9;
+}
+
+.separate2 {
+    /* border: 1px solid black; */
+    color: #ffffff;
+    margin: 20px 0px 0px 80px;
+    width: 570px;
+}
+
+.ProductIntroPrice {
+    margin: 30px 0px 0px 90px;
+    font-size: 26px;
+}
+
+.TypeSelect {
+    height: 30px;
+    margin: 0px 100px 0px 90px;
+}
+
+.choose {
+    /* margin: 40px 0px 0px 0px; */
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    /* 垂直置中 */
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.ProductIntroPlus, .ProductIntroMinus {
+    width: 45px;
+    /* margin: 0px 0px 0px 0px; */
+    text-align: center;
+    border: 3px solid #92d279;
+    margin: 10px;
+    border-radius: 99em;
+}
+
+.ProductIntroText {
+    width: 500px;
+    /* background-color: blue; */
+    /* border: 3px solid #538E7A; */
+    /* border: 5px solid red; */
+}
+
+.cart {
+    /* height: 30px;
+    width: 100px;
+    margin: 0px auto; */
+    position: flex;
+    left: 100px;
+    /* color: #D9D9D9; */
+    /* border: 3px solid red; */
+
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #005743;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #92D279;
+    background-color: #ffffff;
+}
+
+.cart:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #92D279;
+    box-shadow: 4px 5px 17px -4px #538E7A;
+}
+
+.cart::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0, 87, 67, 90%);
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+.cart:hover::before {
+    width: 250%;
+}
+
+/* Slideshow container */
+.slideshow-container-2 {
+    /* width: 100%; */
+    /* height: 290px; */
+    position: relative;
+    /* margin: auto; */
+    margin: 25px 100px;
+    /* border: 1px solid red; */
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    z-index: 1;
+    right: 0px;
+    border-radius: 3px 0 0 3px;
+    /* border: 1px solid red; */
+}
+
+.prev {
+    /* z-index: 1; */
+    left: 0px;
+    border-radius: 3px 0 0 3px;
+    /* border: 1px solid blue; */
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+/* .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+} */
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    background-color: #92D279;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    /* background-color: #717171; */
+    background-color: #538E7A;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next {
+        font-size: 11px
+    }
 }
