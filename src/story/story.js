@@ -35,14 +35,13 @@ class Story extends Component {
                     < Headernav />
                     <div className='StoryTwoBtnTab'>
                         <button
-
+                            ref={this.defaultOpenRef}
                             className={`tabLinks ${storyTab === "tab1" ? "active" : ""}`}
                             onClick={evt => this.openIt(evt, "tab1")}
                             id='defaultOpen'>
                             品牌故事
                         </button>
                         <button
-                            ref={this.defaultOpenRef}
                             className={`tabLinks ${storyTab === "tab2" ? "active" : ""}`}
                             onClick={evt => this.openIt(evt, "tab2")}>
                             嚴選食材
@@ -206,9 +205,9 @@ class Story extends Component {
                             </div>
                         </div>
                     </div>
-                    {/* <AboutUsButton /> */}
+                    <AboutUsButton />
                 </main >
-                {/* <Footer /> */}
+                <Footer />
             </body >
         );
     }

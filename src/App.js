@@ -5,6 +5,7 @@ import Home from './components/home.js';
 import Login from './components/login.js';
 import MemberBar from './components/memberbar.js';
 import Story from './story/story.js';
+import Report from './report/report.js';
 import News from './news/news.js';
 import Product from './product/product.js';
 import Menu from './menu/menu.js';
@@ -33,6 +34,7 @@ function App() {
           <Switch>
             <Route path="/" component={Home} exact />
             <Route path="/story" component={Story} exact />
+            <Route path="/report" component={Report} exact />
             <Route path="/news" component={News} exact />
             <Route path="/product" component={Product} exact />
             <Route path="/menu" component={Menu} exact />
