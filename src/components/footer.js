@@ -3,6 +3,7 @@ import '../css/index.css';
 import footerLogo from '../images/home/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 class Footer extends Component {
     state = {  } 
@@ -11,8 +12,8 @@ class Footer extends Component {
             <footer className="footer">
                     <div className="footerLogo"><img src={footerLogo} alt="" /></div>
                     <div className="footerMain">
-                    <div className="footer-T">聯繫我們</div>
-                       <a className="navLogin-a" href="/Login" ><FontAwesomeIcon icon={faFacebook} /></a>
+                    <a className="footer-T" href="/contact"><FontAwesomeIcon icon={faEnvelope} />&nbsp;聯繫我們</a>
+                       <a className="footer-icon" href="/Login" ><FontAwesomeIcon icon={faFacebook} />&nbsp;社群交流</a>
 
                     </div>
                     <div className="footerAddress">

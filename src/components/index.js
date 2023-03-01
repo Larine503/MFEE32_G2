@@ -39,21 +39,21 @@ class Index extends Component {
                     <a href="/store" className='nav-t'>門市據點</a>
                     {/* <a href="/contact" className='nav-t'>聯絡我們</a> */}
                     <a href="/order" className='nav-t'>線上訂餐</a>
-                    </div>
-                    
-                    <adiv className="navLogin">
-                        {this.state.isLoggedIn ? (
-                            <div >
-                                <span><span className="navLogin-a" onClick={this.handleLogoutClick} >登出</span></span>
-                                <span><a className="navLogin-a" href="/member/edit"><FontAwesomeIcon icon={faUser} />會員資料</a></span>
-                            </div>) : (
-                            <div><a className="navLogin-a" href="/Login" >登入</a></div>)}
+                </div>
 
-                        <span><a className="navLogin-a" href="/Login" ><FontAwesomeIcon icon={faShoppingCart} /></a></span>
-                    </adiv>
-                    <div className="navIcon" onClick={this.myFunction} href="#">
-                        <FontAwesomeIcon icon={faBars} />
-                    </div>
+                <adiv className="navLogin">
+                    {this.state.isLoggedIn ? (
+                        <div >
+                            <span><span className="navLogin-a" onClick={this.handleLogoutClick} >登出</span></span>
+                            <span><a className="navLogin-a" href="/member/edit"><FontAwesomeIcon icon={faUser} />會員資料</a></span>
+                        </div>) : (
+                        <div><a className="navLogin-a" href="/Login" >登入</a></div>)}
+
+                    <span><a className="navLogin-a" href="/Login" ><FontAwesomeIcon icon={faShoppingCart} /></a></span>
+                </adiv>
+                <div className="navIcon" onClick={this.myFunction} href="#">
+                    <FontAwesomeIcon icon={faBars} />
+                </div>
 
 
             </nav >
@@ -62,11 +62,11 @@ class Index extends Component {
     handleLogoutClick = () => {
         axios.post('http://localhost:8000/logout', { withCredentials: true })
             .then(response => {
-                // 处理响应，例如跳转到登录页
+                //成功回首頁
                 window.location.href = '/';
             })
             .catch(error => {
-                // 处理错误
+                //錯誤
                 console.log(error);
             });
     }
