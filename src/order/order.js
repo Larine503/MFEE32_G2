@@ -2,73 +2,124 @@ import React, { Component } from 'react';
 import '../css/order.css';
 import Index from '../components/index.js';
 import Footer from '../components/footer.js';
-import LocaBox from './locaBox';
-import LocaBox1 from './locaBox1';
 import Drinktab from './drinktab';
 
 
 class Order extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            takeOut:<LocaBox />,
-            sendTO:<LocaBox1 />
+            activeTab: null
         };
-        // this.handleClick = this.handleClick.bind(this);
-        // this.handleChange = this.handleChange.bind(this);
+        this.defaultOpenRef = React.createRef();
     }
-    handleClick(e){
-        alert(this.props.value);
-       
-    }
+
     render() {
+        const { activeTab } = this.state;
         return (
-            <body>
+            <div className='allBB'>
                 <Index />
                 <br />
-                <div style={this.state}>
-                    <h3>線上訂餐</h3>
-                    <section>
+                <div>
+                    
+                    <div className='imSection'>
                         <br />
                         <div className="contentBox1">
                             <div className="contentBox">
-                                <div className="contentIn">
-                                    <a href="/" id="outMe">
-                                        <button className="btnM btnR getBtn" onClick={this.handleClick}>
-                                            <span>外送</span>
-                                            <div className="border btnR"></div>
-                                        </button>
-                                    </a>
-                                    <a href="#inMe">
-                                        <button className="btnM btnR" id="inMe">
-                                            <span>自取</span>
-                                            <div className="border btnR getBtn"></div>
-                                        </button>
-                                    </a>
+                                <div className="contentIn ">
+                                    
+                                    <div className='ORbtnM '>
+                                    <button 
+                                        ref={this.defaultOpenRef}
+                                        className={`tablinks ${activeTab === "tab1" ? "active" : ""}`}
+                                        onClick={evt => this.openIt(evt, "tab1")}
+                                        id="defaultOpen"
+                                    >
+                                        <span>外送</span>
+                                    </button>
+                                    
+                                    
+
+                                    <button
+                                        className={`tablinks ${activeTab === "tab2" ? "active" : ""}`}
+                                        onClick={evt => this.openIt(evt, "tab2")}
+                                    >
+                                        <span>自取</span>
+                                    </button>
+                                    </div>
+                                    
                                 </div>
                                 <div className="locaBox">
-                                    <LocaBox />
+                                    
+                                        <div className="locaBox1"
+                                            style={{ display: activeTab === "tab1" ? "block" : "none" }}
+                                            >
+                                            <div className="local">
+                                                <span> 地點</span>
+                                            </div>
+                                            <form method="post">
+                                                <div className="locatInput">
+                                                    <input type="text" placeholder="輸入完整位置" />
+                                                    
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div className="locaBox1"
+                                            style={{ display: activeTab === "tab2" ? "block" : "none" }}
+                                            >
+                                            <div className="local" >
+                                                <span> 地點</span>
+                                            </div>
+                                            <div className="locatInput">
+                                                <select name="" id="storeWhere">
+                                                    <option value="">東興店</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                        <br /><br />
+                                        <div className="local1 outMe">
+                                            <span>取餐時間</span>
+                                        </div>
+                                        <div className="locatInput outMe">
+                                            <input type="datetime-local" id="time" name="time" />
+                                        </div>
+                                        <br />
+                                        <a href="/order/goOrder">
+                                            <button className="ORbtnL ORbtnR outMe">
+                                                <span>前往訂餐</span>
+                                                <div className="ORborder ORbtnR outMe"></div>
+                                            </button>
+                                        </a>
+                                    
                                 </div>
                             </div>
                         </div>
                         <Drinktab />
-                    </section>
-                    <br />
+                    </div>
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    
                 </div>
                 <Footer />
-            </body>
+            </div>
         );
     }
-    // okClick = async() => {
-    //     // console.log(this.state.todoItem);
-    //     var fromServer = await axios.put(
-    //     "http://localhost:8800/order/goOder",
-    //     this.state.orderInfo
-    //     )
-    // window.location = "/"
-    // console.log(this.state.todoItem);
-    // return;
-    // }
+    // { 兩區域切換 }
+    openIt = (evt, two) => {
+        this.setState({
+            activeTab: two
+        });
+        console.log(`選擇了 ${two}`);
+    }
+    // { 預設開啟 }
+    componentDidMount() {
+        this.setState({
+            activeTab: "tab1"
+        });
+        this.defaultOpenRef.current.click();
+    }
 }
 
 export default Order;

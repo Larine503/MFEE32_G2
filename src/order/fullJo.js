@@ -3,7 +3,6 @@ import '../css/order.css';
 import EditIcon from '../images/order/edit.png';
 import HeartIcon from '../images/order/heart.png';
 import AniIcon from '../images/order/ani_icon.png';
-import closeBtn from '../images/order/cancel.png';
 
 
 class fullJo extends Component {
@@ -12,10 +11,8 @@ class fullJo extends Component {
     }
     render() {
         return (
-            <body>
-                
-                <div style={this.state}>
-                    <h3>線上訂餐</h3>
+            <div>
+                <div style={this.state} >
                     <div className="fullJO" id="fullJO">
                         <div className="joInfo">
                             <div className="joME"><img src={HeartIcon} className="FJheart" alt='' />
@@ -61,12 +58,12 @@ class fullJo extends Component {
                                 </div>
                             </div>
                         </div>
-                        <a href="/order/goOrder" className="joBtnClose"><img src={closeBtn} alt="" /></a>
+                        
                     </div>
                     <br />
                 </div>
                 
-            </body>
+            </div>
         );
     }
 }

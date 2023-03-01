@@ -13,14 +13,14 @@ class DrinkList extends Component {
     }
     render() {
         return (
-            <body>
+            <div className="allBB">
                 <Index />
                 <div style={this.state}>
-                    <section>
+                    <div>
                     <FollowList />
-                        <div className="dkcontentBox">
+                        <div className="dkcontentBox goimSection">
                             <div className="dkcontentBox1">
-                                <img src={drinkA} alt="" className="hereDrink" />
+                                <img src={drinkA} alt="" className="hereDrink shakeMe" />
                                 <div className="contentInD">
                                     <h2>茗品系列</h2>
                                     <p>鮮熱茶汁，濃郁醇厚，搭配半月型自製衛生冰塊，堅持以調酒杯現場手工沖泡、調製。</p>
@@ -28,19 +28,20 @@ class DrinkList extends Component {
                                         <button className="dkbtnM btnR">
                                             <img src={BackTo} alt="" />
                                             &nbsp;
-                                            <span>返回</span>
+                                            <span className='hiBack'>返回</span>
                                         </button>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <br />
-                    </section>
+                    </div>
                     <DrinkMenu />
-                    
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 </div>
                 <Footer />
-            </body>
+            </div>
         );
     }
 }

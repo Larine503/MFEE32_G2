@@ -17,59 +17,60 @@ class DrinkMenu extends Component {
             <div id="drinksL">
                 <div className="tab-content-1L"><br />
                     <div className="info-d">
-                        <table class="drinkAddname">
-                        <a href="/order/drinkInfo"><img src={drinkA1} alt="" className="drinkMeL" /></a><br />
-                        <a href="/order/AddDrink"><span>烏龍綠茶</span><img src={drinkPlus} alt="" class="btnopen" /></a>
+                        <table className="drinkAddname">
+                            <a href="/order/drinkInfo"><img src={drinkA1} alt="" className="drinkMeL shakeMe" /></a><br />
+                            <a href="/order/AddDrink"><span>烏龍綠茶</span><img src={drinkPlus} alt="" className="btnopen" /></a>
                         </table>
-                        
+
                     </div>
 
                     <div className="info-d">
-                        <table class="drinkAddname">
-                        <a href="/order/drinkInfo"><img src={drinkA2} alt="" className="drinkMeL" /></a><br />
-                        <a href="/order/AddDrink"><span>特級綠茶</span><img src={drinkPlus} alt="" class="btnopen"/></a>
-                        </table>
-                    </div>
-
-                    <div className="info-d">
-                    <table class="drinkAddname">
-                        <a href="/order/drinkInfo"><img src={drinkA3} alt="" className="drinkMeL" /></a><br />
-                        <a href="/order/AddDrink"><span>錫蘭紅茶</span><img src={drinkPlus} alt="" class="btnopen"/></a>
+                        <table className="drinkAddname">
+                            <a href="/order/drinkInfo" className='drinkNamehold'><img src={drinkA2} alt="" className="drinkMeL shakeMe" /></a><br />
+                            <a href="/order/AddDrink"><span>特級綠茶</span><img src={drinkPlus} alt="" className="btnopen" /></a>
                         </table>
                     </div>
 
                     <div className="info-d">
-                    <table class="drinkAddname">
-                        <a href="/order/drinkInfo"><img src={drinkA4} alt="" className="drinkMeL" /></a><br />
-                        <a href="/order/AddDrink"><span>極品菁茶</span><img src={drinkPlus} alt="" class="btnopen"/></a>
+                        <table className="drinkAddname">
+                            <a href="/order/drinkInfo"><img src={drinkA3} alt="" className="drinkMeL shakeMe" /></a><br />
+                            <a href="/order/AddDrink"><span>錫蘭紅茶</span><img src={drinkPlus} alt="" className="btnopen" /></a>
                         </table>
                     </div>
 
                     <div className="info-d">
-                    <table class="drinkAddname">
-                        <a href="/order/drinkInfo"><img src={drinkA5} alt="" className="drinkMeL" /></a><br />
-                        <a href="/order/AddDrink"><span>原鄉四季</span><img src={drinkPlus} alt="" class="btnopen"/></a>
+                        <table className="drinkAddname">
+                            <a href="/order/drinkInfo"><img src={drinkA4} alt="" className="drinkMeL shakeMe" /></a><br />
+                            <a href="/order/AddDrink"><span>極品菁茶</span><img src={drinkPlus} alt="" className="btnopen" /></a>
+                        </table>
+                    </div>
+
+                    <div className="info-d">
+                        <table className="drinkAddname">
+                            <a href="/order/drinkInfo"><img src={drinkA5} alt="" className="drinkMeL shakeMe" /></a><br />
+                            <a href="/order/AddDrink"><span>原鄉四季</span><img src={drinkPlus} alt="" className="btnopen" /></a>
                         </table>
                     </div>
                     <div className="info-d">
-                    <table class="drinkAddname">
-                        <a href="/order/drinkInfo"><img src={drinkA6} alt="" className="drinkMeL" /></a>
-                        <a href="/order/AddDrink"><span>特選普洱</span><img src={drinkPlus} alt="" class="btnopen"/></a>
+                        <table className="drinkAddname">
+                            <a href="/order/drinkInfo"><img src={drinkA6} alt="" className="drinkMeL shakeMe" /></a>
+                            <a href="/order/AddDrink"><span>特選普洱</span><img src={drinkPlus} alt="" className="btnopen" /></a>
                         </table>
                     </div>
                     <div className="info-d">
-                    <table class="drinkAddname">
-                        <a href="/order/drinkInfo"><img src={drinkA7} alt="" className="drinkMeL" /></a>
-                        <a href="/order/AddDrink"><span>翡翠烏龍</span><img src={drinkPlus} alt="" class="btnopen"/></a>
+                        <table className="drinkAddname">
+                            <a href="/order/drinkInfo"><img src={drinkA7} alt="" className="drinkMeL shakeMe" /></a>
+                            <a href="/order/AddDrink"><span>翡翠烏龍</span><img src={drinkPlus} alt="" className="btnopen" /></a>
                         </table>
                     </div>
                     <div className="info-d">
-                    <table class="drinkAddname">
-                        <a href="/order/drinkInfo"><img src={drinkA8} alt="" className="drinkMeL" /></a>
-                        <a href="/order/AddDrink"><span>嚴高山茶</span><img src={drinkPlus} alt="" class="btnopen"/></a>
+                        <table className="drinkAddname">
+                            <a href="/order/drinkInfo"><img src={drinkA8} alt="" className="drinkMeL shakeMe" /></a>
+                            <a href="/order/AddDrink"><span>嚴高山茶</span><img src={drinkPlus} alt="" className="btnopen" /></a>
                         </table>
                     </div>
                 </div>
+
             </div>
 
         );

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import '../css/order.css';
-import Index from '../components/index.js';
 import HeartIcon from '../images/order/heart.png';
 import AniIcon from '../images/order/ani_icon.png';
-import closeBtn from '../images/order/cancel.png';
+
 
 
 class teamJo extends Component {
@@ -12,24 +11,20 @@ class teamJo extends Component {
     }
     render() {
         return (
-            <body>
-                <Index />
+            <div>
                 <div style={this.state}>
-                    <h3>線上訂餐</h3>
                     <div className="teamJO" id="teamJO">
                         <div className="teamInfo">
                             <div className="teamTitle"><img src={HeartIcon} className="heart" alt='' />
                                 <h1>揪團</h1>
                             </div>
                             <div>
-                                <div className="teamName">
-                                    <h3><span>小明</span>開團</h3>
-                                </div>
                                 <div className="teamBox">
                                     <div className="teamSuss">
-                                        <h2>成功開團!</h2>
+                                        
+                                        <h2>「<span>小明</span>」&nbsp;成功開團!</h2>
                                         <p>分享團購連結揪好友、家人一起訂購</p>
-                                        <img src={AniIcon} alt="" className="aniIcon" />
+                                        <img src={AniIcon} alt="" className="TJaniIcon" />
                                     </div>
                                 </div>
                             </div>
@@ -47,12 +42,12 @@ class teamJo extends Component {
                                 </div>
                             </div>
                         </div>
-                        <a href="/order/goOrder" className="joBtnClose"><img src={closeBtn} alt="" /></a>
+                       
                     </div>
                     <br />
                 </div>
 
-            </body>
+            </div>
         );
     }
 }
