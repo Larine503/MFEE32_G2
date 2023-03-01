@@ -9,17 +9,18 @@ class FollowList extends Component {
     }
     render() {
         return (
-            <body>
+            <div>
                 <div style={this.state}>
-                    <h3>線上訂餐</h3>
-                    <a href="/order/billAll" class="followMe">
-                        <div class="followMylist" >
+                    <div className='taTA'>
+                    <a href="/order/billList" className="followMe">
+                        <div className="followMylist" >
                             <img src={AniIcon} alt="" />
-                            <p class="followText">訂購清單</p>
+                         <div className='hiHide'><p className="followText">訂購清單</p></div>  
                         </div>
                     </a>
+                    </div>
                 </div>
-            </body>
+            </div>
         );
     }
 }

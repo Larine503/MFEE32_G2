@@ -11,7 +11,7 @@ class DrinkInfo extends Component {
     }
     render() {
         return (
-            <body>
+            <div>
                 <div style={this.state}>
                     
                     <div className="drinkscreen">
@@ -48,7 +48,7 @@ class DrinkInfo extends Component {
                     <br />
                 </div>
                 
-            </body>
+            </div>
         );
     }
 }

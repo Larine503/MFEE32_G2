@@ -260,6 +260,31 @@ app.get('/storeList/:county', function (req, res) {
 })
 //----------
 
+// 郁的訂單歷史內容
+app.get('/order/billAll/:id', (req, res) => {
+    const id = req.params.id;
+    const sql = 'SELECT id, pid, people, size, sugar, plus ,cup ,extra ,price FROM drink_history  WHERE id = ?';
+    db.query(sql, id, (err, rows) => {
+        if (err) {
+            throw err;
+        }
+        res.json(rows);
+    });
+});
+
+app.get('/order/billAll/drinkName/:id', (req, res) => {
+    const id = req.params.id;
+    const mysql = "SELECT id, time, method, storeId, total FROM drink_list WHERE id = ?";
+    db.query(mysql, [id], (err, rows) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+        
+        res.json(rows);
+    });
+});
+
 db.connect(function (err) {
     if (err) {
         console.log('喬巴：資料庫 連線 有誤');

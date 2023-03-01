@@ -12,20 +12,27 @@
     --gray: #d9d9d9;
 }
 
+.allBB {
+    background-color: var(--dark-green);
+}
 
 .imSection {
-    margin: 0 auto;
-    padding: 0.2em 0em 0.2em 0em;
-    width: 90%;
-    max-width: 500px;
+    margin: 3% 5%;
+
+}
+
+.goimSection {
+    margin: 3% 5%;
+
 }
 
 @media screen and (min-width: 768px) {
     .imsection {
-        margin: 0 auto;
-        padding: 0.2em 0em 0.2em 0em;
-        width: 90%;
-        max-width: 1000px;
+        margin: 10% 0%;
+    }
+
+    .gOimsection {
+        margin: 0% 0%;
     }
 }
 
@@ -33,41 +40,72 @@
 .followMe {
     position: fixed;
     right: 10px;
-    bottom: 10px;
+    bottom: 50px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
     z-index: 10;
 }
-.followMe>a{
+
+
+
+.followMe>a {
     position: relative;
 }
-.followMe img{
-    width: 100px;
-    margin-top: -20px;
-    margin-left: -10px;
-    
+
+.followMe img {
+    width: 115px;
+    height: 100px;
+    margin-top: -30px;
+    margin-left: -15px;
+    transition: transform 0.2s ease;
 }
 
-.followMylist{
+
+.followMylist {
     margin-left: 0px;
-    margin-top: 80px;
-    background-color: var(--light-green);
+    margin-top: 85px;
+    background-color: #92d2793a;
     text-decoration: none;
     color: var(--white);
     width: 80px;
-    height: 80px;
+    height: 50px;
     display: inline-block;
-    border-radius: 20px;
+    border-radius: 50px;
+    box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.445);
+    transition: transform 0.2s ease;
+}
+
+.followMylist:hover {
+    transform: scaley(1.5);
+    background-color: #92d279;
     box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.445);
 }
-.followText{
-    text-decoration: none;
-    color: var(--white);
-    margin: -20px 0 0 8px;
+
+.followMe img:hover {
+    transform: translateY(1px);
+    height: 70px;
 
 }
+
+.hiHide {
+    display: none;
+}
+
+.followText {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 12px;
+}
+
+.followMylist:hover .hiHide {
+    color: var(--black);
+    display: block;
+    margin-top: -30px;
+    margin-left: 16px;
+}
+
 .btnXL {
     width: 90%;
     max-width: 500px;
@@ -83,6 +121,7 @@
 .btnXL:active,
 .btnL:active,
 .btnM:active,
+.ORbtnM>button:active,
 .dkbtn:active,
 .gobtnXL:active,
 .gobtnM:active,
@@ -134,7 +173,7 @@
     background: var(--light-green);
     transition: all 0.1s linear;
     box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.066);
-    margin: 3% 5%;
+    margin: 5% 5%;
 }
 
 .gobtnXL span {
@@ -152,7 +191,7 @@
 }
 
 
-.gobtnXL .border {
+.gobtnXL .goborder {
     position: absolute;
     border: 0.40em solid var(--light-green);
     transition: all 0.3s 0.08s linear;
@@ -163,13 +202,21 @@
     transform: translate(-50%, -50%);
 }
 
-.gobtnXL:hover .border {
+.gobtnXL:hover .goborder {
     display: block;
     width: 103%;
-    height: 128%;
+    height: 120%;
 }
 
-
+.joGroup {
+    /* background-color: #000000; */
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    /* position: absolute; */
+    /* z-index: 2; */
+    margin-top: -100px;
+}
 
 
 /* ------btnXL網頁----- */
@@ -219,6 +266,9 @@
         display: inline-block;
         width: 100%;
         text-align: center;
+        /* position: absolute; */
+        /* z-index: 2; */
+        margin-top: -100px;
     }
 
     .gobtnXL {
@@ -230,7 +280,6 @@
         background: var(--light-green);
         transition: all 0.1s linear;
         box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.066);
-        /* margin:0 16%; */
     }
 
     .gobtnXL span {
@@ -243,52 +292,70 @@
         margin-top: 1%;
     }
 
-    .gobtnXL .border {
+    .gobtnXL .goborder {
         border: 0.5em solid var(--light-green);
         position: absolute;
         transition: all 0.3s 0.08s linear;
         transform: translate(-50%, -50%);
+        width: 98%;
+
     }
 
-    .gobtnXL:hover .border {
+    .gobtnXL:hover .goborder {
         display: block;
         width: 102%;
-        height: 125%;
+        height: 120%;
     }
 
+}
+
+.contentBox1 {
+    /* margin: 0 25%; */
+    width: 100%;
+    height: 370px;
+    /* background-color: #000000; */
+    justify-content: center;
 }
 
 .contentBox {
     /* display: inline-block; */
     width: 100%;
-    height: 450px;
+    height: 400px;
     border-radius: 20px;
     background-color: var(--green);
     box-shadow: 0.1em 0.2em 0.5em rgba(0, 0, 0, 0.826);
+    margin-top: 15%;
 }
 
-.goContentBox {
-    width: 100%;
-    height: 420px;
-    border-radius: 20px;
-    background-color: var(--green);
-    box-shadow: 0.1em 0.2em 0.5em rgba(0, 0, 0, 0.826);
-    margin-top: 5%;
-}
+
+
 .dkcontentBox {
     /* display: inline-block; */
-    width: 100%;
+    width: 85%;
+    max-width: 700px;
     height: 240px;
     border-radius: 20px;
     background-color: var(--green);
     box-shadow: 0.1em 0.2em 0.5em rgba(0, 0, 0, 0.826);
+    margin: 0 auto;
+    /* text-align: center; */
+    justify-content: center;
+}
+
+.goContentBox {
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    background-color: var(--green);
+    box-shadow: 0.1em 0.2em 0.5em rgba(0, 0, 0, 0.826);
+    margin-top: 0%;
 }
 
 /* -------contentBox內容盒--網頁版------ */
 @media screen and (min-width: 768px) {
     .contentBox1 {
-        margin: 0 auto;
-        width: 80%;
+        /* margin: 0 25%; */
+        width: 100%;
         height: 500px;
         /* background-color: #000000; */
     }
@@ -297,17 +364,24 @@
         display: inline-block;
         width: 100%;
         max-width: 700px;
-        max-height: 390px;
+        max-height: 370px;
         height: 100%;
         border-radius: 20px;
         background-color: var(--green);
         box-shadow: 0.1em 0.2em 0.5em rgba(0, 0, 0, 0.826);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 0%;
     }
+
     .dkcontentBox1 {
         width: 100%;
         height: 300px;
         /* background-color: #000000; */
     }
+
     .dkcontentBox {
         display: inline-block;
         width: 100%;
@@ -317,26 +391,80 @@
         border-radius: 20px;
         background-color: var(--green);
         box-shadow: 0.1em 0.2em 0.5em rgba(0, 0, 0, 0.826);
-        margin-left: 15%;
+        margin-left: 28%;
     }
 
     .goContentBox {
+        /* display: inline-block; */
         width: 100%;
-        height: 70%;
-        max-height: 800px;
+        max-width: 700px;
+        max-height: 350px;
         border-radius: 20px;
         background-color: var(--green);
         box-shadow: 0.1em 0.2em 0.5em rgba(0, 0, 0, 0.826);
+        position: absolute;
+        top: 410px;
+        left: 50%;
+        transform: translate(-50%, -50%);
         margin-top: 0%;
+    }
+
+    .goGotab {
+        margin-top: 30%;
+        margin-left: 3%;
+        /* background-color: #000000; */
     }
 }
 
 .contentIn {
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
-.inMe {
+/* .inMe {
     display: none;
+} */
+
+.ORbtnM>button {
+    border: none;
+    width: 80%;
+    border-radius: 10%;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0.05em 0em 0.2em rgba(0, 0, 0, 0.729);
+    background-color: var(--green);
+    margin-right: 15px;
+    border-radius: 15px;
+    margin-top: 15px;
+
+}
+
+.ORbtnM>button.active {
+
+    box-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.763);
+    background-color: var(--dark-green);
+}
+
+.ORbtnM span {
+    color: var(--white);
+}
+
+.ORbtnM span.active,
+.ORbtnM span:active {
+    color: var(--dark-green);
+}
+
+.ORbtnM {
+    width: 80%;
+    height: 60px;
+    max-width: 500px;
+    /* position: relative; */
+    padding: 2% 5% 2% 5%;
+    /* background: var(--light-green); */
+    /* box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244); */
+    display: flex;
+    margin: 0 auto;
+    border: none;
+
 }
 
 .btnM {
@@ -374,23 +502,41 @@
 }
 
 .BAbtnM {
-    width: 35%;
-    max-width: 200px;
+    width: 100px;
+    height: 30px;
+    /* max-width: 250px; */
     position: relative;
-    padding: 2% 0 2% 0;
+    /* padding: 2% 0 2% 0; */
     background: var(--dark-green);
     transition: all 0.1s linear;
     box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
-    margin: 6% 5% 0% 4%;
+    /* margin: 6% 5% 0% 4%; */
     border: none;
+    margin-top: 30px;
+
 }
 
-.BAbtnM span {
-    font-size: 18.72px;
+.BAbtnM1 {
+    width: 100px;
+    height: 30px;
+    position: relative;
+    background: var(--green);
+    transition: all 0.1s linear;
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
+    border: none;
+    margin-top: 30px;
+}
+
+.BAbtnM>p,
+.BAbtnM1>p {
+    /* font-size: 18.72px; */
     color: var(--white);
+    display: inline-block;
+    /* background-color: #000000; */
+    margin-top: 5px;
 }
 
-.BAbtnM .border {
+.BAbtnM .BAborder {
     position: absolute;
     border: 0.45em solid var(--dark-green);
     transition: all 0.3s 0.08s linear;
@@ -399,18 +545,34 @@
     width: 95%;
     height: 95%;
     transform: translate(-50%, -50%);
-
 }
 
-.BAbtnM:hover .border {
+.BAbtnM1 .BAborder {
+    position: absolute;
+    border: 0.45em solid var(--green);
+    transition: all 0.3s 0.08s linear;
+    top: 50%;
+    left: 50%;
+    width: 95%;
+    height: 95%;
+    transform: translate(-50%, -50%);
+}
+
+.BAbtnM:hover .BAborder,
+.BAbtnM1:hover .BAborder {
     display: block;
     width: 105%;
     height: 115%;
+
+}
+
+.BAbtnR {
+    border-radius: 3em;
 }
 
 .gobtnM {
     width: 90%;
-    margin: 7% 0 0 0%;
+    margin: 7% 0 0 2%;
     padding: 5% 0 5% 0;
     font-size: medium;
     text-align: left;
@@ -436,21 +598,31 @@
     margin-left: 3%;
 }
 
+.gobtnM:hover {
+    background-color: var(--gray);
+}
+
 .dkbtnM {
-    width: 35%;
+    width: 20%;
     max-width: 200px;
     position: relative;
-    padding: 2% 0 2% 0;
-    background: var(--dark-green);
+    padding: 5% 0 5% 0;
+    background: #00574300;
     transition: all 0.1s linear;
-    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
-    margin: 6% 5% 0% 4%;
+    box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.303);
+    margin: 10% 5% 0% 50%;
     border: none;
+    transition: transform 0.2s ease;
 }
 
 .dkbtnM span {
     font-size: 16px;
     color: var(--white);
+
+}
+
+.hiBack {
+    display: none;
 }
 
 .dkbtnM .border {
@@ -465,24 +637,133 @@
 
 }
 
-.dkbtnM:hover .border {
-    display: block;
-    width: 105%;
-    height: 115%;
+.dkbtnM:hover .hiBack,
+.dkbtnM>img:hover {
+    display: inline-block;
+    font-size: 12px;
+
+    /* transform: scalex(0.7); */
 }
+
+.dkbtnM:hover {
+    transform: scale(1.5);
+    background: #005743db;
+    padding: 2%;
+}
+
+
 .dkbtnM>img {
-    width: 15%;
+    width: 20%;
     border-radius: 0%;
     margin-left: 3%;
 }
 
+.shakeMe {
+    transition: transform 0.3s ease-in-out;
+}
+
+.shakeMe:hover {
+    animation: shake 0.8s;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(10deg);
+    }
+
+    10% {
+        transform: rotate(-10deg);
+    }
+
+    20% {
+        transform: rotate(10deg);
+    }
+
+    30% {
+        transform: rotate(-10deg);
+    }
+
+    40% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    60% {
+        transform: rotate(10deg);
+    }
+
+    70% {
+        transform: rotate(-10deg);
+    }
+
+    80% {
+        transform: rotate(10deg);
+    }
+
+    90% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
 /* --------btnM網頁版---------- */
 @media screen and (min-width: 768px) {
+    .ORbtnM>button {
+        border: none;
+        width: 80%;
+        border-radius: 10%;
+        z-index: 1;
+        overflow: hidden;
+        box-shadow: 0.05em 0em 0.2em rgba(0, 0, 0, 0.729);
+        background-color: var(--green);
+        margin-right: 15px;
+        border-radius: 10px;
+        margin-top: 15px;
+
+    }
+
+    .ORbtnM>button.active {
+
+        box-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.763);
+        background-color: var(--dark-green);
+    }
+
+    .ORbtnM span {
+        color: var(--white);
+    }
+
+    .ORbtnM span.active,
+    .ORbtnM span:active {
+        color: var(--dark-green);
+    }
+
+    .ORbtnM {
+        width: 80%;
+        height: 70px;
+        max-width: 500px;
+        /* position: relative; */
+        padding: 2% 5% 2% 5%;
+        /* background: var(--light-green); */
+        /* box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244); */
+        display: flex;
+        margin: 0 auto;
+        border: none;
+
+    }
+
+
+
     .dkbtnM {
-        width: 35%;
+        width: 25%;
         max-width: 280px;
         padding: 2% 0 2% 0;
-        margin: 4% 5% 0% 28%;
+        margin: 4% 5% 0% 33%;
     }
 
     .dkbtnM span {
@@ -500,17 +781,75 @@
         width: 103%;
         height: 117%;
     }
-    .dkbtnM>img {
+
+    .shakeMe .dkbtnM>img {
         width: 10%;
         border-radius: 0%;
     }
+
+    .shakeMe {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .shakeMe:hover {
+        animation: shake 0.8s;
+    }
+
+    @keyframes shake {
+        0% {
+            transform: rotate(10deg);
+        }
+
+        10% {
+            transform: rotate(-10deg);
+        }
+
+        20% {
+            transform: rotate(10deg);
+        }
+
+        30% {
+            transform: rotate(-10deg);
+        }
+
+        40% {
+            transform: rotate(10deg);
+        }
+
+        50% {
+            transform: rotate(-10deg);
+        }
+
+        60% {
+            transform: rotate(10deg);
+        }
+
+        70% {
+            transform: rotate(-10deg);
+        }
+
+        80% {
+            transform: rotate(10deg);
+        }
+
+        90% {
+            transform: rotate(-10deg);
+        }
+
+        100% {
+            transform: rotate(10deg);
+        }
+    }
+
     .gobtnM {
         width: 80%;
-        margin: 5% 0 0 5%;
+        margin: 5% 0 0 7%;
         padding: 2% 0 2% 0;
         font-size: large;
         text-align: left;
         border-radius: 8px;
+        /* transform: translate(-50%, -50%); */
+        /* background-color: #000000; */
     }
 
     .gobtnM>span {
@@ -538,6 +877,10 @@
         margin-left: 15%;
     }
 
+    .gobtnM:hover {
+        background-color: var(--gray);
+    }
+
     .btnM {
         width: 35%;
         max-width: 280px;
@@ -563,29 +906,31 @@
 }
 
 
-.btnR {
+.ORbtnR {
     border-radius: 3em;
 }
 
 .locaBox {
     /* background-color: #cf121e; */
-    margin-top: 5px;
+    margin-top: 60px;
     padding: 5px;
 }
 
 .locaBox1 {
     /* background-color: #cf121e; */
-    margin-top: -64px;
+    margin-top: -72px;
     padding: 5px;
 }
 
 #storeWhere {
     margin-left: 10%;
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 60px;
     padding: 12px;
-    font-size: medium;
+    font-size: large;
     text-align: center;
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
+
 }
 
 
@@ -601,7 +946,7 @@
     width: 130px;
     height: 30px;
     background-color: var(--dark-green);
-    margin: -30px 0% 0 10%;
+    margin: -20px 0% 0 10%;
     box-shadow: 0em 0em 0.2em rgba(0, 0, 0, 0.705);
 }
 
@@ -624,7 +969,7 @@
 .locatInput input {
     width: 80%;
     height: 40px;
-    max-width: 600px;
+    max-width: 620px;
     margin: 0px 0% 0 10%;
     padding: 2%;
     font-size: large;
@@ -651,6 +996,11 @@ input[type="text"]::placeholder {
     text-align: center;
     font-size: larger;
 }
+.locatInput option{
+    text-align: center;
+    font-size: larger;
+}
+
 
 /* -------地點網頁版------- */
 @media screen and (min-width: 768px) {
@@ -672,7 +1022,7 @@ input[type="text"]::placeholder {
 
     .local1 {
         width: 20%;
-        margin: 10% 0 0 10%;
+        margin: 5% 0 0 10%;
         /* background-color: #ff3542; */
     }
 
@@ -703,10 +1053,10 @@ input[type="text"]::placeholder {
     }
 
     #storeWhere {
-        width: 50%;
+        width: 80%;
         height: 100%;
         max-height: 40px;
-        max-width: 500px;
+        max-width: 600px;
         margin: 0px 0 0 220px;
         font-size: medium;
         /* padding: 20px 0 20px 0; */
@@ -723,7 +1073,7 @@ input[type="text"]::placeholder {
 
 
 
-.btnL {
+.ORbtnL {
     width: 65%;
     position: relative;
     padding: 0.5em 3em 0.5em 3em;
@@ -731,15 +1081,15 @@ input[type="text"]::placeholder {
     background: var(--dark-green);
     transition: all 0.1s linear;
     box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
-    margin: 2% 0px 0% 20%;
+    margin: 3% 0px 0% 20%;
 }
 
-.btnL span {
+.ORbtnL span {
     font-size: 18.72px;
     color: var(--white);
 }
 
-.btnL .border {
+.ORbtnL .ORborder {
     position: absolute;
     border: 0.45em solid var(--dark-green);
     transition: all 0.3s 0.08s linear;
@@ -750,7 +1100,7 @@ input[type="text"]::placeholder {
     transform: translate(-50%, -50%);
 }
 
-.btnL:hover .border {
+.ORbtnL:hover .ORborder {
     display: block;
     width: 102%;
     height: 120%;
@@ -758,7 +1108,7 @@ input[type="text"]::placeholder {
 
 /* -------btnL網頁版--------- */
 @media screen and (min-width: 768px) {
-    .btnL {
+    .ORbtnL {
         width: 60%;
         position: relative;
         margin: auto;
@@ -767,50 +1117,51 @@ input[type="text"]::placeholder {
         background: var(--dark-green);
         transition: all 0.1s linear;
         box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
-        margin: 8% 0px 0% 18%;
+        margin: 10% 0px 0% 21%;
     }
 
-    .btnL span {
+    .ORbtnL span {
         font-size: 18.72px;
         color: var(--white);
     }
 
-    .btnL .border {
+    .ORbtnL .ORborder {
         position: absolute;
         border: 0.45em solid var(--dark-green);
         transition: all 0.3s 0.08s linear;
         top: 50%;
         left: 50%;
         width: 98%;
-        height: 95%;
+        height: 98%;
         transform: translate(-50%, -50%);
     }
 
-    .btnL:hover .border {
+    .ORbtnL:hover .ORborder {
         display: block;
         width: 102%;
-        height: 115%;
+        height: 120%;
     }
 }
 
 .gobtnL {
     width: 70%;
-    /* position:relative; */
+    position: relative;
     padding: 0.5em 5em 0.5em 5em;
     background: var(--light-green);
     transition: all 0.1s linear;
     box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
-    margin: 20px 0px 0% 15%;
+    margin: 5% 0px 0% 15%;
     z-index: 1;
     border: none;
 }
 
-.gobtnL span {
+.gobtnL>span {
     font-size: 24px;
     color: var(--white);
-    display: inline-flex;
+    display: block;
     z-index: 10;
-    margin: -50% 0 0 0;
+    margin: -30% 0 0 0;
+    /* background-color: #000000; */
 }
 
 .ani_icon {
@@ -820,19 +1171,24 @@ input[type="text"]::placeholder {
     /* position: absolute; */
 }
 
+.gobtnL:hover {
+    transform: scale(1.05);
+}
+
 @media screen and (min-width: 768px) {
     .gobtnL {
         width: 60%;
-        position: relative;
-        margin: auto;
+        max-width: 500px;
+        /* position: relative; */
+        /* margin: 0 auto; */
         padding: 0.5em 5em 0.5em 5em;
         border: none;
         background: var(--light-green);
         transition: all 0.1s linear;
         box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
-        margin: 2% 0px 0% 20.5%;
+        margin: 5% 0px 0% 20.5%;
         border: none;
-        z-index: 1;
+        z-index: 10;
     }
 
     .gobtnL span {
@@ -840,6 +1196,10 @@ input[type="text"]::placeholder {
         color: var(--white);
         margin: 0% 0 0 0;
         text-align: center;
+    }
+
+    .gobtnL:hover {
+        transform: scale(1.05);
     }
 
     .ani_icon {
@@ -859,20 +1219,19 @@ input[type="text"]::placeholder {
     width: 50%;
     height: 200px;
     /* background-color: black; */
-    margin: -10% 0 90px -12%;
-    padding: 0 5% 0 0%;
+    margin: -10% 0 90px -18%;
+    padding: 0 12% 0 0%;
 }
 
 .info-d span {
     display: inline-block;
-    margin: -30% 0px 0 50%;
-    width: 45%;
+    margin: -30% 0px 0 0%;
+    width: 60%;
     max-width: 130px;
     background-color: var(--green);
     color: var(--white);
     padding: 5px 10px 5px 15px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
 }
 
@@ -880,7 +1239,7 @@ input[type="text"]::placeholder {
 .info-d span+img {
     display: block;
     width: 38px;
-    margin: -36px 0 0 100%;
+    margin: -95px 0 0 72%;
 }
 
 .hereDrink {
@@ -918,6 +1277,11 @@ input[type="text"]::placeholder {
 
 }
 
+.tab-content-1L,
+.drinksL {
+    background-color: var(--dark-green);
+}
+
 .btnM img {
     width: 13px;
     height: 13px;
@@ -927,7 +1291,7 @@ input[type="text"]::placeholder {
 .drinkMeL {
     width: 80%;
     max-width: 150px;
-    margin-left: 90px;
+    margin-left: 0px;
     padding: 15px 0px 0 -10%;
     text-align: center;
     justify-content: center;
@@ -940,14 +1304,15 @@ input[type="text"]::placeholder {
     height: 40px;
     /* background-color: #000000; */
 }
-.drinkAddname{
-   display: block;
+
+.drinkAddname {
+    display: block;
     justify-content: center;
     text-align: center;
     width: 100%;
     /* background-color: #000000; */
-    margin: 5% 0 0 5%;
-    
+    margin: 5% 0 0 40%;
+
 }
 
 @media screen and (min-width: 768px) {
@@ -961,6 +1326,7 @@ input[type="text"]::placeholder {
         /* background-color: black; */
         margin: 0% 0 90px 0%;
         padding: 0 0% 0 0%;
+
     }
 
     .drinkMe {
@@ -977,23 +1343,24 @@ input[type="text"]::placeholder {
     }
 
     .drinkMeL {
-        width: 85%;
-        max-width: 150px;
+        width: 100%;
+        max-width: 200px;
         margin-left: 35px;
         padding: 0px 30px 0 0%;
         text-align: center;
         justify-content: center;
         /* background-color: #000000; */
+
     }
 
     .info-d span {
         display: inline-block;
-        margin: -30% 0px 0 10%;
-        width: 40%;
+        margin: -30% 0px 0 30%;
+        width: 200%;
         max-width: 130px;
         background-color: var(--green);
         color: var(--white);
-        padding: 5px 10px 5px 15px;
+        padding: 5px 10px 5px 7px;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
         box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
@@ -1003,7 +1370,7 @@ input[type="text"]::placeholder {
     .info-d span+img {
         display: block;
         /* width: 30px; */
-        margin: -35px 0 0 75%;
+        margin: -35px 0 0 90%;
     }
 
     .hereDrink {
@@ -1043,13 +1410,17 @@ input[type="text"]::placeholder {
     .btnopen {
         width: 60px;
         height: 38px;
-        
+
     }
-    .drinkAddname{
+
+    .drinkAddname {
         width: 200px;
         margin: 0 auto;
+        /* text-align: center;
+        justify-content: center; */
+        /* background-color: #000000; */
     }
-   
+
 }
 
 
@@ -1062,7 +1433,9 @@ input[type="text"]::placeholder {
     flex-wrap: wrap;
     width: 100%;
     height: 500%;
-    margin: 5px 0 0 -13%;
+    margin: 10px 0% 0 0%;
+    /* background-color: #000000; */
+    padding: 0 0 0 0px;
 }
 
 .drinksBox li {
@@ -1103,7 +1476,7 @@ input[type="text"]::placeholder {
     width: 100%;
     height: 100%;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.684);
+    background-color: rgba(0, 0, 0, 0.879);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1114,7 +1487,7 @@ input[type="text"]::placeholder {
     width: 85%;
     max-width: 530px;
     max-height: 605px;
-    height: 420px;
+    height: 450px;
     background-color: var(--light-green);
     padding: 15px 20px;
     border-radius: 10px;
@@ -1193,7 +1566,7 @@ input[type="text"]::placeholder {
     position: fixed;
     float: left;
     text-align: center;
-    
+
 }
 
 .joTeamName>h4 {
@@ -1208,9 +1581,11 @@ input[type="text"]::placeholder {
 .joTeamName>input {
     width: 220px;
     height: 35px;
-    margin-left: -25px;
+    margin-left: -50px;
     border-radius: 5px;
     border: none;
+    margin-top: -20px;
+    font-size: large;
 }
 
 .joTeamName>input[type="text"] {
@@ -1226,13 +1601,16 @@ input[type="text"]::placeholder {
 .FJaniIcon {
     width: 130px;
     height: 110px;
-    margin-left: 195px;
+    margin-left: 100px;
+    margin-top: -20px;
     /* background-color: #cf121e; */
 }
 
+
+
 .joPlus {
-    margin-top: 10px;
-    margin-left: 50px;
+    margin-top: 5px;
+    margin-left: 5px;
     /* background-color: brown; */
     width: 400px;
 }
@@ -1246,10 +1624,6 @@ input[type="text"]::placeholder {
     /* background-color: blue; */
 }
 
-.joInfo h1 {
-    display: inline-block;
-    /* background-color: #cf121e; */
-}
 
 .joBtnM {
     width: 80%;
@@ -1300,7 +1674,7 @@ input[type="text"]::placeholder {
 .joTeamName {
     position: fixed;
     float: left;
-    margin-left: 80px;
+    margin-left: 60px;
     margin-top: 20px;
 }
 
@@ -1332,11 +1706,21 @@ input[type="text"]::placeholder {
     .drinksBox {
         overflow-x: hidden;
         overflow-y: hidden;
-        margin: -10% 0% 0% 2%;
-        padding: 40px 0 0 0px;
-        position: sticky;
+        display: flex;
+        flex-wrap: wrap;
+        /* position: absolute; */
+        /* top: 100%;
+        left: 80%; */
+        /* transform: translate(-50%, -50%); */
+        padding: 63px 0 0 0px;
+        /* position: sticky; */
         height: 600px;
-        width: 900px;
+        width: 1000px;
+        position: absolute;
+        top: 830px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* margin: -100px 0 0 13%; */
         /* background-color: #000000; */
     }
 
@@ -1360,12 +1744,54 @@ input[type="text"]::placeholder {
     }
 
     .drinksBox img:hover {
-        transform: scale(1.3);
+        transform: scale(1.0);
     }
 
     #drinks>div {
         visibility: hidden;
     }
+
+    .FJaniIcon {
+        margin-left: 200%;
+
+    }
+
+    .joPlus {
+        margin-top: 5px;
+        margin-left: 115px;
+
+    }
+
+    .joTeamName {
+        position: fixed;
+        float: left;
+        text-align: center;
+        margin-left: 150px;
+
+    }
+
+    .joTeamName>h4 {
+        margin-left: -50px;
+        margin-top: -40px;
+        background-color: var(--dark-green);
+        width: 100px;
+        padding: 2px 0 2px 0;
+        border-radius: 4px;
+    }
+
+    .joTeamName>input {
+        width: 220px;
+        height: 35px;
+        margin-left: -50px;
+        border-radius: 5px;
+        border: none;
+        margin-top: -20px;
+    }
+
+    .joTeamName>input[type="text"] {
+        text-align: center;
+    }
+
 }
 
 
@@ -1507,7 +1933,7 @@ input[type="text"]::placeholder {
 .drinkTitle {
     background-color: var(--dark-green);
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 15px;
     margin: 0px 0 0 10px;
     /* margin: 0 auto; */
     justify-content: center;
@@ -1517,17 +1943,18 @@ input[type="text"]::placeholder {
 
 .drinkTitle>h2 {
     color: var(--white);
-    padding: 5px 15px;
+    padding: 0px 15px;
     border-radius: 10px;
     font-size: medium;
 }
 
 .imgDrink>img {
     /* float: left; */
-    width: 50%;
-    max-width: 130px;
+    width: 100%;
+    max-width: 170px;
     /* background-color: blue; */
     margin-left: 25%;
+    margin-top: -5%;
 }
 
 .drinkCount {
@@ -1573,23 +2000,7 @@ input[type="text"]::placeholder {
     width: 90%;
 }
 
-.drinkClose {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    /* background-color: var(--dark-red); */
-    color: var(--white);
-    text-decoration: none;
-    left: 10px;
-    top: 10px;
-}
 
-.drinkClose>img {
-    width: 30px;
-    height: 30px;
-}
 
 @media screen and (min-width:532px) {
     .drinkscreen {
@@ -1649,26 +2060,13 @@ input[type="text"]::placeholder {
         display: inline-block;
     }
 
-    .drinkTitle {
-        background-color: var(--dark-green);
-        /* display: inline-block; */
-        border-radius: 5px;
-        margin: 100px 0px;
-        /* justify-content: center; */
-        /* text-align: center; */
-        /* z-index: 0; */
-    }
 
-    .drinkTitle>h2 {
-        color: var(--white);
-        padding: -5px 15px;
-        border-radius: 10px;
-    }
 
     .imgDrink>img {
         float: left;
-        width: 110%;
-        margin: 70px 0 0 10%;
+        width: 200px;
+        height: 190px;
+        margin: 80px 0 0 10%;
         /* background-color: #cf121e; */
 
     }
@@ -1716,23 +2114,10 @@ input[type="text"]::placeholder {
         width: 360px;
     }
 
-    .drinkClose {
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        left: 10px;
-        top: 10px;
-    }
-
-    .drinkClose>img {
-        width: 30px;
-        height: 30px;
-    }
 }
 
 
-.billScreen{
+.billScreen {
     position: fixed;
     top: 0;
     left: 0;
@@ -1745,13 +2130,30 @@ input[type="text"]::placeholder {
     align-items: center;
     /* display: none; */
 }
-.billBox{
+
+.billBox {
     width: 85%;
     /* max-width: 1300px; */
     /* max-height: 650px; */
-    height: 650px;
+    height: 480px;
     background-color: var(--light-green);
-    padding: 15px 20px;
+    padding: 15px 20px 40px 20px;
+    border-radius: 10px;
+    color: var(--white);
+    /* margin: 55px 0 0 7.5%; */
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    max-width: 600px;
+    margin: 30px 0 0 0;
+}
+.BAbillBox {
+    width: 85%;
+    /* max-width: 1300px; */
+    /* max-height: 650px; */
+    height: 530px;
+    background-color: var(--light-green);
+    padding: 15px 0px 0px 20px;
     border-radius: 10px;
     color: var(--white);
     /* margin: 55px 0 0 7.5%; */
@@ -1761,7 +2163,8 @@ input[type="text"]::placeholder {
     max-width: 600px;
     margin: 80px auto;
 }
-.FJborder{
+
+.FJborder {
     position: absolute;
     border: 0.4em solid var(--green);
     transition: all 0.3s 0.08s linear;
@@ -1771,7 +2174,8 @@ input[type="text"]::placeholder {
     height: 25px;
     transform: translate(-50%, -50%);
 }
-.FJborder1{
+
+.FJborder1 {
     position: absolute;
     border: 0.4em solid var(--dark-green);
     transition: all 0.3s 0.08s linear;
@@ -1781,12 +2185,14 @@ input[type="text"]::placeholder {
     height: 25px;
     transform: translate(-50%, -50%);
 }
+
 .joBtnL:hover .FJborder {
     display: block;
     width: 225px;
     height: 38px;
     border-radius: 50px;
 }
+
 .joBtnL2:hover .FJborder1 {
     display: block;
     width: 225px;
@@ -1794,7 +2200,7 @@ input[type="text"]::placeholder {
     border-radius: 50px;
 }
 
-.BAaniCon{
+.BAaniCon {
     width: 100%;
     margin: -50px 0 0 0%;
     justify-content: center;
@@ -1802,7 +2208,7 @@ input[type="text"]::placeholder {
     /* background-color: aqua; */
 }
 
-.BAaniCon>h1{
+.BAaniCon>h1 {
     width: 100%;
     margin: -30px 0 0 0%;
     justify-content: center;
@@ -1810,14 +2216,15 @@ input[type="text"]::placeholder {
     /* background-color: aqua; */
 }
 
-.BLaniCon{
+.BLaniCon {
     width: 100%;
     margin: -30px 0 0 0%;
     justify-content: center;
     text-align: center;
     /* background-color: aqua; */
 }
-.BLaniCon>img{
+
+.BLaniCon>img {
     /* background-color: #cf121e; */
     display: inline-block;
     width: 150px;
@@ -1825,204 +2232,374 @@ input[type="text"]::placeholder {
     /* position: absolute; */
     margin: -20px 0 0 -20px;
 }
-.BLaniCon>h1{
+
+.BLaniCon>h1 {
     /* background-color: blue; */
     display: inline-block;
     margin: 50px 0 0px -130px;
     font-size: 26px;
     /* position: absolute; */
 }
+
 .billBg{
     background-color: var(--white);
-    width: 90%;
-    height: 420px;
+    display: inline-block;
+    width: 100%;
+    height: 350px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
     margin-top: 20px;
     border-radius: 10px;
-    padding: 20px;
 }
-.billBg h1,
-.billBg h3{
-    color: var(--light-green);
-}
+
 .billBg h1{
-    font-size: 26px;
-    margin-top: -10px;
+    color: var(--dark-green);
 }
-.billBg:nth-child(2) h3{
+.billBg h3 {
+    background-color: var(--light-green);
+    margin-left: 0%;
+    padding:  0  200% 0 45%;
+}
+
+.billBg h1 {
+    font-size: 26px;
+    margin-top: 20px;
+}
+
+.billBg:nth-child(2) h3 {
     text-align: left;
 }
-.orderNum{
+
+.orderNum {
     /* background-color: #000000; */
     display: inline-block;
     margin-left: 0px;
 }
 
-.comeLeft{
+.comeLeft {
     /* text-align: left; */
     /* background-color: #000000; */
-    /* float: left; */
+    float: left;
     /* background-color: blue; */
-    margin-left: -50px;
+    margin-left: 0px;
     /* display: inline-block; */
 }
 
-.comeLeft h4{
+.comeLeft h4 {
     color: var(--dark-green);
     /* float: left; */
     margin-left: 50px;
     /* background-color: #cf121e; */
 }
-.comeLeft p{
+
+.comeLeft p {
     margin-left: 50px;
 }
-.choiceName{
-    text-align: left;
+
+.BAcomeLeft {
+    /* text-align: left; */
+    /* background-color: #000000; */
+    /* float: left; */
+    /* background-color: blue; */
+    margin-left: -50px;
+    margin-top: 120px;
+    /* display: inline-block; */
 }
-.choiceName>h4{
+
+.BAcomeLeft h4 {
+    color: var(--dark-green);
+    /* float: left; */
+    margin-left: 50px;
+    /* background-color: #cf121e; */
+}
+
+.BAcomeLeft p {
+    margin-left: 50px;
+}
+
+.choiceName {
+    text-align: center;
+}
+
+.choiceName>h4 {
     color: var(--dark-green);
     margin-top: 10px;
     display: inline-block;
     /* background-color: #000000; */
 }
-.billBg p{
+.BAchoiceName {
+    text-align: center;
+}
+
+.BAchoiceName>h4 {
+    color: var(--dark-green);
+    margin-top: 10px;
+    display: inline-block;
+    /* background-color: #000000; */
+}
+
+.billBg p {
     /* text-align: left; */
     color: var(--green);
     margin-top: 10px;
     /* background-color: #000000; */
-    margin-left: 30px;
+    /* margin-left: 20px; */
+    display: inline-block;
+}
+.BAbillBg{
+    /* background-color: var(--white); */
+    /* display: inline-block; */
+    width: 100%;
+    height: 350px;
+    /* overflow-y: scroll; */
+    /* overflow-x: hidden; */
+    margin-top: 20px;
+}
+.BAbillBg h1,
+.BAbillBg h3 {
+    color: var(--light-green);
+}
+
+.BAbillBg h1 {
+    font-size: 26px;
+    margin-top: -10px;
+}
+
+.BAbillBg:nth-child(2) h3 {
+    text-align: left;
+}
+.BAbillBg p {
+    /* text-align: left; */
+    color: var(--green);
+    margin-top: 10px;
+    /* background-color: #000000; */
+    /* margin-left: 20px; */
     display: inline-block;
 }
 
-.billHr{
+.billHr {
+    width: 110%;
+    height: 3px;
+    background-color: var(--light-green);
+    margin-left: 0px;
+}
+.BAbillHr {
     width: 100%;
     height: 3px;
     background-color: var(--light-green);
+    margin-left: 20px;
 }
 
 .straw,
 .bag,
 .payNumber,
 .payHowto,
-.payPay,
-.getGet{
-  float: left;
-  color: var(--dark-green);
-}
-.strawNbag{
-/* background-color: #000000; */
-width: 280px;
-height: 30px;
-}
-.straw>h4,
-.bag>h4{
-  float: left; 
-  margin-top: 0px;
-  /* background-color: rgb(0, 255, 4) */
-}
-.bag{
-    margin-left: 25%;
-}
-
-.payNumber>h4,
-.getGet>h4{
-   margin-left: 0%;
-   margin-top: 0%; 
-}
-.payNumber p{
-    margin-left: 20px;
+.getGet {
+    float: left;
+    color: var(--dark-green);
 }
 .payPay{
     margin-top: -20px;
+    margin-left: 50px;
+}
+.strawNbag {
     /* background-color: #000000; */
-    display: inline-block;
+    width: 180px;
+    height: 30px;
+    margin-top: -10px;
+    margin-left: 60px;
+}
+
+.straw>h4,
+.bag>h4 {
+    float: left;
+    margin-top: 0px;
+    /* background-color: rgb(0, 255, 4) */
+}
+
+.bag {
+    margin-left: 0%;
 }
 
 .getGet{
-    background-color: #000000;
-    width: 300px;
-    margin-left: -250px;
-    display: inline-block;
+    margin-top: 5%;
+    margin-left: 55px;
+    /* background-color: #00b7ff; */
+    width: 220px;
+}
+.getHowto{
+    margin-top: 27px;
+    margin-left: -50px;
+}
+.getToWhere{
+    margin-left: 25px;
+    /* background-color: #000000; */
+    margin-top: -20px;
+    color: var(--green);
+}
+.timeWhen{
+    /* background-color: #000000; */
+    margin-top: -10px;
+}
+.timeWhen>h4{
+margin-left: -50px ;
+}
+.timeWhen>span{
+    margin-top: -20px;
+    margin-left: 35px;
+    color: var(--green);
+    /* background-color: #000000; */
+    display: block;
+}
+.payNumber{
+    margin-left: 59px;
+    margin-top: 10px;
+    /* background-color: #000000; */
+    display: block;
+}
+.payNumber>h4,
+.getGet>h4 {
+    margin-left: 0%;
+    margin-top: 0%;
 }
 
-.payHowto>h4{
-/* background-color: #1512cf; */
-display: inline-block;
-margin-top: 10px;
-margin-left: 30px;
-}
-.payHowto>select{
-    background-color: var(--white);
-    margin-left: 5px;
-    margin-top: 4px;
-    border-radius: 5px;
-    width: 120px;
-    height: 20px;
+.payNumber span{
+    margin-left: 20px;
     color: var(--green);
-    border: none;
+    font-size:large;
 }
-.payHowto>select:hover{
+
+.payHowto{
+    margin-top: -20px;
+    /* background-color: #000000; */
+    height: 10px;
+}
+.payHowto>h4{
+ margin-left: 5px;
+ margin-top: 10px;
+ /* background-color: #000000; */
+}
+
+
+.payHowto>select {
+    background-color: var(--gray);
+    color: var(--white);
+    border: none;
+    margin-left: 45px;
+    margin-top: -20px;
+    display: block;
+    font-size: 12px;
+    padding: 3px;
+}
+
+.payHowto>select:hover {
     background-color: var(--light-green);
     color: var(--white);
 }
-.payHowto>select>option{
+
+.payHowto>select>option {
     text-align: center;
     color: var(--white);
     font-size: medium;
 }
 
 
-.payNumber>h4{
-    float: left;
-}
 
 
-.somethingBox{
+
+.somethingBox {
     text-align: left;
     /* margin-left: -258px; */
     /* background-color: #000000; */
     /* display: inline-block; */
     margin-top: 3px;
 }
-.somethingBox>h4{
+
+.somethingBox>h4 {
     color: var(--dark-green);
 }
 
-.billBtn{
+.billBtn {
     /* background-color: #cf121e; */
-    display:inline-block;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.BAbillBtn {
+    /* background-color: #cf121e; */
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.BLbtnM{
+.BLbtnM {
     width: 100px;
-    height: 40px;
-    background-color: var(--dark-green);
-    padding: 8px 0 5px 0;
+    height: 35px;
+    background-color: var(--green);
+    padding: 5px 0 2px 0;
     box-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.295);
-    margin: 5% 0 0 0%;
+    margin: -15% 0 0 3%;
     color: var(--white);
-    margin-left: 15px;
     border: none;
 }
+
 .BLborder {
     position: absolute;
     border: 0.4em solid var(--green);
     transition: all 0.3s 0.08s linear;
     margin-left: 50px;
-    margin-top: -20px;
+    margin-top: -20.5px;
     width: 95px;
-    height: 35px;
+    height: 30px;
     transform: translate(-50%, -50%);
 }
 
-.BLbtnM:hover .border {
+.BLbtnM:hover .BLborder {
     display: block;
-    width: 116px;
-    height: 50px;
+    width: 105px;
+    height: 40px;
     border-radius: 50px;
 }
-.BLbtnM>p{
+
+.BLbtnM>p {
     margin-top: 1px;
 }
+.BLbtnM1 {
+    width: 100px;
+    height: 35px;
+    background-color: var(--dark-green);
+    padding: 5px 0 2px 0;
+    box-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.295);
+    margin: -15% 0 0 3%;
+    color: var(--white);
+    border: none;
+}
+
+.BLborder1 {
+    position: absolute;
+    border: 0.4em solid var(--dark-green);
+    transition: all 0.3s 0.08s linear;
+    margin-left: 50px;
+    margin-top: -20.5px;
+    width: 95px;
+    height: 30px;
+    transform: translate(-50%, -50%);
+}
+
+.BLbtnM1:hover .BLborder1 {
+    display: block;
+    width: 105px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+.BLbtnM1>p {
+    margin-top: 1px;
+}
+
 .BLbtnR {
     border-radius: 1.5em;
 
@@ -2034,10 +2611,11 @@ margin-left: 30px;
     display: inline-block;
     /* margin-top: 10px; */
     /* background-color: #cf121e; */
-  
-   }
-   /* Input */
-   .cl-switch > input {
+
+}
+
+/* Input */
+.cl-switch>input {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -2056,9 +2634,10 @@ margin-left: 30px;
     transform: scale(1);
     pointer-events: none;
     transition: opacity 0.3s 0.1s, transform 0.2s 0.1s;
-   }
-   /* Track */
-   .cl-switch > span::before {
+}
+
+/* Track */
+.cl-switch>span::before {
     content: "";
     /* float: right; */
     display: inline-block;
@@ -2069,9 +2648,10 @@ margin-left: 30px;
     background-color: rgb(0, 0, 0, 0.38);
     vertical-align: top;
     transition: background-color 0.2s, opacity 0.2s;
-   }
-   /* Thumb */
-   .cl-switch > span::after {
+}
+
+/* Thumb */
+.cl-switch>span::after {
     content: "";
     position: absolute;
     top: 2px;
@@ -2082,23 +2662,24 @@ margin-left: 30px;
     background-color: #fff;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     transition: background-color 0.2s, transform 0.2s;
-   }
-   /* Checked */
-   .cl-switch > input:checked {
+}
+
+/* Checked */
+.cl-switch>input:checked {
     right: -10px;
     background-color: #85b8b7;
-   }
-   
-   .cl-switch > input:checked + span::before {
+}
+
+.cl-switch>input:checked+span::before {
     background-color: #85b8b7;
-   }
-   
-   .cl-switch > input:checked + span::after {
+}
+
+.cl-switch>input:checked+span::after {
     background-color: var(--dark-green);
     transform: translateX(16px);
-   }
-  
-   /* ----------------------- */
+}
+
+/* ----------------------- */
 
 .teamJO {
     position: fixed;
@@ -2115,14 +2696,16 @@ margin-left: 30px;
 }
 
 .teamPlus {
-    margin-left: 85px;
+    margin-left: 10px;
+    border: none;
+    margin-top: 15px;
 }
 
 .teamInfo {
     width: 85%;
     max-width: 530px;
     max-height: 605px;
-    height: 420px;
+    height: 480px;
     background-color: var(--light-green);
     padding: 15px 20px;
     border-radius: 10px;
@@ -2130,9 +2713,9 @@ margin-left: 30px;
 }
 
 .teamTitle {
-    
+
     display: inline-block;
-    margin-left: 200px;
+    margin-left: 120px;
 }
 
 .teamTitle>h1 {
@@ -2142,65 +2725,69 @@ margin-left: 30px;
 .teamName {
     background-color: var(--dark-green);
     display: inline-block;
-    margin-left: 190px;
-    margin-top: 15px;
-    padding: 5px 20px;
-    border-radius: 5px;
-    display: inline-block;
+    margin-left: 230px;
+    margin-top: 148x;
+    padding: 0px 10px;
+    border-radius: 15px;
     z-index: 10;
 }
 
 .teamBox {
-    width: 400px;
-    height: 200px;
+    width: 100%;
+    height: 260px;
     background-color: var(--white);
-    margin-left: 45px;
-    margin-top: -20px;
+    margin-left: 0px;
+    margin-top: 10px;
 
 }
+
+
 
 .teamSuss>h2 {
     color: var(--red);
     text-align: center;
     margin-top: 30px;
-    margin-left: 150px;
-   
+    margin-left: 50px;
+
     display: inline-block;
 }
 
 .teamSuss>p {
     color: var(--black);
     text-align: center;
+    margin-top: -10px;
 }
 
 .teamSuss>img {
-    
-    margin-left: 135px;
+
+    margin-left: 80px;
     margin-top: 15px;
 }
 
 .teamBtnL {
-    width: 80%;
+    width: 100%;
     position: relative;
-    padding: 0.5em 5em 0.5em 5em;
+    padding: 1em 5em 1em 5em;
     background: var(--dark-green);
     transition: all 0.1s linear;
     box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
     z-index: 1;
     color: var(--white);
     margin: 10px 0 0 0;
+    border: none;
 }
 
 .teamBtnL2 {
-    width: 80%;
+    width: 100%;
     position: relative;
-    padding: 0.5em 5em 0.5em 5em;
+    padding: 0.7em 5em 0.7em 5em;
     background: var(--dark-red);
     transition: all 0.1s linear;
     box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
     z-index: 1;
     color: var(--white);
-    margin: 10px 0 0 0;
+    margin: 15px 0 0 0;
+    border: none;
 }
 
 .friendJO {
@@ -2221,7 +2808,7 @@ margin-left: 30px;
     width: 85%;
     max-width: 530px;
     max-height: 605px;
-    height: 420px;
+    height: 500px;
     background-color: var(--light-green);
     padding: 15px 20px;
     border-radius: 10px;
@@ -2248,12 +2835,13 @@ margin-left: 30px;
 }
 
 .friendBtnM {
-    width: 80%;
-    margin: 2% 0 0 0;
-    padding: 2% 0 2% 0;
+    width: 90%;
+    margin: 0% 0 0 6px;
+    padding: 5% 5%;
     font-size: medium;
     text-align: left;
     border-radius: 8px;
+    border: none;
 }
 
 .getloc,
@@ -2265,45 +2853,52 @@ margin-left: 30px;
 }
 
 .friendBtnEdit {
-    margin-top: 10px;
+    margin-top: 40px;
     margin-left: -10px;
+    border: none;
 }
 
 .friendPlus {
+    width: 80%;
     /* background-color: blueviolet; */
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-left: 30px;
 }
 
 .friendBtnL {
-    width: 55%;
+    width: 100%;
     position: relative;
-    padding: 0.5em 5em 0.5em 5em;
+    padding: 0.8em 5em 0.8em 5em;
     background: var(--dark-green);
     transition: all 0.1s linear;
     box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
     z-index: 1;
     color: var(--white);
+    border: none;
 }
 
 .friendBtnL2 {
-    width: 55%;
+    width: 100%;
     position: relative;
-    padding: 0.5em 5em 0.5em 5em;
+    padding: 0.5em 3em 0.8em 3em;
     background: var(--dark-red);
     transition: all 0.1s linear;
     box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
     z-index: 1;
     color: var(--white);
+    border: none;
+    margin-top: -5px;
 }
 
 .friendName {
     position: fixed;
     float: left;
-    margin-top: 20px;
+    margin-top: -20px;
+    
 }
 
 .friendName>h4 {
-    margin-left: 40px;
+    margin-left: 20px;
     background-color: var(--dark-green);
     width: 100px;
     padding: 2px 0 2px 0;
@@ -2315,21 +2910,24 @@ margin-left: 30px;
     display: inline-block;
     padding: 3px 20px;
     border-radius: 5px;
-    margin-left: 30px;
+    margin-left: -90px;
+    margin-top: 15px;
 }
 
 .friendName p {
     font-size: x-small;
-    margin: 0 0 0 65px;
+    margin: 5px 0 0 10px;
     /* background-color: aqua; */
     display: inline-block;
 }
 
 .friendName>input {
-    width: 250px;
+    width: 280px;
     height: 35px;
-    margin-left: 40px;
+    margin-left: 15px;
     border-radius: 5px;
+    margin-top: -25px;
+    display: block;
 }
 
 .friendName>input[type="text"] {
@@ -2342,10 +2940,10 @@ margin-left: 30px;
 }
 
 .friendBox>img {
-    width: 180px;
-    height: 140px;
-    margin-left: 230px;
-    margin-top: 20px;
+    width: 130px;
+    height: 100px;
+    margin-left: 190px;
+    margin-top: 5px;
 }
 
 .fullScreen {
@@ -2373,6 +2971,7 @@ margin-left: 30px;
     z-index: 10;
     margin-top: -20px;
     margin-left: 20%;
+    text-align: center;
 
 }
 
@@ -2380,15 +2979,22 @@ margin-left: 30px;
     color: var(--white);
     /* display: flex; */
     justify-content: center;
-    align-items: center;
-    margin: 5px 0 0 25px;
+    /* align-items: center; */
+    text-align: center;
+    /* margin: 5px 0 0 0; */
+}
+
+.drinkName img {
+    display: flex;
+    margin-top: -75px;
+    margin-left: 200px;
 }
 
 .fullScreen .drinkInfo {
     width: 80%;
-    top: 60px;
+    top: 5px;
     max-width: 570px;
-    max-height: 800px;
+    max-height: 500px;
     height: 80%;
     background-color: var(--green);
     padding: 30px 20px;
@@ -2397,11 +3003,17 @@ margin-left: 30px;
     color: var(--white);
     overflow: scroll;
     position: relative;
+    overflow-x: hidden;
+}
+
+.sugarRang,
+.iceRang {
+    margin-left: -120px;
 }
 
 .drinkBox {
-    /* background-color: blueviolet; */
-    width: 30%;
+    /* background-color: rgba(137, 43, 226, 0.238); */
+    width: 100%;
     height: 235px;
     /* position: relative; */
     float: left;
@@ -2417,19 +3029,225 @@ margin-left: 30px;
 
 }
 
-.drinkImg1>img {
-    visibility: hidden;
-}
-
 .plusOther {
-    margin: 100% 0 0 0;
+    margin: 20% 0 0 20px;
     /* background-color: aqua; */
     display: inline-block;
 }
+.plusOther>h3 {
+    float: left;
+    margin-left: 15%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 3px 50px;
+    background-color: var(--light-green);
+}
+.drinkImg1{
+    display: none;
+}
 
-
+@media screen  and (min-width:768px) {
+    .billBg{
+        background-color: var(--white);
+        display: inline-block;
+        width: 100%;
+        height: 350px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin-top: 20px;
+    }
+    
+    .billBg h1{
+        color: var(--dark-green);
+    }
+    .billBg h3 {
+        background-color: var(--light-green);
+        margin-left: 0%;
+        padding:  0  200% 0 47%;
+    }
+    
+    .billBg h1 {
+        font-size: 26px;
+        margin-top: 20px;
+    }
+    
+    .billBg:nth-child(2) h3 {
+        text-align: left;
+    }
+    .payHowto{
+        margin-top: -10px;
+        /* background-color: #000000; */
+        display: inline-block;
+        height: 10px;
+        margin-left: -50px;
+    }
+    .payHowto>h4{
+     display: inline-block;
+     margin-top: 10px;
+     /* background-color: #000000; */
+    }
+    
+    
+    .payHowto>select {
+        background-color: var(--gray);
+        color: var(--white);
+        border: none;
+        margin-left: 98px;
+        margin-top: -20px;
+        display: block;
+        font-size: 12px;
+        /* padding: 3px; */
+    }
+    
+    .payHowto>select:hover {
+        background-color: var(--light-green);
+        color: var(--white);
+    }
+    
+    .payHowto>select>option {
+        text-align: center;
+        color: var(--white);
+        font-size: medium;
+    }
+    .getGet{
+        margin-top: -6.5%;
+        margin-left: 55px;
+        /* background-color: #00b7ff; */
+        width: 220px;
+    }
+    .payNumber{
+        margin-left: 298px;
+        margin-top: 10px;
+        /* background-color: #000000; */
+        display: block;
+    }
+    .payNumber>h4,
+    .getGet>h4 {
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+    
+    .payNumber span{
+        margin-left: 20px;
+        color: var(--green);
+        font-size:large;
+    }
+    .getToWhere>span{
+        color: var(--green);
+    }
+}
 
 @media screen and (min-width:600px) {
+
+    .teamJO {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.817);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* display: none; */
+    }
+
+    .teamPlus {
+        margin-left: 90px;
+        border: none;
+        margin-top: 20px;
+    }
+
+    .teamInfo {
+        width: 85%;
+        max-width: 530px;
+        max-height: 605px;
+        height: 480px;
+        background-color: var(--light-green);
+        padding: 15px 20px;
+        border-radius: 10px;
+        color: var(--white);
+    }
+
+    .teamTitle {
+
+        display: inline-block;
+        margin-left: 230px;
+    }
+
+    .teamTitle>h1 {
+        display: inline-block;
+    }
+
+    .teamName {
+        background-color: var(--dark-green);
+        display: inline-block;
+        margin-left: 230px;
+        margin-top: 148x;
+        padding: 0px 10px;
+        border-radius: 15px;
+        z-index: 10;
+    }
+
+    .teamBox {
+        width: 400px;
+        height: 260px;
+        background-color: var(--white);
+        margin-left: 68px;
+        margin-top: 10px;
+
+    }
+
+
+
+    .teamSuss>h2 {
+        color: var(--red);
+        text-align: center;
+        margin-top: 30px;
+        margin-left: 98px;
+
+        display: inline-block;
+    }
+
+    .teamSuss>p {
+        color: var(--black);
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    .teamSuss>img {
+
+        margin-left: 128px;
+        margin-top: 15px;
+    }
+
+    .teamBtnL {
+        width: 80%;
+        position: relative;
+        padding: 0.5em 5em 0.5em 5em;
+        background: var(--dark-green);
+        transition: all 0.1s linear;
+        box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
+        z-index: 1;
+        color: var(--white);
+        margin: 10px 0 0 0;
+        border: none;
+    }
+
+    .teamBtnL2 {
+        width: 80%;
+        position: relative;
+        padding: 0.5em 5em 0.5em 5em;
+        background: var(--dark-red);
+        transition: all 0.1s linear;
+        box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
+        z-index: 1;
+        color: var(--white);
+        margin: 15px 0 0 0;
+        border: none;
+    }
+
     .drinkName {
         /* position: absolute; */
         width: 170px;
@@ -2439,16 +3257,22 @@ margin-left: 30px;
         /* margin: 0 auto; */
         z-index: 10;
         margin-top: -20px;
-        margin-left: 160px;
-
+        margin-left: 200px;
+    }
+    .drinkName img{
+        margin-left: 330px;
+    }
+    .drinkName>h2{
+        /* background-color: #000000; */
+        padding-top: 2px;
     }
 
     .sugarBar,
     .iceBar {
         /* background-color: #000000; */
-        width: 175%;
+        width: 65%;
         /* display: inline-block; */
-        margin: 0 0 0 15px;
+        margin: 30px 0 0 5px;
         float: left;
     }
 
@@ -2461,7 +3285,7 @@ margin-left: 30px;
 
     .plusOther>h3 {
         float: left;
-        margin-left: -10px;
+        margin-left: 50px;
 
         /* background-color: darkgoldenrod; */
     }
@@ -2470,24 +3294,253 @@ margin-left: 30px;
         /* background-color: #cf121e; */
         display: inline-block;
         margin: -250px 0 0 240px;
+        
+    }
+    
+    .drinkImg>img{
+        width: 120%;
+        /* background-color: #000000; */
+        
     }
 
-    .drinkImg1>img {
+    .drinkImg{
+        background-color: blue;
+       float: left;
+       width: 130px;
+       margin-left: 50px;
+       display: none;
+    }
+
+
+
+    .friendJO {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.817);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* display: none; */
+    }
+
+    .friendInfo {
+        width: 85%;
+        max-width: 530px;
+        max-height: 605px;
+        height: 470px;
+        background-color: var(--light-green);
+        padding: 15px 20px;
+        border-radius: 10px;
+        color: var(--white);
+    }
+
+    .friendInfo>div {
+        /* background-color: aqua; */
+        justify-content: center;
+        text-align: center;
+    }
+
+    .FJheart {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        margin-top: 10px;
         /* background-color: blue; */
-        width: 280px;
     }
 
-    .drinkImg1>img {
-        visibility: visible;
+    .friendInfo h1 {
+        display: inline-block;
+        /* background-color: #cf121e; */
     }
 
-    .drinkImg>img {
-        display: none;
+    .friendBtnM {
+        width: 80%;
+        margin: 2% 0 0 0;
+        padding: 2% 0 2% 0;
+        font-size: medium;
+        text-align: left;
+        border-radius: 8px;
+
+    }
+
+    .getloc,
+    .getTime {
+        color: #005743;
+        font-weight: bold;
+        font-size: 100%;
+        margin-left: 3%;
+    }
+
+    .friendBtnEdit {
+        margin-top: 10px;
+        margin-left: -10px;
+    }
+
+    .friendPlus {
+        /* background-color: blueviolet; */
+        margin-top: 10px;
+    }
+
+    .friendBtnL {
+        width: 55%;
+        position: relative;
+        padding: 0.5em 5em 0.5em 5em;
+        background: var(--dark-green);
+        transition: all 0.1s linear;
+        box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
+        z-index: 1;
+        color: var(--white);
+    }
+
+    .friendBtnL2 {
+        width: 55%;
+        position: relative;
+        padding: 0.5em 5em 0.5em 5em;
+        background: var(--dark-red);
+        transition: all 0.1s linear;
+        box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
+        z-index: 1;
+        color: var(--white);
+    }
+
+    .friendName {
+        position: fixed;
+        float: left;
+        margin-top: -25px;
+    }
+
+    .friendName>h4 {
+        margin-left: 40px;
+        background-color: var(--dark-green);
+        width: 100px;
+        padding: 2px 0 2px 0;
+        border-radius: 4px;
+    }
+
+    .friendName>h5 {
+        background-color: var(--green);
+        display: inline-block;
+        padding: 3px 20px;
+        border-radius: 5px;
+        margin-left: 30px;
+        margin-top: -10px;
+    }
+
+    .friendName p {
+        font-size: x-small;
+        margin: 0 0 0 65px;
+        /* background-color: aqua; */
+        display: inline-block;
+    }
+
+    .friendName>input {
+        width: 250px;
+        height: 35px;
+        margin-left: 40px;
+        border-radius: 5px;
+        margin-top: -30px;
+    }
+
+    .friendName>input[type="text"] {
+        text-align: center;
+    }
+
+    .friendBox {
+        /* background-color: blue; */
+        height: 120px;
+    }
+
+    .friendBox>img {
+        width: 180px;
+        height: 140px;
+        margin-left: 230px;
+        margin-top: 20px;
     }
 
 }
 
-.sugarBar>img,
+.addrGo {
+    margin-left: 40px;
+}
+
+.sugarBar>img {
+    margin: 15px 0 0 25px;
+    padding: 5px;
+    width: 60px;
+    float: left;
+    /* background-color: #cf121e; */
+}
+
+.rangColor[type="range"],
+.rangColor[type="range"]::-webkit-slider-runnable-track,
+.rangColor[type="range"]::-webkit-slider-thumb,
+.rangColorI[type="range"],
+.rangColorI[type="range"]::-webkit-slider-runnable-track,
+.rangColorI[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+}
+
+.rangColor[type="range"],
+.rangColorI[type="range"]{
+    height: 30px;
+    width: 200px;
+    /* overflow: hidden; */
+    cursor: pointer;
+    /* 滑鼠放上會改變鼠標樣式 */
+    /* background-color: grey; */
+    /* 我的目標樣式 */
+    margin: 0 10px 0;
+    padding: 0 10px;
+    box-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.542);
+}
+
+.rangColor[type="range"]::-webkit-slider-runnable-track {
+    height: 12px;
+    width: 180px;
+    border-radius: 4px;
+    background: linear-gradient(to right,#ffe1e1, #ff3542);
+    /* border:2px solid #d83e46; */
+}
+.rangColorI[type="range"]::-webkit-slider-runnable-track {
+    height: 12px;
+    width: 180px;
+    border-radius: 4px;
+    background: linear-gradient(to right,#ff3542 ,#ffe1e1 ,#00b7ff );
+    /* border:2px solid #d83e46; */
+}
+
+
+.rangColor[type="range"]::-webkit-slider-thumb {
+    position: relative;
+    height: 25px;
+    width: 12px;
+    margin-top: -7px;
+    background-color: var(--red);
+    border-radius: 30%;
+    border: 2px solid var(--white);
+    box-shadow: 0.1em 0.1em 0.1em rgba(54, 2, 2, 0.327);
+}
+.rangColorI[type="range"]::-webkit-slider-thumb {
+    position: relative;
+    height: 25px;
+    width: 12px;
+    margin-top: -7px;
+    background-color: #54b2ff95;
+    border-radius: 30%;
+    border: 2px solid var(--white);
+    box-shadow: 0.1em 0.1em 0.1em rgba(54, 2, 2, 0.327);
+}
+
+
+.rangeVule {
+    margin-top: -20px;
+}
+
 .iceBar>img {
     margin: 15px 0 0 10px;
     padding: 5px;
@@ -2496,26 +3549,26 @@ margin-left: 30px;
     /* background-color: #cf121e; */
 }
 
+.sugarOut {
+    /* background-color: #000000; */
+    margin: -40px 0 0 30px;
+
+}
+
 .addSugar,
 .addIce {
     display: inline-block;
     /* background-color: #ff3542; */
-    margin: 10px 0 0 7px;
+    margin: 20px 0 0 7px;
 }
 
-.addSugar>h3,
-.addIce>h3 {
-    margin-left: 45px;
+.addSugar>h2,
+.addIce>h2 {
+    margin-left: 30px;
 
 }
 
-.drinkImg>img {
-    width: 200%;
-    /* background-color: #92d279; */
-    /* display: flex; */
-    /* z-index: 0; */
-    margin: -10px 0 0 80%;
-}
+
 
 .addSugar span,
 .addIce span {
@@ -2523,17 +3576,41 @@ margin-left: 30px;
     background-color: var(--white);
     padding: 2px 10px;
     border-radius: 5px;
+    margin: 0 0 0 10px;
+    box-shadow: 0.1em 0.1em 0.1em rgba(54, 2, 2, 0.327);
 }
 
 .sizeBox {
     /* background-color: #cf121e; */
     margin-top: 20px;
-    display: inline-block;
-    width: 228px;
+    /* display: inline-block; */
+    width: 250px;
+    float: left;
+}
+
+@media screen and (min-width:768px){
+    .sizeBox {
+        /* background-color: #cf121e; */
+        margin-top: 20px;
+        /* display: inline-block; */
+        width: 200px;
+    }
+    .drinkSize{
+        float: left;
+        /* background-color: #cf121e; */
+    }
+    .webDrink{
+        margin: -280px 0 0 300px;
+        /* background-color: #00b7ff; */
+        /* display: inline-block; */
+    }
+    .addIce{
+        margin-left: 10px;
+    }
 }
 
 .sizeText {
-    margin: 0 0 0 75px;
+    margin: 0 0 0 85px;
 }
 
 .sizeText>h3 {
@@ -2561,7 +3638,7 @@ margin-left: 30px;
     margin-top: -20px;
 }
 
-.drinkSize input[type=radio] {
+.drinkSize>input[type=radio] {
     accent-color: var(--dark-green);
 
 }
@@ -2572,32 +3649,26 @@ margin-left: 30px;
     background-color: var(--white);
     /* position: fixed; */
     border-radius: 20px;
-    margin: 0 0 0 20px;
+    margin: 0 0 0 25px;
 }
 
 .radio1 {
-    margin: -8px 0 0 70px;
+    margin: -8px 0 0 80px;
 }
 
 .radio2 {
-    margin: -8px 0 0 150px;
+    margin: -8px 0 0 160px;
 }
 
 
 
-.plusOther>h3 {
-    float: left;
-    margin-left: 18%;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    padding: 3px 50px;
-    background-color: var(--dark-green);
-}
+
 
 .plusList {
     display: inline-block;
-    /* margin-left: 15px; */
+    margin-left: -35px;
     /* background-color: #cf121e; */
+    width: 300px;
 }
 
 .plusList>div {
@@ -2609,6 +3680,7 @@ margin-left: 30px;
 .plusList input[type="radio"] {
     width: 30px;
     height: 30px;
+    margin-left: -2px;
     accent-color: var(--dark-red);
 }
 
@@ -2659,20 +3731,32 @@ margin-left: 30px;
 
 .cupCount {
     display: inline-block;
-    background-color: var(--white);
+    background-color: var(--green);
     margin: 0px 0 0 10px;
+    border-radius: 5%;
 }
-
+.cupB{
+    margin-left: 20px;
+    /* background-color: #000000; */
+}
+.priceArea{
+    margin-left: -15px;
+}
 
 .minusBtn,
 .plusBtn {
     width: 30px;
-    height: 30px;
+    height: 34.5px;
     color: var(--dark-green);
     background-color: var(--white);
     font-size: large;
     margin-top: -5px;
     cursor: pointer;
+    border: none;
+    border-radius: 0;
+}
+.plusBtn{
+    margin-left: -10px;
 }
 
 .qtyNum {
@@ -2681,29 +3765,33 @@ margin-left: 30px;
     text-align: center;
     background-color: var(--white);
     font-size: medium;
+    border: none;
+    border-radius: 0;
+    margin-left: -10px;
 }
 
 .addTolist {
     /* background-color: darkgreen; */
-    margin: 0 0 0 25%;
+    margin: -10px 0 0 25%;
     display: inline-block;
 
 }
 
 .AbtnL {
     width: 100%;
+    height: 50px;
     position: relative;
-    margin: auto;
+    /* margin: auto; */
     padding: 0.5em 3em 0.5em 3em;
     border: none;
     background: var(--light-green);
     transition: all 0.1s linear;
     box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
-    /* margin: 2% 0px 0% 20%; */
 }
 
 .AbtnL>h3 {
     color: var(--white);
+    margin-top: 5px;
 }
 
 .AbtnL .Aborder {
@@ -2712,15 +3800,15 @@ margin-left: 30px;
     transition: all 0.3s 0.08s linear;
     top: 50%;
     left: 50%;
-    width: 100%;
-    height: 100%;
+    width: 92%;
+    height: 80%;
     transform: translate(-50%, -50%);
 }
 
 .AbtnL:hover .Aborder {
     display: block;
-    width: 115%;
-    height: 155%;
+    width: 104%;
+    height: 115%;
 }
 
 .AbtnL:active {
@@ -2804,31 +3892,7 @@ margin-left: 30px;
 
 }
 
-.drinkTitle {
-    background-color: var(--dark-green);
-    display: inline-block;
-    border-radius: 5px;
-    margin: 0px 0 0 10px;
-    /* margin: 0 auto; */
-    justify-content: center;
-    text-align: center;
-    /* z-index: 0; */
-}
 
-.drinkTitle>h2 {
-    color: var(--white);
-    padding: 5px 15px;
-    border-radius: 10px;
-    font-size: medium;
-}
-
-.imgDrink>img {
-    /* float: left; */
-    width: 50%;
-    max-width: 130px;
-    /* background-color: blue; */
-    margin-left: 25%;
-}
 
 .drinkCount {
     background-color: var(--light-green);
@@ -2882,7 +3946,7 @@ margin-left: 30px;
     /* background-color: var(--dark-red); */
     color: var(--white);
     text-decoration: none;
-    left: 10px;
+    left: 250px;
     top: 10px;
 }
 
@@ -2891,6 +3955,82 @@ margin-left: 30px;
     height: 30px;
 }
 
+.billScroll {
+    /* overflow: scroll; */
+    overflow-x: hidden;
+    background-color: var(--white);
+    width: 85%;
+    height: 300px;
+    min-width: 160px;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    color: var(--dark-green);
+}
+
+.getPoint>span {
+    margin-left: 50px;
+}
+@media screen and (min-width:768px){
+    .drinkCup {
+        margin: -20px 0 0 50px;
+    
+    }
+    .cupCount {
+        /* display: inline-block; */
+        background-color: var(--green);
+        margin: -15px 0 0 10px;
+        border-radius: 5%;
+        float: left;
+    }
+    .priceArea>p{
+        /* background-color: #000000; */
+        margin-left: 270px;
+        margin-top: 30px;
+    }
+    .AbtnL {
+        width: 130%;
+        height: 50px;
+        position: relative;
+        margin: 0 0 0 100px;
+        padding: 0.5em 3em 0.5em 3em;
+        border: none;
+        background: var(--light-green);
+        transition: all 0.1s linear;
+        box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
+    }
+    
+    .AbtnL>h3 {
+        color: var(--white);
+        margin-top: 5px;
+    }
+    
+    .AbtnL .Aborder {
+        position: absolute;
+        border: 0.45em solid var(--light-green);
+        transition: all 0.3s 0.08s linear;
+        top: 49%;
+        left: 50%;
+        width: 92%;
+        height: 80%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .AbtnL:hover .Aborder {
+        display: block;
+        width: 104%;
+        height: 115%;
+    }
+    
+    .AbtnL:active {
+        transform: scale(0.95);
+        background-color: var(--white);
+    }
+    
+    .AbtnR {
+        border-radius: 3em;
+    }
+}
 @media screen and (min-width:532px) {
     .drinkscreen {
         position: fixed;
@@ -2927,7 +4067,7 @@ margin-left: 30px;
         /* height: 360px; */
         background-color: var(--white);
         border-radius: 10px;
-        /* margin-left: 13px; */
+        margin-left: 13px;
         /* position: relative; */
     }
 
@@ -2952,7 +4092,7 @@ margin-left: 30px;
     .drinkTitle {
         background-color: var(--dark-green);
         /* display: inline-block; */
-        border-radius: 5px;
+        border-radius: 15px;
         margin: 100px 0px;
         /* justify-content: center; */
         /* text-align: center; */
@@ -2961,17 +4101,10 @@ margin-left: 30px;
 
     .drinkTitle>h2 {
         color: var(--white);
-        padding: -5px 15px;
-        border-radius: 10px;
+        padding: 0px 15px;
     }
 
-    .imgDrink>img {
-        float: left;
-        width: 110%;
-        margin: 70px 0 0 10%;
-        /* background-color: #cf121e; */
 
-    }
 
     .drinkCount {
         background-color: var(--light-green);
@@ -2990,7 +4123,16 @@ margin-left: 30px;
         display: inline-block;
         margin-left: 5px;
         margin-top: 40px;
+        /* color:var(--dark-red); */
+        padding-right: 10%;
+    }
 
+    .lcup:hover {
+        background-color: var(--dark-red);
+    }
+
+    .lCup p {
+        color: var(--white)
     }
 
     .mCup {
@@ -3013,7 +4155,7 @@ margin-left: 30px;
     .drinkin>p {
         color: var(--white);
         margin: 15px 0 0 20px;
-        width: 360px;
+        width: 450px;
     }
 
     .drinkClose {
@@ -3021,7 +4163,7 @@ margin-left: 30px;
         width: 30px;
         height: 30px;
         line-height: 30px;
-        left: 10px;
+        left: 435px;
         top: 10px;
     }
 
@@ -3031,35 +4173,80 @@ margin-left: 30px;
     }
 }
 
-@media screen and ( min-width:560px) {
-    .billHr{
+@media screen and (min-width:560px) {
+    .billHr {
         width: 110%;
         height: 3px;
-        max-width: 490px;
+        max-width: 700px;
         background-color: var(--light-green);
         margin-left: -10px;
-        
+
     }
-    .billB{
-        margin: 0 0 0 40px;
+    .BRbillHr {
+        width: 110%;
+        height: 3px;
+        max-width: 600px;
+        background-color: var(--light-green);
+        margin-left: -10px;
+
     }
-   
-    .outHere{
-        margin:0 0 0 30px;
+
+    .billB {
+        /* margin: 0 0 0 40px; */
+        /* background-color: #000000; */
+        display: inline-block;
+    }
+
+    .billB h3 {
+        margin-left: -35px;
+    }
+
+    .outHere {
+        margin: 0 0 0 30px;
         position: relative;
         /* background-color: #000000; */
     }
-    .comeLeft h4{
+
+    .comeLeft h4 {
         color: var(--dark-green);
-        float: left;
+        /* float: left; */
         margin-left: 50px;
         /* background-color: #cf121e; */
     }
-    .choiceName{
+    .BAcomeLeft h4 {
+        color: var(--dark-green);
+        /* float: left; */
+        margin-left: 50px;
+        /* background-color: #cf121e; */
+    }
+
+    .choiceName {
+        /* float: left; */
+        margin-left: 0px;
+        /* background-color: #000000; */
+    }
+
+    .choiceName>p {
+        margin-left: 30px;
+    }
+    .BAchoiceName {
         float: left;
         margin-left: -20px;
     }
-    .choiceName>p{
+
+    .BAchoiceName>p {
         margin-left: 30px;
+    }
+
+    .billScroll {
+        /* overflow-y: hidden;
+        overflow-x: hidden; */
+        background-color: var(--white);
+        width: 90%;
+        height: 280px;
+        margin-top: 20px;
+        border-radius: 10px;
+        padding: 15px 0 15px 35px;
+        color: var(--dark-green);
     }
 }

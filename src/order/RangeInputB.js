@@ -27,8 +27,9 @@ class RangeInput extends Component {
     const { value } = this.state;
 
     return (
-      <div>
+      <div className='sugarOut'>
         <label htmlFor="rangeInput">{label}</label>
+        <pre><p>    少                多</p></pre>
         <input
           type="range"
           id="rangeInput"
@@ -38,7 +39,9 @@ class RangeInput extends Component {
           value={this.state.value}
           step={step}
           onChange={this.handleChange}
+          className="rangColorI"
         />
+        <br />
         <span>{valueToText[value] && valueToText[value]}</span>
       </div>
     );

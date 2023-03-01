@@ -17,7 +17,7 @@ class UnitPrice extends Component {
     if (this.state.qty > 0) {
       this.setState(prevState => ({
         qty: prevState.qty - 1,
-      }),this.calculateTotalAmount);
+      }), this.calculateTotalAmount);
     }
   };
   calculateTotalAmount = () => {
@@ -34,31 +34,31 @@ class UnitPrice extends Component {
   }
   render() {
     return (
-      <div>
-        杯數:
+      <div className='cupB'>
         <div className="cupCount">
-        <input
-          type="button"
-          value="-"
-          className="minusBtn"
-          onClick={this.handleMinusClick}
-        />
-        <input
-          type="text"
-          name="quantity"
-          value={this.state.qty}
-          className="qtyNum"
-          readOnly
-        />
-        <input
-          type="button"
-          value="+"
-          className="plusBtn"
-          onClick={this.handlePlusClick}
-        />
-      </div>
-        <p>單價: {this.state.unitPrice}元</p>
-        <p>金額: {this.state.totalAmount}元</p>
+        杯數:
+          <input
+            type="button"
+            value="-"
+            className="minusBtn"
+            onClick={this.handleMinusClick}
+          />
+          <input
+            type="text"
+            name="quantity"
+            value={this.state.qty}
+            className="qtyNum"
+            readOnly
+          />
+          <input
+            type="button"
+            value="+"
+            className="plusBtn"
+            onClick={this.handlePlusClick}
+          />
+        </div>
+        <pre className='priceArea'><p>  單價: {this.state.unitPrice}元   金額: {this.state.totalAmount}元</p></pre>
+
       </div>
     );
   }
