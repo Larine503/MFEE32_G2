@@ -6,24 +6,24 @@ class PassWord extends Component {
 
     state = {
         mtel: '0900345678',
-        currentPassword: 'abc',
-        newPassword: 'sad',
-        confirmPassword: 'sad',
+        currentPassword: '',
+        newPassword: '',
+        confirmPassword: '',
         error: ''
     }
-    async componentDidMount() {
-        await axios.get('http://localhost:8000/login', { withCredentials: true }
-        ).then((response) => {
-            if (!response.data.loggedIn) {
-                window.location.href = '/login';
-            } else {
-                // 用户已登录
-                var newState = { ...this.state };
-                newState.mtel = response.data.mtel;
-                this.setState(newState);
-            }
-        });
-    }
+    // async componentDidMount() {
+    //     await axios.get('http://localhost:8000/login', { withCredentials: true }
+    //     ).then((response) => {
+    //         if (!response.data.loggedIn) {
+    //             window.location.href = '/login';
+    //         } else {
+    //             // 用户已登录
+    //             var newState = { ...this.state };
+    //             newState.mtel = response.data.mtel;
+    //             this.setState(newState);
+    //         }
+    //     });
+    // }
 
     render() {
         return (
@@ -32,11 +32,11 @@ class PassWord extends Component {
                     <div className="passwordForm">
                         <form className="passwordForm-T" action="">
                             <label htmlFor="">原本密碼:<br />
-                                <input type="text" name='currentPassword' value={this.state.currentPassword} onChange={this.currentChange} /></label><br />
+                                <input type="password" name='currentPassword' value={this.state.currentPassword} onChange={this.currentChange} /></label><br />
                             <label htmlFor="">變更密碼:<br />
-                                <input type="text" name='newPassword' value={this.state.newPassword} onChange={this.newChange} /></label><br />
+                                <input type="password" name='newPassword' value={this.state.newPassword} onChange={this.newChange} /></label><br />
                             <label htmlFor="">新密碼:<br />
-                                <input type="text" name='mpid' value={this.state.confirmPassword} onChange={this.confirmChange} /></label><br />
+                                <input type="password" name='mpid' value={this.state.confirmPassword} onChange={this.confirmChange} /></label><br />
                             <div className="passwordForm-D">
                                 <button className="button " type='button' onClick={this.okClick}>
                                     確認

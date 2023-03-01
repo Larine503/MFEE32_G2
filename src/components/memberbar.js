@@ -6,6 +6,7 @@ import Member from '../components/member.js';
 import PassWord from '../components/password.js';
 import OderList from '../components/orderlist.js';
 import Footer from '../components/footer.js';
+import MemberBarBg from '../images/home/data_bg.jpg';
 
 
 class MemberBar extends Component {
@@ -14,11 +15,12 @@ class MemberBar extends Component {
         return (
             <div>
                 <div><Index /></div>
+                <div className='dataBg'><img src={ MemberBarBg}></img></div>
                 <div className="dataDiv">
                     <div className="dataMenu">
-                        <div className="dataMenu-d btn"><a href="/member/edit">會員資料</a></div>
-                        <div className="dataMenu-d btn"><a href="/member/orderList/drinklist">歷史訂單</a></div>
-                        <div className="dataMenu-d btn"><a href="/member/password">變更密碼</a></div>
+                        <a className="dataMenu-d btn" href="/member/edit">會員資料</a>
+                        <a className="dataMenu-d btn" href="/member/orderList/drinklist">歷史訂單</a>
+                        <a className="dataMenu-d btn" href="/member/password">變更密碼</a>
                     </div>
                     <BrowserRouter>
                     <div className="dataImg">
