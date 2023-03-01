@@ -183,6 +183,42 @@ app.put("/member/edit", function (req, res) {
         }
     );
 });
+//會員密碼修改
+app.post("/password", (req, res) => {
+    db.query("select * from member where mtel= ?; ",
+        req.body.mtel,
+        (err, result) => {
+            if (err) {
+                res.send({ err: err });
+            }
+            if (result.length > 0) {
+
+                bcrypt.compare(req.body.currentPassword, result[0].mpid, (error, response) => {
+                    if (response) {
+                        res.json({ success: true });
+                    } else {
+                        res.send({ success: false, message: "原密碼錯誤!" });
+                    }
+                });
+            }
+        }
+    );
+});
+app.put("/password", function (req, res) {
+    const mtel = req.body.mtel;
+    const mpid = req.body.confirmPassword;
+    bcrypt.hash(mpid, saltRounds, (err, hash) => {
+        if (err) {
+            console.log(err)
+        }
+        db.query("update member set pid=?, mpid = ? where mtel = ?",
+            [mpid, hash, mtel],
+            (err, result) => {
+                console.log(result);
+            }
+        );
+    });
+});
 
 //葉的門市據點-----
 app.get('/storeList', (req, res) => {
