@@ -58,7 +58,7 @@ class News extends Component {
                     <div className="allCards">
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/latestNews/20230209.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -79,7 +79,7 @@ class News extends Component {
 
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/latestNews/20230209-1.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -99,7 +99,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/latestNews/20230205.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -117,7 +117,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/latestNews/20230118.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -140,7 +140,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/latestNews/20230103.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -159,7 +159,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/latestNews/20221230.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -179,7 +179,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/latestNews/20221206.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -198,7 +198,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/latestNews/20221115.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -217,7 +217,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/latestNews/20221104.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -235,7 +235,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/latestNews/20221101.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -252,7 +252,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/latestNews/20221027.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -276,7 +276,7 @@ class News extends Component {
 
 
 
-                    <div className="pageCenter">
+                    {/* <div className="pageCenter">
 
                         <div className="arrow">
                             <i className="fa-solid fa-caret-left fa-2x"></i>
@@ -294,7 +294,7 @@ class News extends Component {
                             <i className="fa-solid fa-caret-right fa-2x"></i>
                         </div>
 
-                    </div>
+                    </div> */}
 
                 </div>
 
@@ -306,7 +306,7 @@ class News extends Component {
                     <div className="allCards">
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/products/20230203.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -326,7 +326,7 @@ class News extends Component {
 
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/products/20230130.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -348,7 +348,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/products/20230130-1.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -370,7 +370,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/products/20230116.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -389,7 +389,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/products/20221222.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -412,7 +412,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/products/20221220.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -437,7 +437,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/products/20221214.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -455,7 +455,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/products/20221212.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -479,7 +479,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/products/20221201.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -500,7 +500,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/products/20221201-1.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -520,7 +520,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/products/20221122.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -542,7 +542,7 @@ class News extends Component {
                         </div>
                         <div className="card">
                             <div className="flexBox">
-                                <div className="imgBox">
+                                <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/products/20221118.jpg")} className="cardImg" alt=''/></div>
                                 </div>
                                 <div className="rightSide">
@@ -568,7 +568,7 @@ class News extends Component {
                     </div>
 
 
-                    <div className="pageCenter">
+                    {/* <div className="pageCenter">
 
                         <div className="arrow">
                             <i className="fa-solid fa-caret-left fa-2x"></i>
@@ -584,7 +584,7 @@ class News extends Component {
                             <i className="fa-solid fa-caret-right fa-2x"></i>
                         </div>
 
-                    </div>
+                    </div> */}
 
 
 
