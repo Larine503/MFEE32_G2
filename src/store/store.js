@@ -17,7 +17,7 @@ class Store extends Component {
             activeTab: null,
             storeList: [],
             countyList: [],
-            // showCountyTab: false
+            showCountyTab: false,
         };
         this.defaultOpenRef = React.createRef();
     }
@@ -67,32 +67,47 @@ class Store extends Component {
                     <button className={` ${activeTab === "tabNorth" ? "active" : ""}`}
                         onClick={(evt) => {
                             this.openIt(evt, "tabNorth");
-                            // this.setState({ showCountyTab: true });
+                            this.setState({ showCountyTab: true });
                         }}
                     >北部</button>
 
                     <button className={` ${activeTab === "tabMiddle" ? "active" : ""}`}
-                        onClick={evt => this.openIt(evt, "tabMiddle")}>中部</button>
+                        onClick={evt => {
+                        this.openIt(evt, "tabMiddle");
+                        this.setState({ showCountyTab: true });
+                        }}
+                        >中部</button>
 
                     <button className={` ${activeTab === "tabSouth" ? "active" : ""}`}
-                        onClick={evt => this.openIt(evt, "tabSouth")}
+                        onClick={evt => {
+                            this.openIt(evt, "tabSouth");
+                            this.setState({ showCountyTab: true });
+                        }}
                         ref={this.defaultOpenRef}
                         id="defaultOpen">南部</button>
 
                     <button className={` ${activeTab === "tabEast" ? "active" : ""}`}
-                        onClick={evt => this.openIt(evt, "tabEast")}>東部</button>
+                        onClick={evt => {
+                            this.openIt(evt, "tabEast");
+                            this.setState({ showCountyTab: true });
+                        }}
+                    >東部</button>
 
                     <button className={` ${activeTab === "tabIsland" ? "active" : ""}`}
-                        onClick={evt => this.openIt(evt, "tabIsland")}>離島</button>
+                        onClick={evt => {
+                            this.openIt(evt, "tabIsland");
+                            this.setState({ showCountyTab: true });
+                        }}
+                        >離島</button>
 
                 </div>
 
 
-                <div>
                     {/* 縣市名稱按鈕 */}
+                <div>
                     <div className="countyTab"
-                        // style={{ display: this.state.showCountyTab ? "block" : "none" }}
-                        style={{ display: activeTab === "tabNorth" ? "block" : "none" }}
+                        style={{ display: this.state.showCountyTab ? "block" : "none" }}
+                        // style={{ display: activeTab === "tabNorth" ? "block" : "none" }}
                         id="north">
 
                         <button className={`countyName ${activeTab === "tabTaipei" ? "active" : ""}`}
@@ -155,7 +170,8 @@ class Store extends Component {
 
 
                     <div className="countyTab"
-                        style={{ display: activeTab === "tabMiddle" ? "block" : "none" }}
+                        style={{ display: this.state.showCountyTab ? "block" : "none" }}
+                        // style={{ display: activeTab === "tabMiddle" ? "block" : "none" }}
                         id="middle">
 
                         <button className={`countyName ${activeTab === "tabMiaoli" ? "active" : ""}`}
@@ -202,13 +218,14 @@ class Store extends Component {
 
 
                     <div className="countyTab"
-                        style={{ display: activeTab === "tabSouth" ? "block" : "none" }}
+                        style={{ display: this.state.showCountyTab ? "block" : "none" }}
+                        // style={{ display: activeTab === "tabSouth" ? "block" : "none" }}
                         id="south">
                             
                         <button className={`countyName ${activeTab === "tabChiayiCity" ? "active" : ""}`}
                             onClick={evt => {
                                 evt.stopPropagation();
-                                this.openEach(evt, "tabYunlin");
+                                this.openEach(evt, "tabChiayiCity");
                                 this.fetchCounty("I");
                             }}
                         >嘉義市</button>
@@ -216,7 +233,7 @@ class Store extends Component {
                         <button className={`countyName ${activeTab === "tabChiayiCounty" ? "active" : ""}`}
                             onClick={evt => {
                                 evt.stopPropagation();
-                                this.openEach(evt, "tabYunlin");
+                                this.openEach(evt, "tabChiayiCounty");
                                 this.fetchCounty("Q");
                             }}
                         >嘉義縣</button>
@@ -224,7 +241,7 @@ class Store extends Component {
                         <button className={`countyName ${activeTab === "tabTainan" ? "active" : ""}`}
                             onClick={evt => {
                                 evt.stopPropagation();
-                                this.openEach(evt, "tabYunlin");
+                                this.openEach(evt, "tabTainan");
                                 this.fetchCounty("D");
                             }}
                         >臺南市</button>
@@ -232,7 +249,7 @@ class Store extends Component {
                         <button className={`countyName ${activeTab === "tabKaohsiung" ? "active" : ""}`}
                             onClick={evt => {
                                 evt.stopPropagation();
-                                this.openEach(evt, "tabYunlin");
+                                this.openEach(evt, "tabKaohsiung");
                                 this.fetchCounty("E");
                             }}
                         >高雄市</button>
@@ -240,7 +257,7 @@ class Store extends Component {
                         <button className={`countyName ${activeTab === "tabPingtung" ? "active" : ""}`}
                             onClick={evt => {
                                 evt.stopPropagation();
-                                this.openEach(evt, "tabYunlin");
+                                this.openEach(evt, "tabPingtung");
                                 this.fetchCounty("T");
                             }}
                         >屏東縣</button>
@@ -248,7 +265,7 @@ class Store extends Component {
                         <button className={`countyName ${activeTab === "tabPenghu" ? "active" : ""}`}
                             onClick={evt => {
                                 evt.stopPropagation();
-                                this.openEach(evt, "tabYunlin");
+                                this.openEach(evt, "tabPenghu");
                                 this.fetchCounty("X");
                             }}
                         >澎湖縣</button>
@@ -257,13 +274,14 @@ class Store extends Component {
 
 
                     <div className="countyTab"
-                        style={{ display: activeTab === "tabEast" ? "block" : "none" }}
+                        style={{ display: this.state.showCountyTab ? "block" : "none" }}
+                        // style={{ display: activeTab === "tabEast" ? "block" : "none" }}
                         id="east">
 
                         <button className={`countyName ${activeTab === "tabHualien" ? "active" : ""}`}
                             onClick={evt => {
                                 evt.stopPropagation();
-                                this.openEach(evt, "tabYunlin");
+                                this.openEach(evt, "tabHualien");
                                 this.fetchCounty("U");
                             }}
                         >花蓮縣</button>
@@ -271,7 +289,7 @@ class Store extends Component {
                         <button className={`countyName ${activeTab === "tabTaitung" ? "active" : ""}`}
                             onClick={evt => {
                                 evt.stopPropagation();
-                                this.openEach(evt, "tabYunlin");
+                                this.openEach(evt, "tabTaitung");
                                 this.fetchCounty("V");
                             }}
                         >臺東縣</button>
@@ -280,13 +298,14 @@ class Store extends Component {
 
 
                     <div className="countyTab"
-                        style={{ display: activeTab === "tabIsland" ? "block" : "none" }}
+                        style={{ display: this.state.showCountyTab ? "block" : "none" }}
+                        // style={{ display: activeTab === "tabIsland" ? "block" : "none" }}
                         id="island">
 
                         <button className={`countyName ${activeTab === "tabKinmen" ? "active" : ""}`}
                             onClick={evt => {
                                 evt.stopPropagation();
-                                this.openEach(evt, "tabYunlin");
+                                this.openEach(evt, "tabKinmen");
                                 this.fetchCounty("W");
                             }}
                         >金門縣</button>
@@ -294,7 +313,7 @@ class Store extends Component {
                         <button className={`countyName ${activeTab === "tabLienchiang" ? "active" : ""}`}
                             onClick={evt => {
                                 evt.stopPropagation();
-                                this.openEach(evt, "tabYunlin");
+                                this.openEach(evt, "tabLienchiang");
                                 this.fetchCounty("Z");
                             }}
                         >連江縣</button>
@@ -307,9 +326,12 @@ class Store extends Component {
 
                 <div className="allStores">
 
+                    {/* 全部不分縣市，目前為隱藏狀態，改成!==就會跑出來了; 預計在點完門市據點後預設顯示，點了其他btn就會消失 */}
                     {this.state.storeList.map(storeL => (
                         <div key={storeL.storeId} className="storeA oneShop"
-                            style={{ display: activeTab === null ? "flex" : "none" }} id="allstores"
+                            style={{ display: activeTab === null ? "flex" : "none" }} 
+                            // style={{ display: this.state.showAllStores === true ? "flex" : "none" }} 
+                            id="allstores"
                         >
                             <div className="icons">
                                 <div><AiTwotoneShop /></div>
@@ -323,9 +345,6 @@ class Store extends Component {
                             </div>
                         </div>
                     ))}
-
-
-
 
 
 
@@ -701,14 +720,67 @@ class Store extends Component {
     // { 五區域切換 }
     openIt = (evt, tabName) => {
         evt.stopPropagation();
-        this.setState({
-            activeTab: tabName,
-        //     countyList: [],
-        //     showCountyTab: true
-        // },
-        //     () => {
-        //         document.getElementById("north").style.display = "block";
+        if (tabName === 'tabNorth') {
+            this.setState({
+                activeTab: tabName,
+                countyList: [],
+                showCountyTab: true
+            }, () => {
+                document.getElementById("north").style.display = "block";
+                document.getElementById("middle").style.display = "none";
+                document.getElementById("south").style.display = "none";
+                document.getElementById("east").style.display = "none";
+                document.getElementById("island").style.display = "none";
             });
+        } else if (tabName === 'tabMiddle') {
+            this.setState({
+                activeTab: tabName,
+                countyList: [],
+                showCountyTab: true
+            }, () => {
+                document.getElementById("north").style.display = "none";
+                document.getElementById("middle").style.display = "block";
+                document.getElementById("south").style.display = "none";
+                document.getElementById("east").style.display = "none";
+                document.getElementById("island").style.display = "none";
+            });
+        } else if (tabName === 'tabSouth') {
+            this.setState({
+                activeTab: tabName,
+                countyList: [],
+                showCountyTab: true
+            }, () => {
+                document.getElementById("north").style.display = "none";
+                document.getElementById("middle").style.display = "none";
+                document.getElementById("south").style.display = "block";
+                document.getElementById("east").style.display = "none";
+                document.getElementById("island").style.display = "none";
+            });
+        } else if (tabName === 'tabEast') {
+            this.setState({
+                activeTab: tabName,
+                countyList: [],
+                showCountyTab: true
+            }, () => {
+                document.getElementById("north").style.display = "none";
+                document.getElementById("middle").style.display = "none";
+                document.getElementById("south").style.display = "none";
+                document.getElementById("east").style.display = "block";
+                document.getElementById("island").style.display = "none";
+            });
+        } else if (tabName === 'tabIsland') {
+            this.setState({
+                activeTab: tabName,
+                countyList: [],
+                showCountyTab: true
+            }, () => {
+                document.getElementById("north").style.display = "none";
+                document.getElementById("middle").style.display = "none";
+                document.getElementById("south").style.display = "none";
+                document.getElementById("east").style.display = "none";
+                document.getElementById("island").style.display = "block";
+            });
+        }
     }
     // { 預設開啟 }
     // componentDidMount() {
