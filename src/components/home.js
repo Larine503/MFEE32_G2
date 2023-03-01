@@ -15,13 +15,18 @@ import productImg1 from '../images/home/product_1.jpg';
 import productImg2 from '../images/home/product_2.jpg';
 import productImg3 from '../images/home/product_3.jpg';
 import newsImg1 from '../images/home/new.jpg';
+import menuBg from '../images/home/bn_menu.jpg';
 
 
 
 
 class Home extends Component {
-    state = {}
+    state = {
+        translateX: 0,
+        currentIndex: 0,
+    };
     render() {
+        const { translateX } = this.state;
         return (
             <body>
                 <Index />
@@ -29,11 +34,31 @@ class Home extends Component {
                     <section id="home" className="">
                         <div className="homeDiv1">誠信‧創新‧用心‧惜福</div>
                         <div className="homeDiv2">
-                            <ul className="homeList">
-                                <li className="homeItem"><img className="homeItem-img" src={homeImg1} alt="" /></li>
-                                <li className="homeItem"><img className="homeItem-img" src={homeImg2} alt="" /></li>
-                                <li className="homeItem"><img className="homeItem-img" src={homeImg3} alt="" /></li>
-                                <li className="homeItem"><img className="homeItem-img" src={homeImg4} alt="" /></li>
+                            <ul className="homeList" style={{ transform: `translateX(${translateX}px)` }}>
+                                <li className="homeItem">
+                                    <img className="homeItem-img" src={homeImg1} alt="" />
+                                </li>
+                                <li className="homeItem">
+                                    <img className="homeItem-img" src={homeImg2} alt="" />
+                                </li>
+                                <li className="homeItem">
+                                    <img className="homeItem-img" src={homeImg3} alt="" />
+                                </li>
+                                <li className="homeItem">
+                                    <img className="homeItem-img" src={homeImg4} alt="" />
+                                </li>
+                                <li className="homeItem">
+                                    <img className="homeItem-img" src={homeImg1} alt="" />
+                                </li>
+                                <li className="homeItem">
+                                    <img className="homeItem-img" src={homeImg2} alt="" />
+                                </li>
+                                <li className="homeItem">
+                                    <img className="homeItem-img" src={homeImg3} alt="" />
+                                </li>
+                                <li className="homeItem">
+                                    <img className="homeItem-img" src={homeImg4} alt="" />
+                                </li>
                             </ul>
                         </div>
                     </section>
@@ -79,24 +104,26 @@ class Home extends Component {
                         </div>
                     </section>
                     <section id="menuBg">
-                        <div className="menuBgImg"></div>
+                        <div className="menuBgImg">
+                            <img className="menuBgImg-img" src={menuBg} alt=""></img>
+                        </div>
                     </section>
                     <section id="menu">
                         <div className="menuMain">
                             <ul className="menuUl">
-                                <li className="menuLi">
+                                <li className="menuLi  menuLi_tr1">
                                     <div className="menuLi-div"><img src={dirnkImg1} alt="" /></div>
                                     <div className="menuLi-Text">
                                         <h3>奶茶類</h3>
                                     </div>
                                 </li>
-                                <li className="menuLi">
+                                <li className="menuLi menuLi_tr2">
                                     <div className="menuLi-div"><img src={dirnkImg2} alt="" /></div>
                                     <div className="menuLi-Text">
                                         <h3>純茶類</h3>
                                     </div>
                                 </li>
-                                <li className="menuLi">
+                                <li className="menuLi menuLi_tr3">
                                     <div className="menuLi-div"><img src={dirnkImg3} alt="" /></div>
                                     <div className="menuLi-Text">
                                         <h3>果茶類</h3>
@@ -110,12 +137,12 @@ class Home extends Component {
                         <div className="newsMain">
                             <div className="newsText">
                                 <div className="newsDiv">
-                                    <h3>最新消息</h3>
+                                    <h2 >最新消息</h2>
                                     <p>農曆春節近了，炒氣氛少不了草帽海賊團～不讓過年冷清清，來清心福全喝飲料，還可以抽航海王加價購，笑喝喝過新年，把美味飲料和熱鬧好運一起帶回家！</p>
                                     <a href="/news">
-                                        <button className="btnL btnR">
+                                        <button className="btnL_c btnR_c">
                                             <span>MORE+</span>
-                                            <div className="border btnR"></div>
+                                            <div className="border_c btnR_c"></div>
                                         </button>
                                     </a>
                                 </div>
@@ -123,8 +150,8 @@ class Home extends Component {
                             <div className="newsImg"><img src={newsImg1} alt="" /></div>
                         </div>
                     </section>
-                    <section id="product">
-                        <div className="productMain">
+                    <section id="productC">
+                        <div className="productMainC">
                             <div className="productMain-d">
                                 <div className="productMain-div">
                                     <div className="productMain-img"><img src={productImg1} alt="" /></div>
@@ -139,13 +166,13 @@ class Home extends Component {
 
                             <div className="product-T">
                                 <div className="productText">
-                                    <h3>周邊商品選購</h3>
-                                    <p>航海王系列-馬克杯</p>
-                                    <h5>索隆、魯夫、娜美、喬巴</h5>
+                                    <h2>周邊商品選購</h2>
+                                    <p>收藏瓶人物臉部立體造型精細美觀，適合擺設觀賞，瓶身全彩印刷膜，顏色飽和，小巧有質感！快預備一個小空間收藏他們，兩款同時收藏更有紀念價值！</p>
+                                    <h5>魯夫款/喬巴款</h5>
                                     <a href="/product">
-                                        <button className="btnL btnR">
+                                        <button className="btnL_c btnR_c">
                                             <span>MORE+</span>
-                                            <div className="border btnR"></div>
+                                            <div className="border_c btnR_c"></div>
                                         </button>
                                     </a>
                                 </div>
@@ -159,13 +186,11 @@ class Home extends Component {
                         <div className="storeMain">
                             <div className="storeText">
                                 <div className="storeText-div">
-                                    <h3>門市據點</h3>
-                                    <p>營業時間</p>
-                                    <p>地址</p>
+                                    <h2>門市據點</h2>
                                     <a href="/store">
-                                        <button className="btnL btnR">
+                                    <button className="btnL_c btnR_c">
                                             <span>MORE+</span>
-                                            <div className="border btnR"></div>
+                                            <div className="border_c btnR_c"></div>
                                         </button>
                                     </a>
                                 </div>
@@ -181,8 +206,23 @@ class Home extends Component {
             </body>
         );
     }
+    componentDidMount() {
+        this.interval = setInterval(() => {
+            this.setState((prevState) => ({
+                currentIndex: prevState.currentIndex + 1,
+                translateX:
+                    prevState.currentIndex === 3
+                        ? 0
+                        : prevState.translateX - 415,
+            }));
+        }, 3000);
+    }
 
-        
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+
+
 }
 
 export default Home;

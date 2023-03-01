@@ -105,12 +105,12 @@ class Login extends Component {
         axios.post('http://localhost:8000/login', { mtel, mpid }, { withCredentials: true })
             .then((response) => {
                 if (response.data.success) {
-                    // 登录成功后将isLoggedIn状态设置为true
+                    // 登錄成功後將isLoggedIn狀態設置為true
                     this.setState({ isLoggedIn: true });
-                    // 跳转到主页
+                    // 跳轉到主頁
                     window.location.href = '/';
                 } else {
-                    // 登录失败，显示错误消息
+                    // 登錄失敗，顯示錯誤消息
                     const errorMessage = response.data.message;
                     alert(errorMessage);
                 }
@@ -124,7 +124,7 @@ class Login extends Component {
     handleLogoutClick = () => {
         axios.get('http://localhost:8000/login', { withCredentials: true }).then((response) => {
             console.log(response);
-            // 将isLoggedIn状态设置为false并清除session
+            // 將isLoggedIn狀態設置為false並清除session
             axios.post('http://localhost:8000/login', { withCredentials: true });
             this.setState({ isLoggedIn: false, userItem: { mtel: '', mpid: '' } });
         });

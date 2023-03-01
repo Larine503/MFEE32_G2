@@ -37,7 +37,7 @@ class Index extends Component {
                     <a href="/menu" className='nav-t'>飲品菜單</a>
                     <a href="/product" className='nav-t'>周邊選購</a>
                     <a href="/store" className='nav-t'>門市據點</a>
-                    <a href="/contact" className='nav-t'>聯絡我們</a>
+                    {/* <a href="/contact" className='nav-t'>聯絡我們</a> */}
                     <a href="/order" className='nav-t'>線上訂餐</a>
                     </div>
                     

@@ -17,6 +17,7 @@ class Member extends Component {
             mimages: ''
         }
     }
+
     async componentDidMount() {
         var result = await axios.get("http://localhost:8000/login");
         var url = `http://localhost:8000/member/${result.data.user}`;
@@ -85,12 +86,6 @@ class Member extends Component {
         this.setState(newState);
     }
 
-    // birthdayChange= (e)=>{
-    //     var newState = {...this.state};
-    //     newState.userItem.birthday = e.target.value;
-    //     this.setState(newState);
-    // }
-
     addressChange= (e)=>{
         var newState = {...this.state};
         newState.userItem.address = e.target.value;
@@ -99,8 +94,8 @@ class Member extends Component {
 
     okClick = async () => {
         var fromServer = await axios.put("http://localhost:8000/member/edit", {
-          ...this.state.userItem, // 将 mtel 属性一起发送到服务器
-          birthday: new Date(this.state.userItem.birthday), // 将 birthday 字符串转换为 Date 类型
+          ...this.state.userItem, //將 mtel 屬性一起發送到服務器
+          birthday: new Date(this.state.userItem.birthday), // 將 birthday 字符串轉換為 Date 類型
         });
         console.log(fromServer);
         // window.location.reload();
