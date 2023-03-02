@@ -3,7 +3,7 @@ import '../css/product_list2.css';
 import '../css/index.css';
 import Index from '../components/index.js';
 import Footer from '../components/footer.js';
-import Step from '../components/product_step.js';
+import Step from './product_step.js';
 
 import img1 from "../images/product/20221115event01.jpg";
 

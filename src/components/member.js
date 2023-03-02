@@ -28,43 +28,36 @@ class Member extends Component {
     }
     render() {
         return (
-            <div className="dataImg">
-                {/* <form className="dataImg-d">
-                    <div className="data-M-img"><img src="" alt="" />
-                        <div>上傳</div>
+            <div className="memberMain">
+                <p>會員資料</p>
+                <form className="memberForm-T" action="/member/edit" method='post' onSubmit={this.okClick}>
+                    <div className="memberForm-D">
+                    <div className="memberForm-dd">
+                    <label htmlFor="">您目前使用的手機號碼:</label><br/>
+                            <input className='input_m input_mtel'  type="tel" name="mtel" value={this.state.userItem.mtel}
+                                onChange={this.mtelChange} readonly="readonly"/><br />
                     </div>
-                    <button className="button">
-                        上傳
-                    </button>
-                </form> */}
-                <form className="memberForm-T" action="/member/edit" method='post'>
-                    <div className="memberForm-d">
                         <div className="memberForm-dd">
-                            <input type="hidden" id="userItemMtel"
+                            <input className='input_m' type="hidden" id="userItemMtel"
                                 name="mtel" value={this.state.userItem.mtel} />
-                            <label htmlFor="">姓名:</label><br />
-                            <input type="text" name="mname" value={this.state.userItem.mname}
-                                onChange={this.mnameChange} /><br />
-                            <label htmlFor="">手機號碼:</label><br />
-                            <input type="tel" name="mtel" value={this.state.userItem.mtel}
-                                onChange={this.mtelChange} /><br/>
-                            <label htmlFor="">電子信箱:</label><br />
-                            <input type="email" name="email" value={this.state.userItem.email}
-                                onChange={this.emailChange} />
+                            <div className='inputDiv'><span className='inputSpan'>姓名</span>
+                                <input className='input_m' type="text" name="mname" value={this.state.userItem.mname}
+                                    onChange={this.mnameChange} required /></div>
+                                    <div className='inputDiv'><span className='inputSpan'>Email</span>
+                                    <input  className='input_m' type="email" name="email" value={this.state.userItem.email}
+                                onChange={this.emailChange} required /></div>
+                                <div className='inputDiv'><span className='inputSpan'>地址</span>
+                                <input className='input_m' type="text" name="address" value={this.state.userItem.address}
+                                    onChange={this.addressChange} required /></div>
+
+                        
                         </div>
-                        <div className="memberForm-dd">
-                            {/* <label htmlFor="">生日:<br />
-                                <input type="date" name="birthday" value={this.state.userItem.birthday}
-                                onChange={this.birthdayChange} /></label><br /> */}
-                            <label htmlFor="">地址:<br />
-                                <input type="text" name="address" value={this.state.userItem.address}
-                                onChange={this.addressChange}/></label>
-                        </div>
+                
 
                     </div>
                     <div className="memberForm-D">
                         <button className="button" type="button" onClick={this.okClick}>
-                            確認
+                            更新
                         </button>
                     </div>
                 </form>
@@ -73,33 +66,32 @@ class Member extends Component {
 
         );
     }
-   
-    mnameChange=(e)=>{
-        var newState = {...this.state};
+
+    mnameChange = (e) => {
+        var newState = { ...this.state };
         newState.userItem.mname = e.target.value;
         this.setState(newState);
     }
 
-    emailChange=(e)=>{
-        var newState = {...this.state};
+    emailChange = (e) => {
+        var newState = { ...this.state };
         newState.userItem.email = e.target.value;
         this.setState(newState);
     }
 
-    addressChange= (e)=>{
-        var newState = {...this.state};
+    addressChange = (e) => {
+        var newState = { ...this.state };
         newState.userItem.address = e.target.value;
         this.setState(newState);
     }
 
     okClick = async () => {
         var fromServer = await axios.put("http://localhost:8000/member/edit", {
-          ...this.state.userItem, //將 mtel 屬性一起發送到服務器
-          birthday: new Date(this.state.userItem.birthday), // 將 birthday 字符串轉換為 Date 類型
+            ...this.state.userItem          
         });
         console.log(fromServer);
-        // window.location.reload();
-      };
+        alert('更新成功');
+    };
 
 }
 

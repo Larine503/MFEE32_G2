@@ -15,12 +15,14 @@ class MemberBar extends Component {
         return (
             <div>
                 <div><Index /></div>
-                <div className='dataBg'><img src={ MemberBarBg}></img></div>
+                <div className='dataBg'>
+                <img src={MemberBarBg} alt=''></img>
+                </div>
                 <div className="dataDiv">
                     <div className="dataMenu">
-                        <a className="dataMenu-d btn" href="/member/edit">會員資料</a>
-                        <a className="dataMenu-d btn" href="/member/orderList/drinklist">歷史訂單</a>
-                        <a className="dataMenu-d btn" href="/member/password">變更密碼</a>
+                        <a className="dataMenu-d " href="/member/edit">會員資料</a>
+                        <a className="dataMenu-d " href="/member/orderList/drinklist">歷史訂單</a>
+                        <a className="dataMenu-d " href="/member/password">變更密碼</a>
                     </div>
                     <BrowserRouter>
                     <div className="dataImg">
