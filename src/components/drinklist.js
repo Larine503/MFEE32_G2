@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import '../css/index.css';
 import axios from 'axios';
-// import { json } from 'body-parser';
-axios.defaults.withCredentials = true;
 
 class Drinklist extends Component {
     state = {
@@ -20,7 +18,7 @@ class Drinklist extends Component {
                         <table className="orderList-number">
                             <span type="hidden" id="userItemMtel"
                                 name="phone" value={item.phone} />
-                            <tr className="orderList-number-t">
+                            <tr className="orderList-number-t" >
                                 <p>飲品訂單編碼:{item.id}</p>
                             </tr>
                             <tr className="orderList-number-p">
@@ -35,9 +33,6 @@ class Drinklist extends Component {
                             </tr>
                         </table>
                     )}
-
-
-
                     <br/>
                     
                 </div>
