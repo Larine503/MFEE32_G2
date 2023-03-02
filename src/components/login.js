@@ -45,12 +45,12 @@ class Login extends Component {
                             <p className="loginForm-P">會員登入</p>
 
                             <form className="loginForm-T" action="/login">
-                                <label htmlFor="">電話號碼:</label><br />
-                                <input type="tel" name="mtel" value={userItem.mtel}
-                                    onChange={this.mtelChange} /><br />
-                                <label htmlFor="">密碼:</label><br />
-                                <input type="password" name="mpid" value={userItem.mpid}
-                                    onChange={this.mpidChange} /><br />
+                                {/* <label htmlFor="">電話號碼:</label><br /> */}
+                                <input className='input_m' type="tel" name="mtel" value={userItem.mtel}
+                                    onChange={this.mtelChange} placeholder='電話號碼'/><br /><br />
+                                {/* <label htmlFor="">密碼:</label><br /> */}
+                                <input className='input_m' type="password" name="mpid" value={userItem.mpid}
+                                    onChange={this.mpidChange}  placeholder='密碼' /><br />
                                 <div className="loginForm-D">
                                     {isLoggedIn ? (
                                         <button
