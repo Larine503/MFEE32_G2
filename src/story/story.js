@@ -3,7 +3,6 @@ import '../css/index.css';
 import "../css/about_us.css";
 import Index from '../components/index.js';
 import Headernav from './headernav.js';
-import AboutUsButton from './AboutUsButton.js';
 import Footer from '../components/footer.js';
 import originTeaDec from '../images/story/about_us_images/teaLine_dec.png';
 import t06 from '../images/story/brand_story_images/t06.png';
@@ -130,7 +129,7 @@ class Story extends Component {
                                         茶葉<br />
                                         檢驗報告
                                     </div>
-                                    <a href="/report">
+                                    <a href="/story/report" >
                                         <div className='seeMoreBtn'>
                                             <button className="smallButton">查看更多</button>
                                         </div>
@@ -205,7 +204,6 @@ class Story extends Component {
                             </div>
                         </div>
                     </div>
-                    <AboutUsButton />
                 </main >
                 <Footer />
             </body >

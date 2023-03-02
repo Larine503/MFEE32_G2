@@ -44,7 +44,7 @@
 .topping_title {
     position: absolute;
     padding-bottom: 20px;
-    padding-top:  10px;
+    padding-top: 10px;
 }
 
 .toppingText {
@@ -53,35 +53,35 @@
     writing-mode: vertical-lr;
 }
 
+/* 系列字樣範圍 */
 .milkTea_title_area {
     background: radial-gradient(50% 50% at 50% 50%, rgba(146, 210, 121, 0.9) 68.89%, rgba(251, 224, 221, 0.0315469) 99.99%, rgba(255, 225, 225, 0) 100%);
     border-radius: 30%;
     position: absolute;
-    top: 130px;
+    top: 120px;
     left: 700px;
     height: 70px;
     width: 300px;
     text-align: center;
 }
 
+/* 系列字樣 */
 .milkTea_titles {
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: bolder;
     font-size: 45px;
     letter-spacing: 2px;
     color: var(--dark-green);
-    position: absolute;
-    top: 250px;
 }
 
-/* .drinks_menu {
+.drinks_menu {
     position: absolute;
-    top: 300px;
-    left: 800px;
+    top: -10px;
     font-family: 'Noto Sans TC', sans-serif;
     text-align: center; 
     writing-mode: vertical-lr;
-} */
+
+}
 
 .cell_drinkList {
     position: absolute;
@@ -89,31 +89,9 @@
     left: 800px;
 }
 
-.cell_1 {
+.cell_drink_title {
     position: absolute;
-    writing-mode: vertical-lr;
-    padding-left: 20px;
-    padding-top: 20px;
-    height: 420px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 20px;
 }
-
-.cell_2 {
-    position: absolute;
-    writing-mode: vertical-lr;
-    /* top: 50px;
-    left: 280px */
-    padding-top: 20px;
-}
-
-/* .cell_drink_title {
-    position: absolute;
-} */
 
 .cell_line {
     height: 80px;
@@ -126,4 +104,103 @@
     padding-top: 90px;
     padding-right: 0px;
     height: 420px;
+}
+
+.cell_2 {
+    position: absolute;
+    writing-mode: vertical-lr;
+    /* top: 50px;
+    left: 280px */
+    padding-top: 20px;
+}
+
+
+.cell_drink_title {
+    position: absolute;
+}
+
+.cell_line {
+    height: 80px;
+    width: 50px;
+    background-image: url(../images/story/about_us_images/green_short_straight_line.png);
+    background-repeat: no-repeat;
+}
+
+.cell_drink_note {
+    padding-top: 90px;
+    padding-right: 0px;
+    height: 420px;
+}
+
+/* 茗品系列btn */
+.teaSerious {
+    position: absolute;
+    top: 150px;
+    right: 60px;
+    width: 100px;
+    height: 100px;
+    border: none;
+    background: radial-gradient(50% 50% at 50% 50%, #92D279 0%, rgba(146, 210, 121, 0) 100%);
+}
+
+/* 鮮奶/拿鐵系列btn */
+.milkteaSerious {
+    position: absolute;
+    top: 500px;
+    right: 60px;
+    width: 100px;
+    height: 100px;
+    border: none;
+    background: radial-gradient(50% 50% at 50% 50%, #92D279 0%, rgba(146, 210, 121, 0) 100%);
+}
+
+
+/* 全部飲品btn */
+.AllDriksButton {
+    text-align: center;
+    padding-top: 550px;
+}
+
+.AllDriksButton :not(:first-child) {
+    margin-left: 20px;
+}
+
+.Button {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #005743;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #92D279;
+    background-color: #ffffff;
+}
+
+.Button:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #92D279;
+    box-shadow: 4px 5px 17px -4px #538E7A;
+}
+
+.Button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0, 87, 67, 90%);
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+.Button:hover::before {
+    width: 250%;
 }

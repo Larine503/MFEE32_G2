@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../css/index.css';
 import "../css/drinks.css";
 import Index from '../components/index.js';
-import 粉條奶茶 from '../images/drink/MT/粉條奶茶.png';
+import 紅茶拿鐵 from '../images/drink/TT/紅茶拿鐵.png';
 // import 茶凍奶茶 from '../images/drink/MT/茶凍奶茶.png';
 // import 珍珠奶茶 from '../images/drink/MT/珍珠奶茶.png';
 // import 烏龍奶茶 from '../images/drink/MT/烏龍奶茶.png';
@@ -16,7 +16,7 @@ import 粉條奶茶 from '../images/drink/MT/粉條奶茶.png';
 import AllDriksButton from '../menu/allDriksButton.js';
 
 
-class Menu extends Component {
+class MilkteaSerious extends Component {
     state = {
         'padding-top': '100px',
     }
@@ -26,7 +26,7 @@ class Menu extends Component {
                 <Index />
                 <div>
                     <div className='drinksPicture'>
-                        <img src={粉條奶茶} alt='' />
+                        <img src={紅茶拿鐵} alt='' />
                         <div className="topping_content">
                             <div className="topping_title">
                                 加料
@@ -47,13 +47,13 @@ class Menu extends Component {
                     </div>
                     <div className="menu_area">
                         <div className="milkTea_title_area">
-                            <div className="milkTea_title">奶茶系列/奶茶推薦</div>
+                            <div className="milkTea_title">鮮奶/拿鐵系列</div>
                         </div>
                         <div className="drinks_menu">
                             <ul className="cell_drinkList">
                                 <li className="cell_1">
                                     <div className="cell_drink_title">
-                                        粉條奶茶
+                                        原鄉四季
                                     </div>
                                     <div className="cell_line"></div>
                                     <div className="cell_drink_note">
@@ -82,7 +82,7 @@ class Menu extends Component {
                     <div>
                         <a href="/menu/milkteaSerious">
                             <button className='milkteaSerious'>
-                                鮮奶/拿鐵系列
+                            奶茶系列/奶茶推薦
                             </button>
                         </a>
                     </div>
@@ -93,4 +93,4 @@ class Menu extends Component {
     }
 }
 
-export default Menu;
+export default MilkteaSerious;

@@ -334,6 +334,7 @@ img.spirit_tea_dec {
     padding-top: 5%;
 }
 
+/* 茶葉檢驗報告小圖 */
 .teaPicture {
     background-image: url('../images/story/food_images/茶葉.jpg');
     background-repeat: no-repeat;
@@ -344,6 +345,7 @@ img.spirit_tea_dec {
     left: 300px;
 }
 
+/* 固態食材檢驗報告小圖 */
 .solidPicture {
     background-image: url('../images/story/food_images/固態食材.jfif');
     background-repeat: no-repeat;
@@ -354,6 +356,7 @@ img.spirit_tea_dec {
     left: 600px;
 }
 
+/* 液態食材檢驗報告小圖 */
 .liquidPicture {
     background-image: url('../images/story/food_images/液態食材.jfif');
     background-repeat: no-repeat;
@@ -364,6 +367,7 @@ img.spirit_tea_dec {
     left: 900px;
 }
 
+/* 乳品及鮮果檢驗報告小圖 */
 .milkPicture {
     background-image: url('../images/story/food_images/乳品及鮮果.jfif');
     background-repeat: no-repeat;
@@ -375,6 +379,7 @@ img.spirit_tea_dec {
     left: 300px;
 }
 
+/* 包材檢驗報告小圖 */
 .pickPicture {
     background-image: url('../images/story/food_images/包材.jfif');
     background-repeat: no-repeat;
@@ -386,6 +391,7 @@ img.spirit_tea_dec {
     left: 600px;
 }
 
+/* 其他檢驗報告小圖 */
 .elsePicture {
     background-image: url('../images/story/food_images/其他.jfif');
     background-repeat: no-repeat;
@@ -407,35 +413,6 @@ img.spirit_tea_dec {
     font-weight: bold;
 }
 
-.teaCheckText {
-    font-size: 36px;
-    color: var(--dark-green);
-    font-weight: bold;
-    font-family: 'Noto Sans TC', sans-serif;
-    text-align: center;
-    letter-spacing: 1em;
-    padding-top: 5%;
-}
-
-.checkText img {
-    width: 250px;
-    height: 400px;
-    margin-top: 5%;
-    margin-left: 10%;
-    margin-bottom: 5%;
-    border-style: solid;
-    border-color: var(--green);
-}
-
-.line_check {
-    padding-left: 25%;
-    width: 100%;
-    border: 2px solid var(--light-green);
-    transform: rotate(-180deg);
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-}
 
 /* -----品牌堅持----- */
 
@@ -502,6 +479,53 @@ img.spirit_tea_dec {
     padding: 20% 20% 0% 20%;
 }
 
+
+/* -----茶葉檢驗報告----- */
+
+
+/* 茶葉檢驗報告字樣 */
+.teaCheckText {
+    font-size: 36px;
+    color: var(--dark-green);
+    font-weight: bold;
+    font-family: 'Noto Sans TC', sans-serif;
+    text-align: center;
+    letter-spacing: 1em;
+    padding-top: 5%;
+}
+
+/* 各類茶葉字樣 */
+.teaCheckList {
+    text-align: center; 
+    padding-top: 50px; 
+    color: var(--dark-green);
+}
+
+/* 小圖範圍 */
+.teaArea {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+/* 小圖 */
+.checkText img {
+    width: 250px;
+    height: 400px;
+    margin-top: 80px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-style: solid;
+    border-color: var(--green);
+}
+
+/* .line_check {
+    padding-left: 25%;
+    width: 100%;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+} */
 
 
 /* 關於我們btn */
