@@ -114,19 +114,19 @@ class Home extends Component {
                                 <li className="menuLi  menuLi_tr1">
                                     <div className="menuLi-div"><img src={dirnkImg1} alt="" /></div>
                                     <div className="menuLi-Text">
-                                        <h3>奶茶類</h3>
+                                        <h3>奶茶系列</h3>
                                     </div>
                                 </li>
                                 <li className="menuLi menuLi_tr2">
                                     <div className="menuLi-div"><img src={dirnkImg2} alt="" /></div>
                                     <div className="menuLi-Text">
-                                        <h3>純茶類</h3>
+                                        <h3>拿鐵系列</h3>
                                     </div>
                                 </li>
                                 <li className="menuLi menuLi_tr3">
                                     <div className="menuLi-div"><img src={dirnkImg3} alt="" /></div>
                                     <div className="menuLi-Text">
-                                        <h3>果茶類</h3>
+                                        <h3>茗品系列</h3>
                                     </div>
                                 </li>
                             </ul>
