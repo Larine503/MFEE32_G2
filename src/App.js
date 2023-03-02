@@ -27,8 +27,8 @@ import FullJo from './order/fullJo.js'
 import TeamJo from './order/teamJo.js'
 import FriendJo from './order/friendJo.js'
 //--渼涵---
-// import ProductStep1 from './product/product_cart.js'
-// import ProductStep2 from './product/product_info.js'
+import ProductStep1 from './product/product_cart.js'
+import ProductStep2 from './product/product_info.js'
 
 
 function App() {
@@ -62,11 +62,11 @@ function App() {
             <Route path="/order/fullJo" component={FullJo} exact />
             <Route path="/order/teamJo" component={TeamJo} exact />
             <Route path="/order/friendJo" component={FriendJo} exact />
-            {/* <Route path="/product/航海王" component={Product}/>
+            <Route path="/product/航海王" component={Product}/>
             <Route path="/product/哥吉拉" component={Product}/>
             <Route path="/product/黃阿媽的後宮生活" component={Product}/>
             <Route path="/product/step1" component={ProductStep1}/>
-            <Route path="/product/step2" component={ProductStep2}/> */}
+            <Route path="/product/step2" component={ProductStep2}/>
           </Switch></div>
       </BrowserRouter>);
 }
