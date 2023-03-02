@@ -1,27 +1,33 @@
 import React, { Component } from 'react';
-import '../css/history.css';
+import '../css/product_list2.css';
 import '../css/index.css';
 import Index from '../components/index.js';
 import Footer from '../components/footer.js';
+import Step from '../components/product_step.js';
+
+
+import img1 from '../images/product/20221115event01.jpg';
 
 
 
-class ProductHistory extends Component {
-    style = {
-        paddingTop: "100px"
+class productCheck extends Component {
+    state = {
+        length: document.getElementsByClassName("product").length
     }
+    style = {
+        display: 'grid'
+    }
+
+
     render() {
         return (
             <body className='bodyProduct'>
                 <Index />
-                <div style={this.style}>
-                    <center>
-                    <h1>訂單紀錄</h1>
-                </center>
+                <Step />
                 <div className="content">
                     <div className="product">
                         <div className="product_info">
-                            <img src="./images/20221115event01.jpg" />
+                            <img src={img1} />
                             <p>
                                 雙面飲料提袋
                                 <br />
@@ -78,13 +84,12 @@ class ProductHistory extends Component {
                         </fieldset>
                     </form>
                 </div>
-                </div>
-                <br /><br />
-                
+                <center><button className="delete" onclick="deleteOrder()">取消訂單</button></center>
                 <Footer />
             </body>
         );
     }
 }
 
-export default ProductHistory;
+
+export default productCheck;

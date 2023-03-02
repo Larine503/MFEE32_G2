@@ -13,198 +13,38 @@ class ProductInfo extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedValue: ''
+            selectedOption: '' // 選取的option值
         };
+        this.handleChange = this.handleChange.bind(this); // 綁定handleChange方法
     }
-    // state = {
-    //     // 'padding-top': '100px',
-    //     // productTitle: [1, 2, 3],
-    //     // banner: [banner1, banner2, banner3],
-    //     // slideIndex: 1
-    // }
     startStyle = {
         display: "none"
     }
+
+    handleChange(event) {
+        this.setState({ selectedOption: event.target.value }); // 更新selectedOption為選取的option值
+    }
+
 
 
 
 
     // 運送方式選擇
-    DeliveryChange = (event) => {
-        // var address_shop = document.getElementsByTagName("input")[5];
-        // address_shop.style.display = "none";
-        // address_shop.style.block = "none";
-        // var select1 = document.getElementsByTagName("select")[0];
-        // var address_home = document.getElementsByTagName("input")[4];
-        // address_home.style.display = "none";
-        // address_home.style.block = "none";
-        // var index1 = select1.selectedIndex;
+    // DeliveryChange = (index) => {
+        
 
-        // 不可選擇"請選擇運送方式"
-        // if (index1 === 0) {
-        //     console.log("no choice");
-        // } else if (index1 === 1) {
-        //     // 宅配到家
-        //     // address_shop.style.display = "none";
-        //     // address_shop.style.block = "none";
+    // }
 
-        //     // address_home.style.display = "block";
-        //     // address_home.innerHTML += "<br>" + "<br>";
-
-        //     // address_home.style.block = "none";
-        //     console.log("2");
-
-        // } else {
-        //     // 就近取貨
-        //     // address_home.style.display = "none";
-        //     // address_home.style.block = "none";
-        //     // address_shop.style.display = "block";
-        //     // 帶出店家資訊
-        //     // address_shop.setAttribute("value", "台中公益店 - 台中市公益路二段51號");
-        //     // address_shop.setAttribute("readonly", "true");
-        //     console.log("3");
-        // }
-
-        this.setState({ selectedValue: event.target.value });
-        console.log(this.state.selectedValue);
-
+    Step(n) {
+        if (n === 1) {
+            window.location.href = "/product";
+        } else {
+            window.location.href = "/product/step3";
+        }
     }
-
 
     render() {
 
-
-
-        // 訂購人姓名和電話
-        // var oder_name = document.getElementsByTagName("input")[0];
-        // var oder_tel = document.getElementsByTagName("input")[1];
-
-        // 收購人姓名和電話
-        // var receive_name = document.getElementsByTagName("input")[2];
-        // var receive_tel = document.getElementsByTagName("input")[3];
-
-
-        // // 運送方式選擇
-        // DeliveryChange = () => {
-        //     // var address_shop = document.getElementsByTagName("input")[5];
-        //     // address_shop.style.display = "none";
-        //     // address_shop.style.block = "none";
-        //     // var select1 = document.getElementsByTagName("select")[0];
-        //     // var address_home = document.getElementsByTagName("input")[4];
-        //     // address_home.style.display = "none";
-        //     // address_home.style.block = "none";
-        //     var index1 = select1.selectedIndex;
-        //     // 不可選擇"請選擇運送方式"
-        //     if (index1 === 0) {
-        //         console.log("no choice");
-        //     } else if (index1 === 1) {
-        //         // 宅配到家
-        //         // address_shop.style.display = "none";
-        //         // address_shop.style.block = "none";
-
-        //         // address_home.style.display = "block";
-        //         // address_home.innerHTML += "<br>" + "<br>";
-
-        //         // address_home.style.block = "none";
-        //         console.log("2");
-
-        //     } else {
-        //         // 就近取貨
-        //         // address_home.style.display = "none";
-        //         // address_home.style.block = "none";
-        //         // address_shop.style.display = "block";
-        //         // 帶出店家資訊
-        //         // address_shop.setAttribute("value", "台中公益店 - 台中市公益路二段51號");
-        //         // address_shop.setAttribute("readonly", "true");
-        //         console.log("3");
-        //     }
-        // }
-
-
-        // 付款方式選擇
-        // var select2 = document.getElementsByTagName("select")[1];
-        // var cash = document.getElementsByTagName("input")[6];
-        // var card = document.getElementsByTagName("input")[7];
-        // var card_date = document.getElementsByTagName("input")[8];
-        // var card_cvv = document.getElementsByTagName("input")[9];
-        // cash.style.display = "none";
-        // cash.style.block = "none";
-        // card.style.display = "none";
-        // card.style.block = "none";
-        // card_date.style.display = "none";
-        // card_date.style.block = "none";
-        // card_cvv.style.display = "none";
-        // card_cvv.style.block = "none";
-
-        // select2.onchange = function a() {
-        //     var index2 = select2.selectedIndex;
-        //     // 不可選擇"請選擇付款方式"
-        //     if (index2 === 0) {
-        //         console.log("no choice");
-        //     } else if (index2 === 1) {
-        //         // cash
-        //         card.style.display = "none";
-        //         card.style.block = "none";
-        //         cash.style.display = "block";
-        //         cash.setAttribute("value", "現金付款");
-        //         cash.setAttribute("readonly", "true");
-
-        //     } else {
-        //         // card
-        //         cash.style.display = "none";
-        //         cash.style.block = "none";
-        //         card.style.display = "block";
-        //         card_date.style.display = "block";
-        //         card_cvv.style.display = "block";
-        //     }
-
-        // }
-
-        // 開立發票方式選擇
-        // var select3 = document.getElementsByTagName("select")[2];
-        // var two = document.getElementsByTagName("input")[10];
-        // var three = document.getElementsByTagName("input")[11];
-        // var phone = document.getElementsByTagName("input")[12];
-        // two.style.display = "none";
-        // two.style.block = "none";
-        // three.style.display = "none";
-        // three.style.block = "none";
-        // phone.style.display = "none";
-        // phone.style.block = "none";
-        // select3.onchange = function a() {
-        //     var index3 = select3.selectedIndex;
-        //     // 不可選擇"請選擇開立發票方式"
-        //     if (index3 === 0) {
-        //         console.log("no choice");
-        //     } else if (index3 === 1) {
-        //         // two
-        //         two.style.display = "block";
-        //         two.setAttribute("value", "二聯式發票");
-        //         two.setAttribute("readonly", "true");
-
-        //         three.style.display = "none";
-        //         three.style.block = "none";
-        //         phone.style.display = "none";
-        //         phone.style.block = "none";
-        //     } else if (index3 === 2) {
-        //         // three
-        //         three.style.display = "block";
-
-        //         two.style.display = "none";
-        //         two.style.block = "none";
-        //         phone.style.display = "none";
-        //         phone.style.block = "none";
-        //     } else {
-        //         // phone
-        //         phone.style.display = "block";
-
-        //         two.style.display = "none";
-        //         two.style.block = "none";
-        //         three.style.display = "none";
-        //         three.style.block = "none";
-        //     }
-
-        // }
 
         return (
             <body className='BodyProduct'>
@@ -262,13 +102,13 @@ class ProductInfo extends Component {
                             <br />
                             運送方式
                             <br />
-                            <select name="ProductInfoDelivery" onChange={this.DeliveryChange} value={this.state.selectedValue}>
+                            <select name="ProductInfoDelivery" onChange={this.handleChange}>
                                 {/* op0 */}
-                                <option value="0">請選擇運送方式</option>
+                                <option value="no">請選擇運送方式</option>
                                 {/* op1 */}
-                                <option className="home" value="1">宅配到家</option>
+                                <option className="home" value="home">宅配到家</option>
                                 {/* op2 */}
-                                <option value="2">就近取貨</option>
+                                <option value="shop">就近取貨</option>
                             </select>
                             <br />
                             {/* 4 */}
@@ -323,12 +163,12 @@ class ProductInfo extends Component {
 
                     <div className="ProductInfoBtn">
                         {/* 10/6 */}
-                        <button className="ProductInfoNext" onclick="nextStep()">送出訂單</button>
+                        <button className="ProductInfoNext" onClick={this.Step.bind(this, 2)}>送出訂單</button>
                         {/* 11/7 */}
-                        <button className="ProductInfoShopping" onclick="goShop()">繼續購物</button>
+                        <button className="ProductInfoShopping" onClick={this.Step.bind(this, 1)}>繼續購物</button>
                     </div>
-                    <Footer />
                 </div>
+                <Footer />
             </body>
         );
     }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import '../css/product_list2.css';
 import '../css/index.css';
 import Index from '../components/index.js';
@@ -33,27 +32,15 @@ class productCart extends Component {
         text.innerText = text.value;
 
 
-        // -(-1)+(1)
-        // 第0和1個按鈕控制第0個div 1 0 2
-        // 第2和3個按鈕控制第1個div 5 1 4
-        // 第4和5個按鈕控制第2個div 9 2 6
+
         var btn = document.getElementsByClassName("CountBtn");
-        for (var i = 0; i < btn.length; i++) {
-            // btn[i].setAttribute();
-            // but[i].onclick = function () {
-            //     b = this.getAttribute('i');
-            //     alert('這是第' + b + '個按鈕');
-            // }
+        // for (var i = 0; i < btn.length; i++) {
 
-            // x>=0 x<2 =>0
-            // x>=2 x<4 =>1
-            // x>=4 x<6 =>2
 
-        }
+        // }
         var a;
 
             if (n === 1) {
-                // console.log(btn[i]);
                 a = btn.length - 1;
                 console.log(a);
             } else {
@@ -61,7 +48,6 @@ class productCart extends Component {
                 console.log(a);
             }
 
-        // console.log(btn.length);
     }
 
 
