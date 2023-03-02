@@ -9,6 +9,8 @@ import Report from './story/report.js';
 import News from './news/news.js';
 import Product from './product/product.js';
 import Menu from './menu/menu.js';
+import TeaSerious from './menu/teaSerious';
+import MilkteaSerious from './menu/milkteaSerious';
 import Order from './order/order.js';
 import Store from './store/store.js';
 import LoginCreat from './components/logincreat.js';
@@ -36,10 +38,12 @@ function App() {
           <Switch>
             <Route path="/" component={Home} exact />
             <Route path="/story" component={Story} exact />
-            <Route path="/report" component={Report} exact />
+            <Route path="/story/report" component={Report} exact />
             <Route path="/news" component={News} exact />
             <Route path="/product" component={Product} exact />
             <Route path="/menu" component={Menu} exact />
+            <Route path="/menu/teaSerious" component={TeaSerious} exact />
+            <Route path="/menu/milkteaSerious" component={MilkteaSerious} exact />
             <Route path="/order" component={Order} exact />
             <Route path="/store" component={Store} exact />
             <Route path="/contact" component={Contact} exact />
