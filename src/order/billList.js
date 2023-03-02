@@ -17,20 +17,20 @@ class BillList extends Component {
                                 <h1>訂購清單</h1>
                             </div>
                             <pre className="billBg">
-                                <div><h1>小明的團購</h1></div>
-                                <div><h3>小明</h3></div>
+                                <div><h1>小新的團訂</h1></div>
+                                <div><h3>小新</h3></div>
                                 <div className="choiceName">
-                                    <h4>布丁奶茶</h4>
+                                    <h4>烏龍綠茶</h4>
                                     <br />
-                                    <p> L /半糖 /微冰 / 加珍珠  *2   $130
+                                    <p> L /半糖 /微冰 / 加珍珠  *2   $80
                                     </p>
 
                                 </div>
-                                <div><h3>阿華</h3></div>
+                                <div><h3>小白</h3></div>
                                 <div className="choiceName">
-                                    <h4>珍珠奶茶</h4>
+                                    <h4>烏龍綠茶</h4>
                                     <br />
-                                    <p> M /半糖 /微冰 / 加珍珠 *3   $150</p>
+                                    <p> M /半糖 /微冰 / 加珍珠 *3   $120</p>
                                 </div>
                                 <br /><br />
                                 <div className="billHr"></div>
@@ -56,6 +56,7 @@ class BillList extends Component {
                                             <select>
                                                 <option>請選擇付款方式</option>
                                                 <option>現金</option>
+                                                <option>刷卡</option>
                                             </select>
                                         </div>
                                     </pre>
@@ -64,13 +65,13 @@ class BillList extends Component {
                                     <div className="getHowto">
                                         <h4>取餐方式</h4>
                                         <div className='getToWhere'>
-                                             <span>自取</span>
-                                            /<span>東興店</span>
+                                             <span>外送</span>
+                                            /<span>台中市南屯區公益路二段51號18樓</span>
                                         </div>
                                     </div>
                                     <div className="timeWhen">
                                         <h4>取餐時間</h4>
-                                        <span>2023/01/16  17:00</span>
+                                        <span>2023/03/02 下午13:00</span>
                                     </div>
                                 </div>
                                 <div className='payPay'>
@@ -92,7 +93,7 @@ class BillList extends Component {
                                 </a>
                                 <a href="/order/billAll" className="BLbtnR">
                                     <button className="BLbtnR BLbtnM1">
-                                        <p>結帳</p>
+                                        <p>送出訂單</p>
                                         <div className="BLborder1 BLbtnR"></div>
                                     </button>
                                 </a>

@@ -55,7 +55,7 @@ class BillAll extends Component {
                             <div className="BAbillBg">
                                 <div>
                                     <div>
-                                        <h1>小明的團購</h1>
+                                        <h1>小新的團訂</h1>
                                     </div>
                                     {this.renderFirstOrder()}
                                     {this.state.billAll.map((bill, index) => (
@@ -83,7 +83,7 @@ class BillAll extends Component {
                                 <div className="BAcomeLeft" key={`drink-${drink.id}`}>
                                     <div>
                                         <h4>現金付款</h4>
-                                        <h4>已付金額</h4>
+                                        <h4>總金額</h4>
                                         <p>${drink.total}</p>
                                     </div>
                                     <div className="BAbillHr"></div>

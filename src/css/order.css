@@ -95,8 +95,9 @@
 
 .followText {
     text-decoration: none;
-    color: var(--white);
+    color: var(--black);
     font-size: 12px;
+    width: 70px;
 }
 
 .followMylist:hover .hiHide {
@@ -1053,7 +1054,7 @@ input[type="text"]::placeholder {
     }
 
     #storeWhere {
-        width: 80%;
+        width: 50.5%;
         height: 100%;
         max-height: 40px;
         max-width: 600px;
@@ -1067,7 +1068,7 @@ input[type="text"]::placeholder {
 
     #storeWhere>option {
         color: var(--black);
-        background-color: #cf121e;
+        /* background-color: #cf121e; */
     }
 }
 
@@ -1194,7 +1195,7 @@ input[type="text"]::placeholder {
     .gobtnL span {
         font-size: 24px;
         color: var(--white);
-        margin: 0% 0 0 0;
+        margin: 0% 0 0 70px;
         text-align: center;
     }
 
@@ -1205,7 +1206,7 @@ input[type="text"]::placeholder {
     .ani_icon {
         width: 150px;
         height: 120px;
-        margin: -50px 0 0 -100px;
+        margin: -50px 0 0 -120px;
         z-index: 0;
         position: absolute;
     }
@@ -1379,6 +1380,9 @@ input[type="text"]::placeholder {
         /* background-color: #cf121e; */
         margin: 20px 0 0 5%;
         float: left;
+    }
+    .contentIn {
+        margin-left: 7%;
     }
 
     .contentInD {
@@ -2199,6 +2203,40 @@ input[type="text"]::placeholder {
     height: 35px;
     border-radius: 50px;
 }
+.FOborder {
+    position: absolute;
+    border: 0.4em solid var(--dark-green);
+    transition: all 0.3s 0.08s linear;
+    margin-left: 43px;
+    margin-top: -9px;
+    width: 210px;
+    height: 25px;
+    transform: translate(-50%, -50%);
+}
+
+.FOborder1 {
+    position: absolute;
+    border: 0.4em solid var(--dark-red);
+    transition: all 0.3s 0.08s linear;
+    margin-left: 43px;
+    margin-top: -9.5px;
+    width: 210px;
+    height: 25px;
+    transform: translate(-50%, -50%);
+}
+.friendBtnL:hover .FOborder {
+    display: block;
+    width: 225px;
+    height: 38px;
+    border-radius: 50px;
+}
+
+.friendBtnL2:hover .FOborder1 {
+    display: block;
+    width: 225px;
+    height: 35px;
+    border-radius: 50px;
+}
 
 .BAaniCon {
     width: 100%;
@@ -2447,7 +2485,7 @@ margin-left: -50px ;
 }
 .timeWhen>span{
     margin-top: -20px;
-    margin-left: 35px;
+    margin-left: 50px;
     color: var(--green);
     /* background-color: #000000; */
     display: block;
@@ -3047,6 +3085,42 @@ margin-left: -50px ;
 }
 
 @media screen  and (min-width:768px) {
+    .FOborder {
+        position: absolute;
+        border: 0.4em solid var(--dark-green);
+        transition: all 0.3s 0.08s linear;
+        margin-left: 50px;
+        margin-top: -9px;
+        width: 230px;
+        height: 25px;
+        transform: translate(-50%, -50%);
+    }
+    
+    .FOborder1 {
+        position: absolute;
+        border: 0.4em solid var(--dark-red);
+        transition: all 0.3s 0.08s linear;
+        margin-left: 50px;
+        margin-top: -9.5px;
+        width: 230px;
+        height: 25px;
+        transform: translate(-50%, -50%);
+    }
+    .friendBtnL:hover .FOborder {
+        display: block;
+        width: 240px;
+        height: 35px;
+        border-radius: 50px;
+    }
+    
+    .friendBtnL2:hover .FOborder1 {
+        display: block;
+        width: 240px;
+        height: 35px;
+        border-radius: 50px;
+    }
+
+
     .billBg{
         background-color: var(--white);
         display: inline-block;
@@ -3111,12 +3185,12 @@ margin-left: -50px ;
     }
     .getGet{
         margin-top: -6.5%;
-        margin-left: 55px;
+        margin-left: -10px;
         /* background-color: #00b7ff; */
         width: 220px;
     }
     .payNumber{
-        margin-left: 298px;
+        margin-left: 235px;
         margin-top: 10px;
         /* background-color: #000000; */
         display: block;
@@ -3132,8 +3206,9 @@ margin-left: -50px ;
         color: var(--green);
         font-size:large;
     }
-    .getToWhere>span{
+    .getToWhere>span:nth-child(1){
         color: var(--green);
+        margin-left: 75px;
     }
 }
 
@@ -3383,6 +3458,7 @@ margin-left: -50px ;
     .friendPlus {
         /* background-color: blueviolet; */
         margin-top: 10px;
+        margin-left: 60px;
     }
 
     .friendBtnL {
@@ -3551,7 +3627,7 @@ margin-left: -50px ;
 
 .sugarOut {
     /* background-color: #000000; */
-    margin: -40px 0 0 30px;
+    margin: -40px 0 0 0px;
 
 }
 

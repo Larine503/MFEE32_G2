@@ -27,12 +27,12 @@ class fullJo extends Component {
                             </div>
                             <div className="joBtnEdit">
                                 <button className="joBtnM">
-                                    <span>自取:</span>&nbsp;&nbsp;<span>東興店</span>&nbsp;&nbsp;<span> 台中市南屯區東興路二段276號</span>
+                                    <span>外送:</span>&nbsp;&nbsp;<span></span>&nbsp;&nbsp;<span>台中市南屯區公益路二段51號18樓</span>
                                     <img src={EditIcon} alt='' />
                                     <div className="border btnR"></div>
                                 </button>
                                 <button className="joBtnM">
-                                    <span>取餐時間:</span>&nbsp;&nbsp;<span>2023/02/02 下午08:00</span>
+                                    <span>取餐時間:</span>&nbsp;&nbsp;<span>2023/02/03 下午13:00</span>
                                     <img src={EditIcon} alt='' />
                                     <div className="border btnR"></div>
                                 </button>

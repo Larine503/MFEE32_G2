@@ -22,7 +22,7 @@ class teamJo extends Component {
                                 <div className="teamBox">
                                     <div className="teamSuss">
                                         
-                                        <h2>「<span>小明</span>」&nbsp;成功開團!</h2>
+                                        <h2>「<span>小新</span>」&nbsp;成功開團!</h2>
                                         <p>分享團購連結揪好友、家人一起訂購</p>
                                         <img src={AniIcon} alt="" className="TJaniIcon" />
                                     </div>

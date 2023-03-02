@@ -31,12 +31,12 @@ class GoOrder extends Component {
                                 <div className="goContentBox">
                                     <div className="contentIn">
                                         <button className="gobtnM ">
-                                            <span>外送:</span>&nbsp;&nbsp;<span>台中市南屯區公益路二段51號</span>
+                                            <span>外送:</span>&nbsp;&nbsp;<span>台中市南屯區公益路二段51號18樓</span>
                                             <img src={EditIcon} alt="" />
                                             <div className="border btnR"></div>
                                         </button>
                                         <button className="gobtnM ">
-                                            <span>取餐時間:</span>&nbsp;&nbsp;<span>2023/02/02 下午08:00</span>
+                                            <span>取餐時間:</span>&nbsp;&nbsp;<span>2023/03/02 下午13:00</span>
                                             <img src={EditIcon} alt="" />
                                             <div className="border btnR"></div>
                                         </button>

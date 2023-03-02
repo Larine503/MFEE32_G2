@@ -21,9 +21,9 @@ class friendJo extends Component {
                             </div>
                             <div>
                                 <div className="friendName">
-                                    <h4><span>小明</span>團購</h4>
+                                    <h4><span>小新</span>團訂</h4>
 
-                                    <h5>團員</h5><p>來自小明的團購邀請</p>
+                                    <h5>團員</h5><p>來自小新的團訂邀請</p>
                                     <br />
                                         <input type="text" placeholder="請輸入大名" />
                                         </div>
@@ -31,9 +31,9 @@ class friendJo extends Component {
                                 </div>
                                 <div className="friendBtnEdit">
                                     <button className="friendBtnM">
-                                        <span className="getloc">自取:</span>&nbsp;&nbsp;<span>東興店</span><br/><span className='addrGo'></span>
+                                        <span className="getloc">外送:</span>&nbsp;&nbsp;<span>台中市南屯區公益路二段51號18樓</span><br/><span className='addrGo'></span>
                                         <div className="border btnR"></div>
-                                        <span className="getTime">取餐時間:</span>&nbsp;&nbsp;<span>2023/02/02 下午08:00</span>
+                                        <span className="getTime">取餐時間:</span>&nbsp;&nbsp;<span>2023/03/02 下午13:00</span>
                                         <div className="border btnR"></div>
                                     </button>
                                 </div>
@@ -41,12 +41,18 @@ class friendJo extends Component {
                                     <div>
                                         <div className="friendPlus">
                                             <a href="/order" className="backJo">
-                                                <button className="friendBtnL btnR"><span>取消團購</span></button>
+                                                <button className="friendBtnL btnR">
+                                                    <span>取消團購</span>
+                                                    <div className="FOborder BLbtnR"></div>
+                                                    </button>
                                             </a>
                                             <br />
                                             <br />
                                                 <a href="/order/drinkList">
-                                                    <button className="friendBtnL2 btnR"><span>開始點餐</span></button>
+                                                    <button className="friendBtnL2 btnR">
+                                                        <span>開始點餐</span>
+                                                        <div className="FOborder1 BLbtnR"></div>
+                                                        </button>
                                                 </a>
 
                                         </div>
