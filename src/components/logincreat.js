@@ -23,15 +23,15 @@ class LoginCreat extends Component {
                         <div className="loginForm">
                             <p className="loginForm-P">會員註冊</p>
                             <form className="loginForm-T" action="">
-                                <label htmlhtmlhtmlFor="">姓名:</label><br />
-                                <input type="text" name="mname" value={this.state.userItem.mname}
-                                    onChange={this.mnameChange} /><br />
-                                <label htmlhtmlhtmlFor="">電話號碼:</label><br />
-                                <input type="tel" name="mtel" value={this.state.userItem.mtel}
-                                    onChange={this.mtelChange} /><br />
-                                <label htmlhtmlhtmlFor="">密碼:</label><br />
-                                <input type="password" name="mpid" value={this.state.userItem.mpid}
-                                    onChange={this.mpidChange} /><br />
+                                {/* <label htmlhtmlhtmlFor="">姓名:</label><br /> */}
+                                <input className='input_m' type="text" name="mname" value={this.state.userItem.mname}
+                                    onChange={this.mnameChange} placeholder='您的姓名' /><br /><br />
+                                {/* <label htmlhtmlhtmlFor="">電話號碼:</label><br /> */}
+                                <input className='input_m' type="tel" name="mtel" value={this.state.userItem.mtel}
+                                    onChange={this.mtelChange} placeholder='電話號碼'/><br /><br />
+                                {/* <label htmlhtmlhtmlFor="">密碼:</label><br /> */}
+                                <input className='input_m' type="password" name="mpid" value={this.state.userItem.mpid}
+                                    onChange={this.mpidChange} placeholder='密碼'/><br />
                                 <div className="loginForm-D">
                                     {/* <button className="button" type="button"  >
                                     登入

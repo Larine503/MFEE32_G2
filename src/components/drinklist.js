@@ -18,19 +18,20 @@ class Drinklist extends Component {
                 <div className="orderList-item">
                     {this.state.drinkList.map((item) =>
                         <table className="orderList-number">
-                            <input type="hidden" id="userItemMtel"
+                            <span type="hidden" id="userItemMtel"
                                 name="phone" value={item.phone} />
                             <tr className="orderList-number-t">
                                 <p>飲品訂單編碼:{item.id}</p>
                             </tr>
                             <tr className="orderList-number-p">
-                                <p>訂單日期:{item.time}</p>
+                                <p>訂單日期</p>
+                                <p>{item.time}</p>
                                 <p>訂購門市:{item.storeId}</p>
-                                <p>訂購金額:{item.total}</p>
+                                <p>訂購金額:{item.total}元</p>
                                 <p>訂單狀態:{item.state}</p>
                             </tr>
                             <tr className="orderList-number-b">
-                                <a href={`/order/billAll/${item.id}`}><p>查看更多</p></a>
+                                <a href={`/order/billAll/${item.id}`}><p>訂單明細</p></a>
                             </tr>
                         </table>
                     )}
