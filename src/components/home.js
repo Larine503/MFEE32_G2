@@ -1,4 +1,3 @@
-// import React, { useEffect, useState } from "react";
 import React, { Component } from 'react';
 // import axios from "axios";
 import '../css/index.css';
@@ -32,7 +31,7 @@ class Home extends Component {
         return (
             <body>
                 <Index />
-                <div >
+                <>
                     <section id="home" className="">
                         <div className="homeDiv1">誠信‧創新‧用心‧惜福</div>
                         <div className="homeDiv2">
@@ -111,20 +110,20 @@ class Home extends Component {
                     </section>
                     <section id="menu">
                         <div className="menuMain" >
-                            <ul className={`scroll-effect2 ${this.state.showEffect2 ? 'show-effect2' : ''} menuUl`}>
-                                <li className="menuLi  menuLi_tr1">
+                            <ul className='menuUl'>
+                                <li  className={`scroll-effect2 ${this.state.showEffect2 ? 'show-effect2' : ''} menuLi`} >
                                     <div className="menuLi-div"><img src={dirnkImg1} alt="" /></div>
                                     <div className="menuLi-Text">
                                         <h3>奶茶系列</h3>
                                     </div>
                                 </li>
-                                <li className="menuLi menuLi_tr2">
+                                <li className={`scroll-effect2_1 ${this.state.showEffect2 ? 'show-effect2' : ''} menuLi`}>
                                     <div className="menuLi-div"><img src={dirnkImg2} alt="" /></div>
                                     <div className="menuLi-Text">
                                         <h3>拿鐵系列</h3>
                                     </div>
                                 </li>
-                                <li className="menuLi menuLi_tr3">
+                                <li  className={`scroll-effect2_2 ${this.state.showEffect2 ? 'show-effect2' : ''} menuLi`}>
                                     <div className="menuLi-div"><img src={dirnkImg3} alt="" /></div>
                                     <div className="menuLi-Text">
                                         <h3>茗品系列</h3>
@@ -154,13 +153,13 @@ class Home extends Component {
                     <section id="productC">
                         <div className="productMainC">
                             <div className="productMain-d">
-                                <div className="productMain-div">
+                                <div  className={`scroll-effect5 ${this.state.showEffect4 ? 'show-effect5' : ''} productMain-div`}>
                                     <div className="productMain-img"><img src={productImg1} alt="" /></div>
                                 </div>
-                                <div className="productMain-div2">
+                                <div className={`scroll-effect6 ${this.state.showEffect4 ? 'show-effect6' : ''} productMain-div`}>
                                     <div className="productMain-img"><img src={productImg2} alt="" /></div>
                                 </div>
-                                <div className="productMain-div3">
+                                <div className={`scroll-effect7 ${this.state.showEffect4 ? 'show-effect7' : ''} productMain-div`}>
                                     <div className="productMain-img"><img src={productImg3} alt="" /></div>
                                 </div>
                             </div>
@@ -203,7 +202,7 @@ class Home extends Component {
                         </div>
                     </section >
                     <Footer />
-                </div>
+                </>
             </body>
         );
     }
@@ -217,19 +216,19 @@ class Home extends Component {
 
     handleScroll = () => {
         const scrollEffect = document.querySelector('.scroll-effect');
-        const triggerHeight = scrollEffect.offsetTop + window.innerHeight / 3;
+        const triggerHeight = scrollEffect.offsetTop + window.innerHeight / 3.5;
         if (window.pageYOffset > triggerHeight) {
             this.setState({ showEffect: true });
         }
-        const triggerHeight2 = triggerHeight+900;
+        const triggerHeight2 = triggerHeight+850;
         if (window.pageYOffset > triggerHeight2) {
             this.setState({ showEffect2: true });
         }
-        const triggerHeight3 = triggerHeight2+300;
+        const triggerHeight3 = triggerHeight2+400;
         if (window.pageYOffset > triggerHeight3) {
             this.setState({ showEffect3: true });
         }
-        const triggerHeight4 = triggerHeight3+750;
+        const triggerHeight4 = triggerHeight3+650;
         if (window.pageYOffset > triggerHeight4) {
             this.setState({ showEffect4: true });
         }
