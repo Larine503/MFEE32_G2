@@ -25,6 +25,20 @@ class Story extends Component {
         this.defaultOpenRef = React.createRef();
     }
 
+    componentDidMount() {
+        this.setState({
+            storyTab: "tab1"
+        });
+        this.defaultOpenRef.current.click();
+    }
+
+    // { 兩區域切換 }
+    openIt = (evt, two) => {
+        this.setState({
+            storyTab: two
+        });
+    }
+
     render() {
         const { storyTab } = this.state;
         return (
@@ -80,7 +94,7 @@ class Story extends Component {
                             </div>
                         </div>
                         <div className="brandSpiritContent">
-                            <div className="">
+                            <div>
                                 <div className="left_title_Spirit">
                                     <span>品牌精神</span>
                                 </div>
@@ -109,7 +123,6 @@ class Story extends Component {
                                         本著「惜福」、「感恩」的心意，力行「取之社會，用之社會」的理念，善盡企業的社會責任。。
                                     </p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -210,19 +223,6 @@ class Story extends Component {
         );
     }
 
-    // { 兩區域切換 }
-    openIt = (evt, two) => {
-        this.setState({
-            storyTab: two
-        });
-    }
-    // { 預設開啟 }
-    componentDidMount() {
-        this.setState({
-            storyTab: "tab1"
-        });
-        this.defaultOpenRef.current.click();
-    }
 
 }
 

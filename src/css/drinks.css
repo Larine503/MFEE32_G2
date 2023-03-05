@@ -13,17 +13,105 @@
     font-family: 'Noto Sans TC', sans-serif;
 }
 
+/* 全部飲品字樣的綠色框邊範圍 */
+.titleArea {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(146, 210, 121, 0.9) 68.89%, rgba(251, 224, 221, 0.0315469) 99.99%, rgba(255, 225, 225, 0) 100%);
+    border-radius: 30%;
+    position: absolute;
+    top: 110px;
+    left: 390px;
+    height: 70px;
+    width: 350px;
+    text-align: center;
+}
+
+/* 全部飲品字樣 */
+.titlesText {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: var(--dark-green);
+    padding-top: 10px;
+}
+
+/* 全部飲品頁面中的奶茶系列/奶茶推薦的範圍 */
+.MTmenu {
+
+}
+
+/* 全部飲品頁面中的奶茶系列/奶茶推薦的字樣綠色圓形邊框 */
+.MTmenuTitleArea {
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: var(--light-green);
+    text-align: center;
+}
+
+/* 全部飲品頁面中的茗品系列的字樣綠色圓形邊框 */
+.TmenuTitleArea {
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: var(--light-green);
+    text-align: center;
+}
+
+/* 全部飲品頁面中的鮮奶系列/拿鐵系列的字樣綠色圓形邊框 */
+.TTmenuTitleArea {
+    position: absolute;
+    top: 200px;
+    left: 850px;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: var(--light-green);
+    text-align: center;
+}
+
+/* 全部飲品頁面中的奶茶系列/奶茶推薦+鮮奶系列/拿鐵系列的字樣 */
+.MTmenuTitle,
+.TTmenuTitle {
+    text-align: center;
+    padding-top: 33px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--dark-green);
+}
+
+/* 全部飲品頁面中的茗品系列的字樣 */
+.TmenuTitle {
+    text-align: center;
+    padding-top: 33px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--dark-green);
+}
+
+/* 飲品的照片範圍 */
 .drinksPicture {
     position: absolute;
-    top: 115px;
+    top: 110px;
     left: 5%;
     width: 350px;
-    height: 400px;
+    height: 390px;
     background: rgb(255, 225, 225);
     background: radial-gradient(circle, rgba(255, 225, 225, 1) 55%, rgba(146, 210, 121, 1) 100%);
     border: 4px dashed var(--green);
 }
 
+/* 飲品的照片 */
 .drinksPicture>img {
     padding-left: 15px;
     padding-top: 10px;
@@ -31,30 +119,38 @@
     height: 100%;
 }
 
+/* 加料的範圍 */
 .topping_content {
-    list-style-type: none;
-    width: 100px;
-    height: 100px;
-    padding-top: 20px;
-    /* background-color: ver(--light-red);
-    border: 4px dashed ver(--light-red);
-    border-radius: 20px 90px 90px 20px; */
-}
-
-.topping_title {
     position: absolute;
-    padding-bottom: 20px;
-    padding-top: 10px;
+    top: 510px;
+    left: 90px;
+    width: 300px;
+    height: 300px;
+    background-color: ver(--light-red);
+    border: 4px dashed ver(--light-red);
+    border-radius: 20px 90px 90px 20px;
+    color: var(--dark-green);
 }
 
+/* 加料字樣 */
+.topping_title {
+    font-size: 23px;
+}
+
+/* 加料內容 */
 .toppingText {
     display: inline-block;
     justify-content: space-between;
     writing-mode: vertical-lr;
+    font-size: 20px;
+    padding-top: 10px;
 }
 
-/* 系列字樣範圍 */
-.milkTea_title_area {
+
+/* MTSerius、TSerius、TTSerius頁面 */
+
+/* 系列字樣的綠色框邊範圍 */
+.drinkTitlesArea {
     background: radial-gradient(50% 50% at 50% 50%, rgba(146, 210, 121, 0.9) 68.89%, rgba(251, 224, 221, 0.0315469) 99.99%, rgba(255, 225, 225, 0) 100%);
     border-radius: 30%;
     position: absolute;
@@ -63,22 +159,28 @@
     height: 70px;
     width: 300px;
     text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: var(--dark-green);
 }
 
 /* 系列字樣 */
-.milkTea_titles {
+.drinktitlesText {
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: bolder;
-    font-size: 45px;
+    font-size: 23px;
     letter-spacing: 2px;
     color: var(--dark-green);
+    padding-top: 15px;
 }
 
 .drinks_menu {
     position: absolute;
     top: -10px;
     font-family: 'Noto Sans TC', sans-serif;
-    text-align: center; 
+    text-align: center;
     writing-mode: vertical-lr;
 
 }
@@ -107,11 +209,7 @@
 }
 
 .cell_2 {
-    position: absolute;
     writing-mode: vertical-lr;
-    /* top: 50px;
-    left: 280px */
-    padding-top: 20px;
 }
 
 
@@ -132,8 +230,8 @@
     height: 420px;
 }
 
-/* 茗品系列btn */
-.teaSerious {
+/* 往上系列btn */
+.SeriousBtn1 {
     position: absolute;
     top: 150px;
     right: 60px;
@@ -141,10 +239,13 @@
     height: 100px;
     border: none;
     background: radial-gradient(50% 50% at 50% 50%, #92D279 0%, rgba(146, 210, 121, 0) 100%);
+    color: var(--dark-green);
+    font-weight: bold;
+    font-size: 15px;
 }
 
-/* 鮮奶/拿鐵系列btn */
-.milkteaSerious {
+/* 往下系列btn */
+.SeriousBtn2 {
     position: absolute;
     top: 500px;
     right: 60px;
@@ -152,6 +253,9 @@
     height: 100px;
     border: none;
     background: radial-gradient(50% 50% at 50% 50%, #92D279 0%, rgba(146, 210, 121, 0) 100%);
+    color: var(--dark-green);
+    font-weight: bold;
+    font-size: 15px;
 }
 
 

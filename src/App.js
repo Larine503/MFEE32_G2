@@ -9,8 +9,9 @@ import Report from './story/report.js';
 import News from './news/news.js';
 import Product from './product/product.js';
 import Menu from './menu/menu.js';
-import TeaSerious from './menu/teaSerious.js';
-import MilkteaSerious from './menu/milkteaSerious.js';
+import MTSerious from './menu/MTSerious.js';
+import TSerious from './menu/TSerious.js';
+import TTSerious from './menu/TTSerious.js';
 import Order from './order/order.js';
 import Store from './store/store.js';
 import LoginCreat from './components/logincreat.js';
@@ -45,8 +46,9 @@ function App() {
           <Route path="/news" component={News} exact />
           <Route path="/product" component={Product} exact />
           <Route path="/menu" component={Menu} exact />
-          <Route path="/menu/teaSerious" component={TeaSerious} exact />
-          <Route path="/menu/milkteaSerious" component={MilkteaSerious} exact />
+          <Route path="/menu/MTSerious" component={MTSerious} exact />
+          <Route path="/menu/TSerious" component={TSerious} exact />
+          <Route path="/menu/TTSerious" component={TTSerious} exact />
           <Route path="/order" component={Order} exact />
           <Route path="/store" component={Store} exact />
           <Route path="/contact" component={Contact} exact />

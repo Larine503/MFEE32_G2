@@ -2,92 +2,73 @@ import React, { Component } from 'react';
 import '../css/index.css';
 import "../css/drinks.css";
 import Index from '../components/index.js';
-import 粉條奶茶 from '../images/drink/MT/粉條奶茶.png';
-// import 茶凍奶茶 from '../images/drink/MT/茶凍奶茶.png';
-// import 珍珠奶茶 from '../images/drink/MT/珍珠奶茶.png';
-// import 烏龍奶茶 from '../images/drink/MT/烏龍奶茶.png';
-// import 特級奶綠 from '../images/drink/MT/特級奶綠.png';
-// import 仙草凍奶茶 from '../images/drink/MT/仙草凍奶茶.png';
-// import 椰果奶茶 from '../images/drink/MT/椰果奶茶.png';
-// import 布丁奶茶 from '../images/drink/MT/布丁奶茶.png';
-// import 暗黑水晶奶茶 from '../images/drink/MT/暗黑水晶奶茶.png';
-// import 蜂蜜奶茶 from '../images/drink/MT/蜂蜜奶茶.png';
-// import 芝麻奶茶 from '../images/drink/MT/芝麻奶茶.png';
-import AllDriksButton from '../menu/allDriksButton.js';
+
 
 
 class Menu extends Component {
     state = {
-        'padding-top': '100px',
+        drinks: []
     }
+    
+    async componentDidMount() {
+        var a = "奶茶系列奶茶推薦";
+        var url = `http://localhost:8000/menu/${a}`;
+        var fromServer = await axios.get(url);
+        // console.log(fromServer.data);
+        this.setState({ drinks: fromServer.data });
+    }
+
     render() {
         return (
             <body>
                 <Index />
-                <div>
-                    <div className='drinksPicture'>
-                        <img src={粉條奶茶} alt='' />
-                        <div className="topping_content">
-                            <div className="topping_title">
-                                加料
+                <div className="allMenuArea">
+                    <div className="titleArea">
+                        <div className="titlesText">全部飲品</div>
+                    </div>
+                    <div className="menuArea">
+                        <div className='MTmenu'>
+                            <div className='MTmenuTitleArea'>
+                                <div className='MTmenuTitle'>
+                                    奶茶系列<br />奶茶推薦
+                                </div>
                             </div>
-                            <ul className='toppingText'>
-                                <li>珍珠</li>
-                                <li>粉圓</li>
-                                <li>QQ</li>
-                                <li>布丁</li>
-                                <li>仙草凍</li>
-                                <li>暗黑水晶</li>
-                                <li>蘆薈</li>
-                                <li>冰淇淋</li>
-                                <li>茉莉茶凍</li>
-                                <li>粉條</li>
-                            </ul>
+                            <div>
+                                <ul className=''>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className='Tmenu'>
+                            <div className='TmenuTitleArea'>
+                                <div className='TmenuTitle'>
+                                    茗品系列
+                                </div>
+                            </div>
+                        </div>
+                        <div className='TTmenu'>
+                            <div className='TTmenuTitleArea'>
+                                <div className='TTmenuTitle'>
+                                    鮮奶系列<br />拿鐵系列
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="menu_area">
-                        <div className="milkTea_title_area">
-                            <div className="milkTea_title">奶茶系列/奶茶推薦</div>
-                        </div>
-                        <div className="drinks_menu">
-                            <ul className="cell_drinkList">
-                                <li className="cell_1">
-                                    <div className="cell_drink_title">
-                                        粉條奶茶
-                                    </div>
-                                    <div className="cell_line"></div>
-                                    <div className="cell_drink_note">
-                                        醲醇芳香的「錫蘭奶紅」，加入爽口滑順的粉條。
-                                    </div>
-                                </li>
-                                <li className="cell_2">
-                                    <div className="cell_drink_title">
-                                        茶凍奶綠
-                                    </div>
-                                    <div className="cell_line"></div>
-                                    <div className="cell_drink_note">
-                                        濃醇的「特級奶綠」，加入滑嫩Q彈的茉莉香綠茶凍。
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="/menu/teaSerious">
-                            <button className='teaSerious'>
-                                茗品系列
-                            </button>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="/menu/milkteaSerious">
-                            <button className='milkteaSerious'>
-                                鮮奶/拿鐵系列
-                            </button>
-                        </a>
-                    </div>
-                </div >
-                <AllDriksButton />
+                </div>
+                <div>
+                    <a href="/menu/TSerious">
+                        <button className='SeriousBtn1'>
+                            茗品系列
+                        </button>
+                    </a>
+                </div>
+                <div>
+                    <a href="/menu/TTSerious">
+                        <button className='SeriousBtn2'>
+                            鮮奶系列<br />拿鐵系列
+                        </button>
+                    </a>
+                </div>
             </body >
         );
     }

@@ -286,8 +286,8 @@ app.get('/order/billAll/drinkName/:id', (req, res) => {
 });
 
 // 江的所有飲品
-app.get("/menu", function (req, res) {
-    db.query("select * from drink where pidname = ?",
+app.get("/menu/:pidname", function (req, res) {
+    db.query("select * from drink where pidname = ? ",
         [req.params.pidname],
         function (err, rows) {
             res.send(JSON.stringify(rows));
