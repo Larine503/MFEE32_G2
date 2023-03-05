@@ -30,7 +30,19 @@ class BillList extends Component {
                                 <div className="choiceName">
                                     <h4>烏龍綠茶</h4>
                                     <br />
-                                    <p> M /半糖 /微冰 / 加珍珠 *3   $120</p>
+                                    <p> L /無糖 /去冰 / 加珍珠 *1   $40</p>
+                                </div>
+                                <div><h3>風間</h3></div>
+                                <div className="choiceName">
+                                    <h4>布丁奶茶</h4>
+                                    <br />
+                                    <p> L /全糖 /微冰  *1   $55</p>
+                                </div>
+                                <div><h3>阿呆</h3></div>
+                                <div className="choiceName">
+                                    <h4>冰淇淋紅茶</h4>
+                                    <br />
+                                    <p> L /微糖 /正常冰  *1   $50</p>
                                 </div>
                                 <br /><br />
                                 <div className="billHr"></div>
@@ -71,13 +83,13 @@ class BillList extends Component {
                                     </div>
                                     <div className="timeWhen">
                                         <h4>取餐時間</h4>
-                                        <span>2023/03/02 下午13:00</span>
+                                        <span>2023/03/14 下午01:00</span>
                                     </div>
                                 </div>
                                 <div className='payPay'>
 
                                     <div className="payNumber">
-                                        <h4>應付金額<span>$282</span></h4>
+                                        <h4>應付金額<span>$225</span></h4>
                                     </div>
 
                                 </div>

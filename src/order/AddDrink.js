@@ -76,6 +76,7 @@ class AddDrink extends Component {
                                     <div className='webDrink'>
                                         <div className="plusOther">
                                             <h3>加料區</h3>
+                                            <p className='textTT'>(&nbsp;加料:10元&nbsp;)</p>
                                             <div className="plusList">
                                                 <div>
                                                     <p>珍珠</p>

@@ -33,7 +33,7 @@ class friendJo extends Component {
                                     <button className="friendBtnM">
                                         <span className="getloc">外送:</span>&nbsp;&nbsp;<span>台中市南屯區公益路二段51號18樓</span><br/><span className='addrGo'></span>
                                         <div className="border btnR"></div>
-                                        <span className="getTime">取餐時間:</span>&nbsp;&nbsp;<span>2023/03/02 下午13:00</span>
+                                        <span className="getTime">取餐時間:</span>&nbsp;&nbsp;<span>2023/03/14 下午1:00</span>
                                         <div className="border btnR"></div>
                                     </button>
                                 </div>
@@ -41,7 +41,7 @@ class friendJo extends Component {
                                     <div>
                                         <div className="friendPlus">
                                             <a href="/order" className="backJo">
-                                                <button className="friendBtnL btnR">
+                                                <button className="friendBtnL BLbtnR">
                                                     <span>取消團購</span>
                                                     <div className="FOborder BLbtnR"></div>
                                                     </button>
@@ -49,7 +49,7 @@ class friendJo extends Component {
                                             <br />
                                             <br />
                                                 <a href="/order/drinkList">
-                                                    <button className="friendBtnL2 btnR">
+                                                    <button className="friendBtnL2 BLbtnR">
                                                         <span>開始點餐</span>
                                                         <div className="FOborder1 BLbtnR"></div>
                                                         </button>

@@ -21,7 +21,7 @@ class UnitPrice extends Component {
     }
   };
   calculateTotalAmount = () => {
-    const totalAmount = this.state.unitPrice * this.state.qty;
+    const totalAmount = this.state.unitPrice * this.state.qty+(10*this.state.qty);
     this.setState({ totalAmount });
   }
 
@@ -36,7 +36,7 @@ class UnitPrice extends Component {
     return (
       <div className='cupB'>
         <div className="cupCount">
-        杯數:
+        杯數:&nbsp;&nbsp;
           <input
             type="button"
             value="-"
@@ -57,7 +57,7 @@ class UnitPrice extends Component {
             onClick={this.handlePlusClick}
           />
         </div>
-        <pre className='priceArea'><p>  單價: {this.state.unitPrice}元   金額: {this.state.totalAmount}元</p></pre>
+        <pre className='priceArea'><p> 單價: {this.state.unitPrice}元   金額: {this.state.totalAmount}元</p></pre>
 
       </div>
     );

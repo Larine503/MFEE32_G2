@@ -25,7 +25,7 @@ class DrinkList extends Component {
                                     <h2>茗品系列</h2>
                                     <p>鮮熱茶汁，濃郁醇厚，搭配半月型自製衛生冰塊，堅持以調酒杯現場手工沖泡、調製。</p>
                                     <a href="/order/goOrder">
-                                        <button className="dkbtnM btnR">
+                                        <button className="dkbtnM dkbtnR">
                                             <img src={BackTo} alt="" />
                                             &nbsp;
                                             <span className='hiBack'>返回</span>

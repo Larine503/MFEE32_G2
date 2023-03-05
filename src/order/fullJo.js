@@ -21,7 +21,7 @@ class fullJo extends Component {
                             <div>
                                 <div className="joTeamName">
                                     <h4>主揪大名</h4>
-                                    <input type="text" placeholder="請輸入大名" />
+                                    <input type="text" placeholder="小新" />
                                 </div>
                                 <div className="imgBox"><img src={AniIcon} alt="" className="FJaniIcon" /></div>
                             </div>
@@ -32,7 +32,7 @@ class fullJo extends Component {
                                     <div className="border btnR"></div>
                                 </button>
                                 <button className="joBtnM">
-                                    <span>取餐時間:</span>&nbsp;&nbsp;<span>2023/02/03 下午13:00</span>
+                                    <span>取餐時間:</span>&nbsp;&nbsp;<span>2023/03/14 下午01:00</span>
                                     <img src={EditIcon} alt='' />
                                     <div className="border btnR"></div>
                                 </button>
@@ -41,7 +41,7 @@ class fullJo extends Component {
                             <div>
                                 <div className="joPlus">
                                     <a href="/order/goOrder" className="backJo">
-                                        <button className="joBtnL btnR">
+                                        <button className="joBtnL FJbtnR">
                                             <span>取消開團</span>
                                             <div className="FJborder BLbtnR"></div>
                                             </button>
@@ -49,7 +49,7 @@ class fullJo extends Component {
                                     <br />
                                     <br />
                                     <a href="/order/teamJo" className="opJo">
-                                        <button className="joBtnL2 btnR">
+                                        <button className="joBtnL2 FJbtnR">
                                             <span>+開新團</span>
                                             <div className="FJborder1 BLbtnR"></div>
                                             </button>

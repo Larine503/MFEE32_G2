@@ -32,11 +32,17 @@ class teamJo extends Component {
                             <div>
                                 <div className="teamPlus">
                                     <a href="/order/friendJo" className="shareJo">
-                                        <button className="teamBtnL btnR"><span>分享團購</span></button>
+                                        <button className="teamBtnL TMbtnR">
+                                            <span>分享團購</span>
+                                            <div className="TMborder1 BLbtnR"></div>
+                                            </button>
                                     </a>
                                     <br />
                                     <a href="/order/drinkList">
-                                        <button className="teamBtnL2 btnR"><span>開始點餐</span></button>
+                                        <button className="teamBtnL2 TMbtnR">
+                                            <span>開始點餐</span>
+                                            <div className="TMborder2 BLbtnR"></div>
+                                            </button>
                                     </a>
 
                                 </div>

@@ -59,12 +59,17 @@ class Order extends Component {
                                             </div>
                                             <form method="post">
                                                 <div className="locatInput">
-                                                    <input type="text" placeholder="輸入完整位置" />
-                                                    
+                                                    <input type="text" placeholder="台中市南屯區公益路二段51號18樓" />
                                                 </div>
                                             </form>
+                                            
+                                        <br />
+                                                <div className="locatInput2">
+                                                <select>
+                                                    <option value="" className='opText1'>東興店</option>
+                                                </select>
+                                            </div>
                                         </div>
-
                                         <div className="locaBox1"
                                             style={{ display: activeTab === "tab2" ? "block" : "none" }}
                                             >
@@ -73,7 +78,7 @@ class Order extends Component {
                                             </div>
                                             <div className="locatInput">
                                                 <select name="" id="storeWhere">
-                                                    <option value="">東興店</option>
+                                                    <option value="" className='opText'>東興店</option>
                                                 </select>
                                             </div>
                                         </div>

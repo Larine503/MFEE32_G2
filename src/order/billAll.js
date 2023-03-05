@@ -81,27 +81,28 @@ class BillAll extends Component {
                             </div>
                             {this.state.drinkName.map(drink => (
                                 <div className="BAcomeLeft" key={`drink-${drink.id}`}>
+                                   <div className="BAbillHr"></div>
                                     <div>
                                         <h4>現金付款</h4>
                                         <h4>總金額</h4>
-                                        <p>${drink.total}</p>
+                                        <p>$225</p>
                                     </div>
-                                    <div className="BAbillHr"></div>
+                                    
                                     <div className="getPoint">
-                                        <h4>{drink.method}/{drink.storeId}</h4>
-                                        <span>{new Date(drink.time).toLocaleString()}</span>
+                                        <h4>外送 /東興店</h4>
+                                        <span>2023/03/14 下午01:00</span>
                                     </div>
                                 </div>
                             ))}
                         </div>
                         <div className="BAbillBtn ">
-                            <a href="/order/drinkList" className="BAbtnR BtnA">
+                            <a href="/order/goOrder" className="BAbtnR BtnA">
                                 <button className="BAbtnM BAbtnR BtnA">
                                     <p>再次訂購</p>
                                     <div className="BAborder BAbtnR"></div>
                                 </button>
                             </a>
-                            <a href="/order/goOrder" className="BAbtnR">
+                            <a href="/order/drinkList" className="BAbtnR">
                                 <button className="BAbtnR BAbtnM1">
                                     <p>關閉</p>
                                     <div className="BAborder BAbtnR"></div>

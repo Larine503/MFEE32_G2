@@ -58,7 +58,7 @@
     width: 115px;
     height: 100px;
     margin-top: -30px;
-    margin-left: -15px;
+    margin-left: -5px;
     transition: transform 0.2s ease;
 }
 
@@ -69,7 +69,7 @@
     background-color: #92d2793a;
     text-decoration: none;
     color: var(--white);
-    width: 80px;
+    width: 100px;
     height: 50px;
     display: inline-block;
     border-radius: 50px;
@@ -96,8 +96,11 @@
 .followText {
     text-decoration: none;
     color: var(--black);
-    font-size: 12px;
-    width: 70px;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 0.5px 0.5px 1px #ffffff;
+    margin-left: 5px;
+    margin-top: 8px;
 }
 
 .followMylist:hover .hiHide {
@@ -105,6 +108,7 @@
     display: block;
     margin-top: -30px;
     margin-left: 16px;
+    border-radius: 50px;
 }
 
 .btnXL {
@@ -308,6 +312,43 @@
         height: 120%;
     }
 
+    .teamBtnL .TMborder1 {
+        border: 0.4em solid var(--dark-green);
+        position: absolute;
+        transition: all 0.3s 0.08s linear;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 20px;
+        margin-top: -9px;
+        margin-left: 38px;
+
+    }
+
+    .teamBtnL:hover .TMborder1 {
+        display: block;
+        width: 102%;
+        height: 120%;
+        border-radius: 50px;
+    }
+    .teamBtnL2 .TMborder2 {
+        border: 0.5em solid var(--dark-red);
+        position: absolute;
+        transition: all 0.3s 0.08s linear;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 20px;
+        margin-top: -9px;
+        margin-left: 38px;
+
+    }
+
+    .teamBtnL2:hover .TMborder2 {
+        display: block;
+        width: 102%;
+        height: 120%;
+        border-radius: 50px;
+    }
+
 }
 
 .contentBox1 {
@@ -365,7 +406,7 @@
         display: inline-block;
         width: 100%;
         max-width: 700px;
-        max-height: 370px;
+        max-height: 390px;
         height: 100%;
         border-radius: 20px;
         background-color: var(--green);
@@ -568,6 +609,20 @@
 }
 
 .BAbtnR {
+    border-radius: 3em;
+}
+
+.dkbtnR {
+    border-radius: 3em;
+}
+
+.gobtnR {
+    border-radius: 3em;
+}
+.FJbtnR {
+    border-radius: 3em;
+}
+.TMbtnR {
     border-radius: 3em;
 }
 
@@ -990,14 +1045,15 @@
 
 input[type="text"]::placeholder {
     text-align: center;
-    font-size: large;
+    font-size: medium;
 }
 
 .locatInput input[type="datetime-local"] {
     text-align: center;
     font-size: larger;
 }
-.locatInput option{
+
+.locatInput option {
     text-align: center;
     font-size: larger;
 }
@@ -1046,6 +1102,15 @@ input[type="text"]::placeholder {
         position: absolute;
     }
 
+    .locatInput input[type="text"] {
+        margin-top: 30px;
+        margin-left: 215px;
+    }
+    .locatInput input[type="datetime-local"] {
+        text-align: center;
+        font-size: larger;
+    }
+
     .loc {
         display: block;
         color: var(--white);
@@ -1056,7 +1121,7 @@ input[type="text"]::placeholder {
     #storeWhere {
         width: 50.5%;
         height: 100%;
-        max-height: 40px;
+        max-height: 45px;
         max-width: 600px;
         margin: 0px 0 0 220px;
         font-size: medium;
@@ -1068,7 +1133,34 @@ input[type="text"]::placeholder {
 
     #storeWhere>option {
         color: var(--black);
+        font-size: 8px;
         /* background-color: #cf121e; */
+    }
+    .locatInput2 {
+        /* width: 100%; */
+        /* height: 100%; */
+        /* max-height: 45px; */
+        /* max-width: 600px; */
+        margin: -29px 0 0 215px;
+        font-size: medium;
+        
+    }
+    .locatInput2>select{
+        width: 30%;
+        height: 100%;
+        /* max-height: 60px; */
+        max-width: 400px;
+        text-align: center;
+        box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
+    }
+
+   
+
+    .opText {
+        font-size: 20px;
+    }
+    .opText1 {
+        font-size: 16px;
     }
 }
 
@@ -1130,10 +1222,10 @@ input[type="text"]::placeholder {
         position: absolute;
         border: 0.45em solid var(--dark-green);
         transition: all 0.3s 0.08s linear;
-        top: 50%;
+        top: 51%;
         left: 50%;
         width: 98%;
-        height: 98%;
+        height: 97%;
         transform: translate(-50%, -50%);
     }
 
@@ -1141,6 +1233,14 @@ input[type="text"]::placeholder {
         display: block;
         width: 102%;
         height: 120%;
+    }
+    .textTT{
+        font-size: 8px;
+        margin-top: 55px;
+        /* background-color: var(--red); */
+        text-align: center;
+        width: 100px;
+        margin-left: 80px;
     }
 }
 
@@ -1381,6 +1481,7 @@ input[type="text"]::placeholder {
         margin: 20px 0 0 5%;
         float: left;
     }
+
     .contentIn {
         margin-left: 7%;
     }
@@ -1419,7 +1520,7 @@ input[type="text"]::placeholder {
 
     .drinkAddname {
         width: 200px;
-        margin: 0 auto;
+        margin: 0 50px;
         /* text-align: center;
         justify-content: center; */
         /* background-color: #000000; */
@@ -1738,7 +1839,7 @@ input[type="text"]::placeholder {
 
     .drinksBox img {
         margin-bottom: 20%;
-        margin-top: 0%;
+        margin-top: 30%;
     }
 
     .drinksBox span {
@@ -1955,7 +2056,7 @@ input[type="text"]::placeholder {
 .imgDrink>img {
     /* float: left; */
     width: 100%;
-    max-width: 170px;
+    max-width: 150px;
     /* background-color: blue; */
     margin-left: 25%;
     margin-top: -5%;
@@ -2069,8 +2170,9 @@ input[type="text"]::placeholder {
     .imgDrink>img {
         float: left;
         width: 200px;
-        height: 190px;
-        margin: 80px 0 0 10%;
+        max-width: 300px;
+        height: 250px;
+        margin: 45px 0 0 8%;
         /* background-color: #cf121e; */
 
     }
@@ -2151,6 +2253,7 @@ input[type="text"]::placeholder {
     max-width: 600px;
     margin: 30px 0 0 0;
 }
+
 .BAbillBox {
     width: 85%;
     /* max-width: 1300px; */
@@ -2203,6 +2306,7 @@ input[type="text"]::placeholder {
     height: 35px;
     border-radius: 50px;
 }
+
 .FOborder {
     position: absolute;
     border: 0.4em solid var(--dark-green);
@@ -2224,6 +2328,7 @@ input[type="text"]::placeholder {
     height: 25px;
     transform: translate(-50%, -50%);
 }
+
 .friendBtnL:hover .FOborder {
     display: block;
     width: 225px;
@@ -2279,7 +2384,7 @@ input[type="text"]::placeholder {
     /* position: absolute; */
 }
 
-.billBg{
+.billBg {
     background-color: var(--white);
     display: inline-block;
     width: 100%;
@@ -2291,13 +2396,14 @@ input[type="text"]::placeholder {
     border-radius: 10px;
 }
 
-.billBg h1{
+.billBg h1 {
     color: var(--dark-green);
 }
+
 .billBg h3 {
     background-color: var(--light-green);
     margin-left: 0%;
-    padding:  0  200% 0 45%;
+    padding: 0 200% 0 45%;
 }
 
 .billBg h1 {
@@ -2341,7 +2447,7 @@ input[type="text"]::placeholder {
     /* float: left; */
     /* background-color: blue; */
     margin-left: -50px;
-    margin-top: 120px;
+    margin-top: 250px;
     /* display: inline-block; */
 }
 
@@ -2366,6 +2472,7 @@ input[type="text"]::placeholder {
     display: inline-block;
     /* background-color: #000000; */
 }
+
 .BAchoiceName {
     text-align: center;
 }
@@ -2385,7 +2492,8 @@ input[type="text"]::placeholder {
     /* margin-left: 20px; */
     display: inline-block;
 }
-.BAbillBg{
+
+.BAbillBg {
     /* background-color: var(--white); */
     /* display: inline-block; */
     width: 100%;
@@ -2394,6 +2502,7 @@ input[type="text"]::placeholder {
     /* overflow-x: hidden; */
     margin-top: 20px;
 }
+
 .BAbillBg h1,
 .BAbillBg h3 {
     color: var(--light-green);
@@ -2407,6 +2516,7 @@ input[type="text"]::placeholder {
 .BAbillBg:nth-child(2) h3 {
     text-align: left;
 }
+
 .BAbillBg p {
     /* text-align: left; */
     color: var(--green);
@@ -2422,11 +2532,12 @@ input[type="text"]::placeholder {
     background-color: var(--light-green);
     margin-left: 0px;
 }
+
 .BAbillHr {
     width: 100%;
     height: 3px;
     background-color: var(--light-green);
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .straw,
@@ -2437,10 +2548,12 @@ input[type="text"]::placeholder {
     float: left;
     color: var(--dark-green);
 }
-.payPay{
+
+.payPay {
     margin-top: -20px;
     margin-left: 50px;
 }
+
 .strawNbag {
     /* background-color: #000000; */
     width: 180px;
@@ -2460,68 +2573,76 @@ input[type="text"]::placeholder {
     margin-left: 0%;
 }
 
-.getGet{
+.getGet {
     margin-top: 5%;
     margin-left: 55px;
     /* background-color: #00b7ff; */
     width: 220px;
 }
-.getHowto{
+
+.getHowto {
     margin-top: 27px;
     margin-left: -50px;
 }
-.getToWhere{
+
+.getToWhere {
     margin-left: 25px;
     /* background-color: #000000; */
     margin-top: -20px;
     color: var(--green);
 }
-.timeWhen{
+
+.timeWhen {
     /* background-color: #000000; */
     margin-top: -10px;
 }
-.timeWhen>h4{
-margin-left: -50px ;
+
+.timeWhen>h4 {
+    margin-left: -50px;
 }
-.timeWhen>span{
+
+.timeWhen>span {
     margin-top: -20px;
     margin-left: 50px;
     color: var(--green);
     /* background-color: #000000; */
     display: block;
 }
-.payNumber{
+
+.payNumber {
     margin-left: 59px;
     margin-top: 10px;
     /* background-color: #000000; */
     display: block;
 }
+
 .payNumber>h4,
 .getGet>h4 {
     margin-left: 0%;
     margin-top: 0%;
 }
 
-.payNumber span{
+.payNumber span {
     margin-left: 20px;
     color: var(--green);
-    font-size:large;
+    font-size: large;
 }
 
-.payHowto{
+.payHowto {
     margin-top: -20px;
     /* background-color: #000000; */
     height: 10px;
 }
-.payHowto>h4{
- margin-left: 5px;
- margin-top: 10px;
- /* background-color: #000000; */
+
+.payHowto>h4 {
+    margin-left: 5px;
+    margin-top: 10px;
+    /* background-color: #000000; */
 }
 
 
 .payHowto>select {
-    background-color: var(--gray);
+    background-color: var(--light-green);
     color: var(--white);
     border: none;
     margin-left: 45px;
@@ -2565,6 +2686,7 @@ margin-left: -50px ;
     justify-content: center;
     gap: 20px;
 }
+
 .BAbillBtn {
     /* background-color: #cf121e; */
     display: inline-block;
@@ -2605,6 +2727,7 @@ margin-left: -50px ;
 .BLbtnM>p {
     margin-top: 1px;
 }
+
 .BLbtnM1 {
     width: 100px;
     height: 35px;
@@ -2932,7 +3055,7 @@ margin-left: -50px ;
     position: fixed;
     float: left;
     margin-top: -20px;
-    
+
 }
 
 .friendName>h4 {
@@ -3031,7 +3154,7 @@ margin-left: -50px ;
 .fullScreen .drinkInfo {
     width: 80%;
     top: 5px;
-    max-width: 570px;
+    max-width: 600px;
     max-height: 500px;
     height: 80%;
     background-color: var(--green);
@@ -3044,9 +3167,12 @@ margin-left: -50px ;
     overflow-x: hidden;
 }
 
-.sugarRang,
-.iceRang {
+.sugarRang{
     margin-left: -120px;
+}
+
+.iceRang {
+    margin-left: -30px;
 }
 
 .drinkBox {
@@ -3072,6 +3198,7 @@ margin-left: -50px ;
     /* background-color: aqua; */
     display: inline-block;
 }
+
 .plusOther>h3 {
     float: left;
     margin-left: 15%;
@@ -3080,11 +3207,12 @@ margin-left: -50px ;
     padding: 3px 50px;
     background-color: var(--light-green);
 }
-.drinkImg1{
+
+.drinkImg1 {
     display: none;
 }
 
-@media screen  and (min-width:768px) {
+@media screen and (min-width:768px) {
     .FOborder {
         position: absolute;
         border: 0.4em solid var(--dark-green);
@@ -3095,7 +3223,7 @@ margin-left: -50px ;
         height: 25px;
         transform: translate(-50%, -50%);
     }
-    
+
     .FOborder1 {
         position: absolute;
         border: 0.4em solid var(--dark-red);
@@ -3106,13 +3234,14 @@ margin-left: -50px ;
         height: 25px;
         transform: translate(-50%, -50%);
     }
+
     .friendBtnL:hover .FOborder {
         display: block;
         width: 240px;
         height: 35px;
         border-radius: 50px;
     }
-    
+
     .friendBtnL2:hover .FOborder1 {
         display: block;
         width: 240px;
@@ -3121,7 +3250,7 @@ margin-left: -50px ;
     }
 
 
-    .billBg{
+    .billBg {
         background-color: var(--white);
         display: inline-block;
         width: 100%;
@@ -3130,40 +3259,43 @@ margin-left: -50px ;
         overflow-x: hidden;
         margin-top: 20px;
     }
-    
-    .billBg h1{
+
+    .billBg h1 {
         color: var(--dark-green);
     }
+
     .billBg h3 {
         background-color: var(--light-green);
         margin-left: 0%;
-        padding:  0  200% 0 47%;
+        padding: 0 200% 0 47%;
     }
-    
+
     .billBg h1 {
         font-size: 26px;
         margin-top: 20px;
     }
-    
+
     .billBg:nth-child(2) h3 {
         text-align: left;
     }
-    .payHowto{
+
+    .payHowto {
         margin-top: -10px;
         /* background-color: #000000; */
         display: inline-block;
         height: 10px;
         margin-left: -50px;
     }
-    .payHowto>h4{
-     display: inline-block;
-     margin-top: 10px;
-     /* background-color: #000000; */
+
+    .payHowto>h4 {
+        display: inline-block;
+        margin-top: 10px;
+        /* background-color: #000000; */
     }
-    
-    
+
+
     .payHowto>select {
-        background-color: var(--gray);
+        background-color: var(--light-green);
         color: var(--white);
         border: none;
         margin-left: 98px;
@@ -3172,41 +3304,45 @@ margin-left: -50px ;
         font-size: 12px;
         /* padding: 3px; */
     }
-    
+
     .payHowto>select:hover {
         background-color: var(--light-green);
         color: var(--white);
     }
-    
+
     .payHowto>select>option {
         text-align: center;
         color: var(--white);
         font-size: medium;
     }
-    .getGet{
+
+    .getGet {
         margin-top: -6.5%;
         margin-left: -10px;
         /* background-color: #00b7ff; */
         width: 220px;
     }
-    .payNumber{
+
+    .payNumber {
         margin-left: 235px;
         margin-top: 10px;
         /* background-color: #000000; */
         display: block;
     }
+
     .payNumber>h4,
     .getGet>h4 {
         margin-left: 0%;
         margin-top: 0%;
     }
-    
-    .payNumber span{
+
+    .payNumber span {
         margin-left: 20px;
         color: var(--green);
-        font-size:large;
+        font-size: large;
     }
-    .getToWhere>span:nth-child(1){
+
+    .getToWhere>span:nth-child(1) {
         color: var(--green);
         margin-left: 75px;
     }
@@ -3298,7 +3434,7 @@ margin-left: -50px ;
     }
 
     .teamBtnL {
-        width: 80%;
+        width: 210px;
         position: relative;
         padding: 0.5em 5em 0.5em 5em;
         background: var(--dark-green);
@@ -3306,12 +3442,12 @@ margin-left: -50px ;
         box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
         z-index: 1;
         color: var(--white);
-        margin: 10px 0 0 0;
+        margin: 10px 0 0 80px;
         border: none;
     }
 
     .teamBtnL2 {
-        width: 80%;
+        width: 210px;
         position: relative;
         padding: 0.5em 5em 0.5em 5em;
         background: var(--dark-red);
@@ -3319,7 +3455,7 @@ margin-left: -50px ;
         box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
         z-index: 1;
         color: var(--white);
-        margin: 15px 0 0 0;
+        margin: 15px 0 0 80px;
         border: none;
     }
 
@@ -3334,10 +3470,12 @@ margin-left: -50px ;
         margin-top: -20px;
         margin-left: 200px;
     }
-    .drinkName img{
+
+    .drinkName img {
         margin-left: 330px;
     }
-    .drinkName>h2{
+
+    .drinkName>h2 {
         /* background-color: #000000; */
         padding-top: 2px;
     }
@@ -3369,21 +3507,21 @@ margin-left: -50px ;
         /* background-color: #cf121e; */
         display: inline-block;
         margin: -250px 0 0 240px;
-        
-    }
-    
-    .drinkImg>img{
-        width: 120%;
-        /* background-color: #000000; */
-        
+
     }
 
-    .drinkImg{
+    .drinkImg>img {
+        width: 120%;
+        /* background-color: #000000; */
+
+    }
+
+    .drinkImg {
         background-color: blue;
-       float: left;
-       width: 130px;
-       margin-left: 50px;
-       display: none;
+        float: left;
+        width: 130px;
+        margin-left: 50px;
+        display: none;
     }
 
 
@@ -3518,11 +3656,12 @@ margin-left: -50px ;
         height: 35px;
         margin-left: 40px;
         border-radius: 5px;
-        margin-top: -30px;
+        margin-top: -23px;
     }
 
     .friendName>input[type="text"] {
         text-align: center;
+        border: none;
     }
 
     .friendBox {
@@ -3562,7 +3701,7 @@ margin-left: -50px ;
 }
 
 .rangColor[type="range"],
-.rangColorI[type="range"]{
+.rangColorI[type="range"] {
     height: 30px;
     width: 200px;
     /* overflow: hidden; */
@@ -3579,14 +3718,15 @@ margin-left: -50px ;
     height: 12px;
     width: 180px;
     border-radius: 4px;
-    background: linear-gradient(to right,#ffe1e1, #ff3542);
+    background: linear-gradient(to right, #ffe1e1, #ff3542);
     /* border:2px solid #d83e46; */
 }
+
 .rangColorI[type="range"]::-webkit-slider-runnable-track {
     height: 12px;
     width: 180px;
     border-radius: 4px;
-    background: linear-gradient(to right,#ff3542 ,#ffe1e1 ,#00b7ff );
+    background: linear-gradient(to right, #ff3542, #ffe1e1, #00b7ff);
     /* border:2px solid #d83e46; */
 }
 
@@ -3601,6 +3741,7 @@ margin-left: -50px ;
     border: 2px solid var(--white);
     box-shadow: 0.1em 0.1em 0.1em rgba(54, 2, 2, 0.327);
 }
+
 .rangColorI[type="range"]::-webkit-slider-thumb {
     position: relative;
     height: 25px;
@@ -3635,12 +3776,12 @@ margin-left: -50px ;
 .addIce {
     display: inline-block;
     /* background-color: #ff3542; */
-    margin: 20px 0 0 7px;
+    margin: 20px 0 0 37px;
 }
 
 .addSugar>h2,
 .addIce>h2 {
-    margin-left: 30px;
+    margin-left: 5px;
 
 }
 
@@ -3664,24 +3805,55 @@ margin-left: -50px ;
     float: left;
 }
 
-@media screen and (min-width:768px){
+@media screen and (min-width:768px) {
     .sizeBox {
         /* background-color: #cf121e; */
         margin-top: 20px;
         /* display: inline-block; */
         width: 200px;
     }
-    .drinkSize{
+
+    .drinkSize {
         float: left;
         /* background-color: #cf121e; */
     }
-    .webDrink{
+
+    .webDrink {
         margin: -280px 0 0 300px;
         /* background-color: #00b7ff; */
         /* display: inline-block; */
     }
-    .addIce{
-        margin-left: 10px;
+
+    .addIce {
+        margin-left: 30px;
+    }
+
+    .addSugar,
+    .addIce {
+        display: inline-block;
+        /* background-color: #ff3542; */
+        margin: 20px 0 0 37px;
+    }
+
+    .addSugar>h2{
+        margin-left: 5px;
+
+    }
+    .addIce>h2 {
+        margin-left: 90px;
+        margin-top: -70px;
+
+    }
+
+
+    .addSugar span,
+    .addIce span {
+        color: var(--black);
+        background-color: var(--white);
+        padding: 2px 10px;
+        border-radius: 5px;
+        margin: 0 0 0 10px;
+        box-shadow: 0.1em 0.1em 0.1em rgba(54, 2, 2, 0.327);
     }
 }
 
@@ -3742,7 +3914,7 @@ margin-left: -50px ;
 
 .plusList {
     display: inline-block;
-    margin-left: -35px;
+    margin-left: -20px;
     /* background-color: #cf121e; */
     width: 300px;
 }
@@ -3811,11 +3983,13 @@ margin-left: -50px ;
     margin: 0px 0 0 10px;
     border-radius: 5%;
 }
-.cupB{
+
+.cupB {
     margin-left: 20px;
     /* background-color: #000000; */
 }
-.priceArea{
+
+.priceArea {
     margin-left: -15px;
 }
 
@@ -3826,12 +4000,13 @@ margin-left: -50px ;
     color: var(--dark-green);
     background-color: var(--white);
     font-size: large;
-    margin-top: -5px;
+    margin-top: -2px;
     cursor: pointer;
     border: none;
     border-radius: 0;
 }
-.plusBtn{
+
+.plusBtn {
     margin-left: -10px;
 }
 
@@ -3844,6 +4019,7 @@ margin-left: -50px ;
     border: none;
     border-radius: 0;
     margin-left: -10px;
+    margin-top: -10px;
 }
 
 .addTolist {
@@ -4047,23 +4223,28 @@ margin-left: -50px ;
 .getPoint>span {
     margin-left: 50px;
 }
-@media screen and (min-width:768px){
+
+@media screen and (min-width:768px) {
     .drinkCup {
         margin: -20px 0 0 50px;
-    
+
     }
+
     .cupCount {
         /* display: inline-block; */
         background-color: var(--green);
-        margin: -15px 0 0 10px;
+        margin: -5px 0 0 10px;
         border-radius: 5%;
         float: left;
     }
-    .priceArea>p{
+
+    .priceArea>p {
         /* background-color: #000000; */
         margin-left: 270px;
-        margin-top: 30px;
+        margin-top: 45px;
+        font-size: larger;
     }
+
     .AbtnL {
         width: 130%;
         height: 50px;
@@ -4075,12 +4256,12 @@ margin-left: -50px ;
         transition: all 0.1s linear;
         box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.244);
     }
-    
+
     .AbtnL>h3 {
         color: var(--white);
         margin-top: 5px;
     }
-    
+
     .AbtnL .Aborder {
         position: absolute;
         border: 0.45em solid var(--light-green);
@@ -4091,22 +4272,23 @@ margin-left: -50px ;
         height: 80%;
         transform: translate(-50%, -50%);
     }
-    
+
     .AbtnL:hover .Aborder {
         display: block;
         width: 104%;
         height: 115%;
     }
-    
+
     .AbtnL:active {
         transform: scale(0.95);
         background-color: var(--white);
     }
-    
+
     .AbtnR {
         border-radius: 3em;
     }
 }
+
 @media screen and (min-width:532px) {
     .drinkscreen {
         position: fixed;
@@ -4258,6 +4440,7 @@ margin-left: -50px ;
         margin-left: -10px;
 
     }
+
     .BRbillHr {
         width: 110%;
         height: 3px;
@@ -4289,6 +4472,7 @@ margin-left: -50px ;
         margin-left: 50px;
         /* background-color: #cf121e; */
     }
+
     .BAcomeLeft h4 {
         color: var(--dark-green);
         /* float: left; */
@@ -4305,6 +4489,7 @@ margin-left: -50px ;
     .choiceName>p {
         margin-left: 30px;
     }
+
     .BAchoiceName {
         float: left;
         margin-left: -20px;

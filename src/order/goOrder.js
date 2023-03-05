@@ -21,9 +21,9 @@ class GoOrder extends Component {
                         <br />
                         <div className='goimSection'>
                             <a href="/order/fullJo" className="joGroup">
-                                <button className="gobtnXL btnR">
+                                <button className="gobtnXL gobtnR">
                                     <span><img src={HeartIcon} alt="" />揪團</span>
-                                    <div className="goborder btnR"></div>
+                                    <div className="goborder gobtnR"></div>
                                 </button>
                             </a>
                             <br />
@@ -33,22 +33,22 @@ class GoOrder extends Component {
                                         <button className="gobtnM ">
                                             <span>外送:</span>&nbsp;&nbsp;<span>台中市南屯區公益路二段51號18樓</span>
                                             <img src={EditIcon} alt="" />
-                                            <div className="border btnR"></div>
+                                            <div className="border gobtnR"></div>
                                         </button>
                                         <button className="gobtnM ">
-                                            <span>取餐時間:</span>&nbsp;&nbsp;<span>2023/03/02 下午13:00</span>
+                                            <span>取餐時間:</span>&nbsp;&nbsp;<span>2023/03/14 下午01:00</span>
                                             <img src={EditIcon} alt="" />
-                                            <div className="border btnR"></div>
+                                            <div className="border gobtnR"></div>
                                         </button>
                                     </div>
                                     <br />
                                     <div className="list">
                                         <br />
                                         <a href="/order/billList">
-                                            <button className="gobtnL btnR">
+                                            <button className="gobtnL gobtnR">
                                                 <img src={AniIcon} alt="" className="ani_icon" />
                                                 <span>訂購清單</span>
-                                                <div className="border btnR"></div>
+                                                <div className="border gobtnR"></div>
                                             </button>
                                         </a>
                                     </div>
