@@ -4,7 +4,7 @@ import '../css/index.css';
 import Index from '../components/index.js';
 import Footer from '../components/footer.js';
 
-
+import img1 from '../images/product/4.png';
 
 class ProductHistory extends Component {
     style = {
@@ -12,75 +12,96 @@ class ProductHistory extends Component {
     }
     render() {
         return (
-            <body className='bodyProduct'>
+            <body>
                 <Index />
                 <div style={this.style}>
                     <center>
-                    <h1>訂單紀錄</h1>
-                </center>
-                <div className="content">
-                    <div className="product">
-                        <div className="product_info">
-                            <img src="./images/20221115event01.jpg" />
-                            <p>
-                                雙面飲料提袋
-                                <br />
-                                款式 : 紅色(魯夫、娜美)
-                                <br />
-                                數量 : 2
-                            </p>
-                            <div className="price">
-                                <p>NT$ 560</p>
+                        <h1 className='ProductHistoryTitle'>訂單紀錄</h1>
+                    </center>
+                    <div className="ProductHistoryContent">
+                        <div className="ProductHistoryProduct">
+                            <div className="ProductHistoryInfo">
+                                <img src={img1} className="ProductHistoryImg" alt='' />
+                                <p className='ProductHistoryInfoP'>
+                                    雙面飲料提袋
+                                    <br />
+                                    款式 : 藍色(香吉士、羅賓)
+                                    <br />
+                                    數量 : 2
+                                </p>
+                                <div className="ProductHistoryPrice">
+                                    <p className="ProductHistoryPriceP">NT$ 560</p>
+                                </div>
+                            </div>
+                            <hr className='separate4' />
+                            <div className="ProductHistoryTotal">
+                                <div className='ProductHistoryTotalDiv Div1'>
+                                    <h4 className='ProductHistoryTotalTitle'>小計:</h4>
+                                    <p>NT$ 560</p>
+                                </div>
+                                <div className='ProductHistoryTotalDiv Div2'>
+                                    <h4 className='ProductHistoryTotalTitle'>運費:</h4>
+                                    <p>NT$ 100</p>
+                                </div>
+                                <div className='ProductHistoryTotalDiv Div3'>
+                                    <h4 className='ProductHistoryTotalTitle'>總計:</h4>
+                                    <p>NT$ 660</p>
+                                </div>
                             </div>
                         </div>
-                        <hr />
-                        <div className="total">
-                            <div>
-                                <h4>小計:</h4>
-                                <p>NT$ 560</p>
-                            </div>
-                            <div>
-                                <h4>運費:</h4>
-                                <p>NT$ 100</p>
-                            </div>
-                            <div>
-                                <h4>總計:</h4>
-                                <p>NT$ 660</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <form className="information">
-                        <fieldset>
-                            <legend>訂單資料</legend>
-                            <h4>訂單編號</h4>
-                            <p>20230123132537</p>
-                            <h4>訂單完成時間</h4>
-                            <p>2023/01/23 13:25:37</p>
-                            <h4>訂購人姓名</h4>
-                            <p>王大明</p>
-                            <h4>訂購人電話</h4>
-                            <p>0912-345678</p>
-                            <h4>收購人姓名</h4>
-                            <p>王小美</p>
-                            <h4>收購人電話</h4>
-                            <p>0909-111222</p>
-                            <h4>運送方式</h4>
-                            <p>宅配到家</p>
-                            <h4>地址</h4>
-                            <p>台中市公益路二段51號</p>
-                            <h4>付款方式</h4>
-                            <p>現金</p>
-                            <h4>發票開立方式</h4>
-                            <p>二聯式發票</p>
-                            <h4>備註</h4>
-                            <p>放在警衛室</p>
-                        </fieldset>
-                    </form>
+                        <form className="ProductHistoryInformation">
+                            <fieldset className='ProductHistoryFielset'>
+                                <legend className='ProductHistoryLegend'>訂單資料</legend>
+                                <div className='ProductHistoryData1'>
+                                <h4 className='ProductHistoryH4'>訂單編號</h4>
+                                <p className='ProductHistoryP'>20230101123543</p>
+                            </div>
+                            <div className='ProductHistoryData2'>
+                                <h4 className='ProductHistoryH4'>訂單完成時間</h4>
+                                <p className='ProductHistoryP'>2023/01/01 12:35:43</p>
+                            </div>
+                            <div className='ProductHistoryData3'>
+                                <h4 className='ProductHistoryH4'>訂購人姓名</h4>
+                                <p className='ProductHistoryP'>王小新</p>
+                            </div>
+                            <div className='ProductHistoryData4'>
+                                <h4 className='ProductHistoryH4'>訂購人電話</h4>
+                                <p className='ProductHistoryP'>0912345678</p>
+                            </div>
+                            <div className='ProductHistoryData5'>
+                                <h4 className='ProductHistoryH4'>收購人姓名</h4>
+                                <p className='ProductHistoryP'>王小新</p>
+                            </div>
+                            <div className='ProductHistoryData6'>
+                                <h4 className='ProductHistoryH4'>收購人電話</h4>
+                                <p className='ProductHistoryP'>0912345678</p>
+                            </div>
+                            <div className='ProductHistoryData7'>
+                                <h4 className='ProductHistoryH4'>運送方式</h4>
+                                <p className='ProductHistoryP'>宅配到家</p>
+                            </div>
+                            <div className='ProductHistoryData8'>
+                                <h4 className='ProductHistoryH4'>地址</h4>
+                                <p className='ProductHistoryP'>台中市台灣大道100號</p>
+                            </div>
+                            <div className='ProductHistoryData9'>
+                                <h4 className='ProductHistoryH4'>付款方式</h4>
+                                <p className='ProductHistoryP'>現金</p>
+                            </div>
+                            <div className='ProductHistoryData10'>
+                                <h4 className='ProductHistoryH4'>發票開立方式</h4>
+                                <p className='ProductHistoryP'>二聯式發票</p>
+                            </div>
+                            <div className='ProductHistoryData11'>
+                                <h4 className='ProductHistoryH4'>備註</h4>
+                                <p className='ProductHistoryP'>放在警衛室</p>
+                            </div>
+                            </fieldset>
+                        </form>
+                    </div>
                 </div>
-                </div>
-                <br /><br />
-                
+                <br />
                 <Footer />
             </body>
         );

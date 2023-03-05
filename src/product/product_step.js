@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../css/product_list2.css';
-import '../css/index.css';
+// import '../css/index.css';
 // import Index from '../components/index.js';
 // import Footer from '../components/footer.js';
 
@@ -20,34 +20,34 @@ class Step extends Component {
     }
 
     render() {
-
+        // const { StepColor1, StepColor2, StepColor3 } = this.props;
         return (
             <body className='BodyProduct' style={this.style}>
                 {/* <Index /> */}
                 <div className="Step">
                     <div>
-                        <div className="Step1">
-                            <p>1</p>
+                        <div className={`Step1 ${this.props.StepColor1}`}>
+                            <p className='StepP'>1</p>
                         </div>
-                        <p className="Step1Name">購物車清單</p>
+                        <p className={`StepName ${this.props.StepNameColor1}`}>購物車清單</p>
                     </div>
                     <div>
-                        <hr />
+                        <hr className='StepDivHr'/>
                     </div>
                     <div>
-                        <div className="Step2">
-                            <p>2</p>
+                        <div className={`Step2 ${this.props.StepColor2}`}>
+                            <p className='StepP'>2</p>
                         </div>
-                        <p className="Step2Name">填寫資料</p>
+                        <p className={`StepName ${this.props.StepNameColor2}`}>填寫資料</p>
                     </div>
                     <div>
-                        <hr />
+                        <hr className='StepDivHr'/>
                     </div>
                     <div>
-                        <div className="Step3">
-                            <p>3</p>
+                        <div className={`Step3 ${this.props.StepColor3}`}>
+                            <p className='StepP'>3</p>
                         </div>
-                        <p className="Step3Name">訂單已送出</p>
+                        <p className={`StepName ${this.props.StepNameColor3}`}>訂單已送出</p>
                     </div>
                 </div>
                 {/* <Footer /> */}

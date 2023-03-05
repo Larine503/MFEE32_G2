@@ -27,48 +27,56 @@ import FullJo from './order/fullJo.js'
 import TeamJo from './order/teamJo.js'
 import FriendJo from './order/friendJo.js'
 //--渼涵---
+import ProductIntro from './product/product_intro.js';
 import ProductStep1 from './product/product_cart.js'
 import ProductStep2 from './product/product_info.js'
+import ProductStep3 from './product/product_check.js'
+import ProductHistory from './product/product_history.js'
 
 
 function App() {
   return (
     <BrowserRouter>
-        <div>
-          <Switch>
-            <Route path="/" component={Home} exact />
-            <Route path="/story" component={Story} exact />
-            <Route path="/story/report" component={Report} exact />
-            <Route path="/news" component={News} exact />
-            <Route path="/product" component={Product} exact />
-            <Route path="/menu" component={Menu} exact />
-            <Route path="/menu/teaSerious" component={TeaSerious} exact />
-            <Route path="/menu/milkteaSerious" component={MilkteaSerious} exact />
-            <Route path="/order" component={Order} exact />
-            <Route path="/store" component={Store} exact />
-            <Route path="/contact" component={Contact} exact />
-            <Route path="/login" component={Login} exact />
-            <Route path="/member/creat" component={LoginCreat} exact />
-            <Route path="/member/:id" component={MemberBar} exact />
-            <Route path="/member/:id/:id" component={MemberBar} exact />
-            <Route path="/order" component={Order} exact />
-            <Route path="/order/drinkInfo" component={DrinkInfo} exact />
-            <Route path="/order/goOrder" component={GoOrder} exact />
-            <Route path="/order/drinkList" component={DrinkList} exact />
-            <Route path="/order/billList" component={BillList} exact />
-            <Route path="/order/AddDrink" component={AddDrink} exact />
-            <Route path="/order/billAll" component={BillAll} exact />
-            <Route path="/order/billAll/:id" component={OderdirnkID} exact />
-            <Route path="/order/fullJo" component={FullJo} exact />
-            <Route path="/order/teamJo" component={TeamJo} exact />
-            <Route path="/order/friendJo" component={FriendJo} exact />
-            <Route path="/product/航海王" component={Product}/>
-            <Route path="/product/哥吉拉" component={Product}/>
-            <Route path="/product/黃阿媽的後宮生活" component={Product}/>
-            <Route path="/product/step1" component={ProductStep1}/>
-            <Route path="/product/step2" component={ProductStep2}/>
-          </Switch></div>
-      </BrowserRouter>);
+      <div>
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/story" component={Story} exact />
+          <Route path="/story/report" component={Report} exact />
+          <Route path="/news" component={News} exact />
+          <Route path="/product" component={Product} exact />
+          <Route path="/menu" component={Menu} exact />
+          <Route path="/menu/teaSerious" component={TeaSerious} exact />
+          <Route path="/menu/milkteaSerious" component={MilkteaSerious} exact />
+          <Route path="/order" component={Order} exact />
+          <Route path="/store" component={Store} exact />
+          <Route path="/contact" component={Contact} exact />
+          <Route path="/login" component={Login} exact />
+          <Route path="/member/creat" component={LoginCreat} exact />
+          <Route path="/member/:id" component={MemberBar} exact />
+          <Route path="/member/:id/:id" component={MemberBar} exact />
+          <Route path="/order" component={Order} exact />
+          <Route path="/order/drinkInfo" component={DrinkInfo} exact />
+          <Route path="/order/goOrder" component={GoOrder} exact />
+          <Route path="/order/drinkList" component={DrinkList} exact />
+          <Route path="/order/billList" component={BillList} exact />
+          <Route path="/order/AddDrink" component={AddDrink} exact />
+          <Route path="/order/billAll" component={BillAll} exact />
+          <Route path="/order/billAll/:id" component={OderdirnkID} exact />
+          <Route path="/order/fullJo" component={FullJo} exact />
+          <Route path="/order/teamJo" component={TeamJo} exact />
+          <Route path="/order/friendJo" component={FriendJo} exact />
+          <Route path="/航海王" component={Product} exact />
+          <Route path="/哥吉拉" component={Product} exact />
+          <Route path="/黃阿媽的後宮生活" component={Product} exact />
+          <Route path="/航海王/:who" component={ProductIntro} />
+          <Route path="/哥吉拉/:who" component={ProductIntro} />
+          <Route path="/黃阿媽的後宮生活/:who" component={ProductIntro} />
+          <Route path="/product/step1" component={ProductStep1} />
+          <Route path="/product/step2" component={ProductStep2} />
+          <Route path="/product/step3" component={ProductStep3} />
+          <Route path="/member/orderList/productlist/0912345678/20230101123543" component={ProductHistory} />
+        </Switch></div>
+    </BrowserRouter>);
 }
 
 export default App;

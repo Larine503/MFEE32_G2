@@ -1,23 +1,26 @@
-.content {
+:root {
+    --dark-red: #cf121e;
+    --red: #ff3542;
+    --light-red: #ffe1e1;
+    --dark-green: #005743;
+    --green: #538e7a;
+    --light-green: #92d279;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #d9d9d9;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+.ProductHistoryContent {
     width: 1055px;
-    height: 1050px;
+    height: 1100px;
     margin: 23px 0px 0px 100px;
     background-color: #D9D9D9;
-    /* display: grid;
-    grid-template-columns: 365px  365px; */
-    /* border: 3px solid #000000; */
 }
 
-body {
-    margin: 0
-}
-
-/* .information {
-    padding: 40px 60px;
-} */
-
-.product_info {
-    /* margin: 45px 0px 0px 0px; */
+.ProductHistoryInfo {
     display: grid;
     grid-template-columns: auto auto auto;
     position: relative;
@@ -25,7 +28,7 @@ body {
 }
 
 
-img {
+.ProductHistoryImg {
     width: 155px;
     height: 155px;
     position: relative;
@@ -33,252 +36,177 @@ img {
     top: 50px;
 }
 
-
-/* .product_info {
-    display: grid;
-    grid-template-columns: auto auto;
-} */
-
-.total>div {
+.ProductHistoryTotalDiv {
     width: 590px;
     display: grid;
     grid-template-columns: auto auto;
     position: relative;
     left: 415px;
     text-align: right;
-    /* left: 20px; */
-    /* top: 100px; */
-    /* border: 1px solid black; */
 }
 
-.product_info>p {
+.ProductHistoryInfoP {
     position: relative;
-    top: 80px;
+    top: 65px;
+    font-size: 18px;
 }
 
-.price>p {
+.ProductHistoryPriceP {
     position: relative;
-    top: 105px;
+    top: 95px;
     left: -150px;
     text-align: right;
-    /* border: 1px solid black; */
+    font-size: 18px;
 }
 
-/* .price>h4 {
-    position: relative;
-    left: 200px;
-    top: 30px;
-} */
-
-/* .total p {
-    width: 285px;
-    position: relative;
-    top: 7px;
-    right: 13px;
-    text-align: right;
-} */
-
-.product>hr {
+.separate4 {
     width: 960px;
     position: relative;
     top: 70px;
     border: 1px solid black;
 }
 
-.total h4 {
+.ProductHistoryTotalTitle {
     position: relative;
-    top: -8px;
+    top: -5px;
     left: 190px;
-    /* border: 1px solid red; */
 }
 
 
-.total>div:nth-child(1) {
+.Div1 {
     position: relative;
     top: 70px;
 }
 
-.total>div:nth-child(2) {
+.Div2 {
     position: relative;
     top: 40px;
 }
 
-.total>div:nth-child(3) {
+.Div3 {
     position: relative;
     top: 10px;
 }
 
-legend {
+.ProductHistoryLegend {
     font-weight: bold;
 }
 
-form {
+.ProductHistoryInformation {
     width: 963px;
     position: relative;
     top: 10px;
     left: 45px;
 }
 
-fieldset {
+.ProductHistoryFielset {
     width: 700px;
-    height: 600px;
+    height: 630px;
     margin: 0px auto;
-    /* background-color: lightblue; */
+    display: grid;
+    grid-template-columns: auto auto ;
 }
 
-.information h4:nth-child(2) {
-    width: 100px;
-    position: relative;
-    left: 15%;
-    top: 15px;
-}
-
-.information p:nth-child(3) {
-    width: 200px;
-    position: relative;
-    left: 15%;
-}
-/*  */
-.information h4:nth-child(4) {
-    width: 100px;
-    position: relative;
-    left: 65%;
-    top: -68px;
-}
-
-.information p:nth-child(5) {
-    width: 200px;
-    position: relative;
-    left: 65%;
-    top: -82px;
-}
-/*  */
-.information h4:nth-child(6) {
-    width: 100px;
-    position: relative;
-    left: 15%;
-    top: -75px;
-}
-
-.information p:nth-child(7) {
-    width: 200px;
-    position: relative;
-    left: 15%;
-    top: -90px;
-}
-/*  */
-.information h4:nth-child(8) {
-    width: 100px;
-    position: relative;
-    left: 65%;
-    top: -161px;
-}
-
-.information p:nth-child(9) {
-    width: 200px;
-    position: relative;
-    left: 65%;
-    top: -171px;
-}
-/*  */
-.information h4:nth-child(10) {
-    width: 100px;
-    position: relative;
-    left: 15%;
-    top: -165px;
-}
-
-.information p:nth-child(11) {
-    width: 200px;
-    position: relative;
-    left: 15%;
-    top: -175px;
-}
-/*  */
-.information h4:nth-child(12) {
-    width: 100px;
-    position: relative;
-    left: 65%;
-    top: -251px;
-}
-
-.information p:nth-child(13) {
-    width: 200px;
-    position: relative;
-    left: 65%;
-    top: -261px;
-}
-/*  */
-.information h4:nth-child(14) {
-    width: 100px;
-    position: relative;
-    left: 15%;
-    top: -250px;
-}
-
-.information p:nth-child(15) {
-    width: 200px;
-    position: relative;
-    left: 15%;
-    top: -260px;
-}
-/*  */
-.information h4:nth-child(16) {
-    width: 100px;
-    position: relative;
-    left: 65%;
-    top: -335px;
-}
-
-.information p:nth-child(17) {
+/* 訂單編號 */
+.ProductHistoryData1 {
     width: 250px;
+    height: 100px;
     position: relative;
-    left: 65%;
-    top: -345px;
-}
-/*  */
-.information h4:nth-child(18) {
-    width: 100px;
-    position: relative;
-    left: 15%;
-    top: -335px;
+    left: 30%;
+    font-size: 20px;
 }
 
-.information p:nth-child(19) {
-    width: 200px;
+/* 訂單完成時間 */
+.ProductHistoryData2 {
+    width: 250px;
+    height: 100px;
     position: relative;
-    left: 15%;
-    top: -345px;
-}
-/*  */
-.information h4:nth-child(20) {
-    width: 100px;
-    position: relative;
-    left: 65%;
-    top: -421px;
+    left: 20%;
 }
 
-.information p:nth-child(21) {
-    width: 200px;
+/* 訂購人姓名 */
+.ProductHistoryData3 {
+    width: 250px;
+    height: 100px;
     position: relative;
-    left: 65%;
-    top: -431px;
+    left: 30%;
 }
 
-.information h4:nth-child(22) {
-    width: 100px;
+/* 訂購人電話 */
+.ProductHistoryData4 {
+    width: 250px;
+    height: 100px;
     position: relative;
-    left: 15%;
-    top: -420px;
+    left: 20%;
 }
 
-.information p:nth-child(23) {
-    width: 200px;
+/* 收購人姓名 */
+.ProductHistoryData5 {
+    width: 250px;
+    height: 100px;
     position: relative;
-    left: 15%;
-    top: -430px;
+    left: 30%;
 }
 
-h1 {
+/* 收購人電話 */
+.ProductHistoryData6 {
+    width: 250px;
+    height: 100px;
+    position: relative;
+    left: 20%;
+}
+
+/* 運送方式 */
+.ProductHistoryData7 {
+    width: 250px;
+    height: 100px;
+    position: relative;
+    left: 30%;
+}
+
+/* 地址 */
+.ProductHistoryData8 {
+    width: 250px;
+    height: 100px;
+    position: relative;
+    left: 20%;
+}
+
+/* 付款方式 */
+.ProductHistoryData9 {
+    width: 250px;
+    height: 100px;
+    position: relative;
+    left: 30%;
+}
+
+/* 發票開立方式 */
+.ProductHistoryData10 {
+    width: 250px;
+    height: 100px;
+    position: relative;
+    left: 20%;
+}
+
+/* 備註 */
+.ProductHistoryData11 {
+    width: 250px;
+    height: 100px;
+    position: relative;
+    left: 30%;
+}
+
+.ProductHistoryH4 {
+    font-size: 20px;
+    color: var(--black);
+}
+
+.ProductHistoryP {
+    position: relative;
+    top: -20px;
+    font-size: 19px;
+}
+
+.ProductHistoryTitle {
     margin: 25px auto 0px auto;
 }
