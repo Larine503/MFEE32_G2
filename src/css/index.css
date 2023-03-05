@@ -153,10 +153,10 @@ img {
 
 .inputSpan {
     width: 30%;
-    font-size: 20px;
+    font-size: 18px;
     background-color: #538E7A;
     color: #fff;
-    padding: 5px 15px;
+    padding: 8px 15px;
     text-align: right;
     letter-spacing: 5px;
     margin: 5px;
@@ -1088,7 +1088,7 @@ img {
 }
 
 .memberMain {
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
     color: #538E7A;
     text-align: left;
