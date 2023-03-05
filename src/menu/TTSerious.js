@@ -4,7 +4,7 @@ import "../css/drinks.css";
 import Index from '../components/index.js';
 import 紅茶拿鐵 from '../images/drink/TT/紅茶拿鐵.png';
 import AllDriksButton from './allDriksButton.js';
-
+import axios from 'axios';
 
 class TTSerious extends Component {
     state = {
@@ -25,42 +25,40 @@ class TTSerious extends Component {
                 <div>
                     <div className='drinksPicture'>
                         <img src={紅茶拿鐵} alt='' />
-                        <div className="topping_content">
-                            <div className="topping_title">
-                                加料
-                            </div>
-                            <ul className='toppingText'>
-                                <li>珍珠</li>
-                                <li>粉圓</li>
-                                <li>QQ</li>
-                                <li>布丁</li>
-                                <li>仙草凍</li>
-                                <li>暗黑水晶</li>
-                                <li>蘆薈</li>
-                                <li>冰淇淋</li>
-                                <li>茉莉茶凍</li>
-                                <li>粉條</li>
-                            </ul>
+                    </div>
+                    <div className="topping_content">
+                        <div className="topping_title">
+                            加料
+                        </div>
+                        <ul className='toppingText'>
+                            <li>珍珠</li>
+                            <li>粉圓</li>
+                            <li>QQ</li>
+                            <li>布丁</li>
+                            <li>仙草凍</li>
+                            <li>暗黑水晶</li>
+                            <li>蘆薈</li>
+                            <li>冰淇淋</li>
+                            <li>茉莉茶凍</li>
+                            <li>粉條</li>
+                        </ul>
+                    </div>
+
+                    <div className="drinks_menu">
+                        <div className="cell_drinkList">
+                            {this.state.drinks.map(drink => (
+                                <div key={drink.pid} className="cell">
+                                    <div className="cell_drink_title">
+                                        {drink.pname}
+                                    </div>
+                                    <div className="cell_line"></div>
+                                    <div className="cell_drink_note">
+                                        {drink.content}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
-                    <div className="drinks_menu">
-                            <div className="cell_drinkList">
-                                {this.state.drinks.map(drink => (
-                                    <div key={drink.pid} className="cell">
-                                        <div className='drinksPicture'>
-                                            <img src={drink.imagePath} alt='' />
-                                        </div>
-                                        <div className="cell_drink_title">
-                                            {drink.pname}
-                                        </div>
-                                        <div className="cell_line"></div>
-                                        <div className="cell_drink_note">
-                                            {drink.content}
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
                     <div>
                         <a href="/menu/TSerious">
                             <button className='SeriousBtn1'>

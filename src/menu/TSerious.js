@@ -4,6 +4,7 @@ import "../css/drinks.css";
 import Index from '../components/index.js';
 import 原鄉四季 from '../images/drink/T/原鄉四季.png';
 import AllDriksButton from './allDriksButton.js';
+import axios from 'axios';
 
 
 class TSerious extends Component {
@@ -23,7 +24,9 @@ class TSerious extends Component {
             <body>
                 <Index />
                 <div>
-
+                    <div className='drinksPicture'>
+                        <img src={原鄉四季} alt='' />
+                    </div>
                     <div className="topping_content">
                         <div className="topping_title">
                             加料
@@ -49,9 +52,6 @@ class TSerious extends Component {
                             <div className="cell_drinkList">
                                 {this.state.drinks.map(drink => (
                                     <div key={drink.pid} className="cell">
-                                        <div className='drinksPicture'>
-                                            <img src={drink.imagePath} alt='' />
-                                        </div>
                                         <div className="cell_drink_title">
                                             {drink.pname}
                                         </div>

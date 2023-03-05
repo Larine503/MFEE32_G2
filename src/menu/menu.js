@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/index.css';
 import "../css/drinks.css";
 import Index from '../components/index.js';
+import axios from 'axios';
 
 
 
