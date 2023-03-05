@@ -31,12 +31,14 @@ class Member extends Component {
             <div className="memberMain">
                 <p>會員資料</p>
                 <form className="memberForm-T" action="/member/edit" method='post' onSubmit={this.okClick}>
+                
                     <div className="memberForm-D">
                     <div className="memberForm-dd">
-                    <label htmlFor="">您目前使用的手機號碼:</label><br/>
+                    <label className='memberForm-span1'>您目前使用的手機號碼:</label><br/>
                             <input className='input_m input_mtel'  type="tel" name="mtel" value={this.state.userItem.mtel}
                                 onChange={this.mtelChange} readonly="readonly"/><br />
                     </div>
+                    <span className='memberForm-span' >★外送資料預設</span>
                         <div className="memberForm-dd">
                             <input className='input_m' type="hidden" id="userItemMtel"
                                 name="mtel" value={this.state.userItem.mtel} />
@@ -49,6 +51,7 @@ class Member extends Component {
                                 <div className='inputDiv'><span className='inputSpan'>地址</span>
                                 <input className='input_m' type="text" name="address" value={this.state.userItem.address}
                                     onChange={this.addressChange} required /></div>
+                                    
 
                         
                         </div>

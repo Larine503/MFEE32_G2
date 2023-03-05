@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import loginImg from '../images/home/loginImg.jpg';
+import loginBg from '../images/home/login_bg.jpg';
 import '../css/index.css';
 import Index from '../components/index.js';
 import Footer from '../components/footer.js';
+import { GoArrowRight } from 'react-icons/go';
 
 class LoginCreat extends Component {
     state = {
@@ -18,8 +19,19 @@ class LoginCreat extends Component {
             <div>
                 <Index />
                 <section id="login">
+                <div  className='dataBg'><img src={loginBg} alt="" /> </div>
                     <div className="loginMain">
-                        <div className="loginContent"><img src={loginImg} alt="" /></div>
+                        <div className="loginContent">
+                            <p>加入清心福全會員</p>
+                           <p>及時提供您最熱門的優惠活動，與您同分享，清心福全聯名活動內容，和新品上市資訊。</p>
+                           <ul>註冊清心福全會員即可：
+                            <li>･&nbsp;&nbsp;線上訂餐外送/自取</li>
+                            <li>･&nbsp;&nbsp;周邊商品線上購買</li>
+                            <li>･&nbsp;&nbsp;多人共同訂餐</li>
+                            <li>･&nbsp;&nbsp;獲取最新活動資訊</li>
+                           </ul>
+                            
+                        </div>
                         <div className="loginForm">
                             <p className="loginForm-P">會員註冊</p>
                             <form className="loginForm-T" action="">
@@ -40,6 +52,10 @@ class LoginCreat extends Component {
                                         註冊
                                     </button>
                                 </div>
+                                <a className='loginForm-D-a' href='/Login'>
+                                    <span><GoArrowRight /></span>
+                                    <span>已註冊，立即登入</span>
+                                    </a>
 
                             </form>
                         </div>

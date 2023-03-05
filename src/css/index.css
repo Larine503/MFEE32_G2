@@ -21,6 +21,7 @@ a {
 }
 
 
+
 body {
     margin: 0;
     padding: 0;
@@ -415,7 +416,7 @@ img {
     display: flex;
     width: calc(400px * 8 + 15px * 8);
     overflow-x: hidden;
-    animation: slide 30s linear infinite;
+    animation: slide 40s linear infinite;
     animation-direction: normal;
 }
 
@@ -449,15 +450,15 @@ img {
 .aboutBg {
     width: 100%;
     height: 500px;
-    padding-top: 40px;
+    /* padding-top: 40px; */
     background-position: center center;
     background-size: cover;
     background-image: url('../images/home/scene_matcha.png');
+
 }
 
 .aboutMain {
-    position: absolute;
-    /* width: 100%; */
+    position: relative;
     height: 100%;
     top: 0;
     left: 50px;
@@ -469,17 +470,17 @@ img {
     margin: 0 auto;
     padding: 100px 200px 0;
     text-align: center;
+    position: absolute;
 }
 
 
 .aboutText {
     /* width: 100%; */
-    position: relative;
     width: 400px;
     padding: 40px 50px 40px;
     border-radius: 5px;
     background-color: white;
-    z-index: 2;
+
 }
 
 
@@ -581,37 +582,16 @@ img {
     height: 310px;
     background-color: #ffffff;
     border-radius: 5px;
-
+    transition: transform 0.5s ease-in-out;
 }
 
 .menuLi:hover {
-    scale: 1.2;
+    transform: scale(1.1);
+    /* transition: transform 0.5s; */
     cursor: pointer;
 }
 
-li.menuLi:nth-child(1):hover {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 1s;
-    transition: cubic-bezier(0.41, 1.69, 0.64, 1);
-    /* transition-timing-function: ease-in-out; */
-}
 
-li.menuLi:nth-child(2):hover {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 1.5s;
-    transition: cubic-bezier(0.41, 1.69, 0.64, 1);
-    /* transition-timing-function: ease-in-out; */
-}
-
-li.menuLi:nth-child(3):hover {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 2s;
-    transition: cubic-bezier(0.41, 1.69, 0.64, 1);
-    /* transition-timing-function: ease-in-out; */
-}
 
 .menuLi-div {
     width: 100%;
@@ -681,7 +661,6 @@ li.menuLi:nth-child(3):hover {
     width: 80%;
     margin: 0 auto;
     padding: 30px 50px;
-    z-index: 2;
 }
 
 .newsText {
@@ -1110,7 +1089,7 @@ li.menuLi:nth-child(3):hover {
 }
 
 .memberMain {
-    width: 100%;
+    width: 70%;
     margin: 0 auto;
     color: #538E7A;
     text-align: left;
@@ -1130,9 +1109,17 @@ li.menuLi:nth-child(3):hover {
     border-radius: 20px;
     padding: 20px 50px;
 }
-
+.memberForm-span{
+    color: var(--light-green);
+    font-size: 20px;
+}
+.memberForm-span1{
+    color: var(--green);
+    font-size: 24px;
+}
 
 .memberForm-dd {
+    margin-top: 10px;
     margin-bottom: 40px;
 }
 
@@ -1178,11 +1165,11 @@ li.menuLi:nth-child(3):hover {
     padding: 0px 200px;
 }
 
-form {
+/* form {
     color: #005743;
     font-size: 24px;
     text-align: left;
-}
+} */
 
 label {
     padding: 0 0 0 10px;
@@ -1203,116 +1190,105 @@ label {
     color: #538E7A;
     text-align: left;
     font-style: 400;
-    padding: 50px;
+    padding: 0 100px 50px;
+
 }
 
 .orderList-top {
-    /* background-color: #d9d9d9; */
-   width: 100%;
-    align-items: center;
+    width: 100%;
     display: flex;
-    padding: 5px 0;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    /* border-bottom: 2px solid #538E7A; */
+}
 
+.orderList-top a {
+    color: var(--green);
 }
 
 
 .orderList-c {
-    background-color: var(--white);
     height: 40px;
     padding: 5px 10px;
     align-items: center;
     font-size: 24px;
-    color: var(--dark-red);
-    border: none;
-    border-bottom:2px solid #d9d9d9;
+    border-bottom: 2px solid #d9d9d9;
     margin-right: 30px;
 }
 
+.orderList-c.selected {
+    font-weight: 600;
+    border-bottom: 2px solid var(--dark-red);
+}
+
+
 .orderList-c:hover {
-    background-color: var(--dark-red);
-    color: #fff;
+    scale: 1.02;
+    border-bottom: 2px solid var(--green);
+    cursor: pointer;
+    font-weight: 600;
+
 }
 
-.orderList-c:active {
-    background-color: var(--dark-red);
-    color: #fff;
-    
-}
-
-.orderList-content {
-    background-color: #cf121e;
-}
 
 .orderList-item {
     width: 100%;
     text-align: center;
-    padding: 50px 60px;
     color: #000000;
-    background-color: #d9d9d9;
-    border: 3px solid var(--light-red);
-    display: flex;
-    border-radius: 30px;
+    border: 2px solid #d9d9d9;
+    border-radius: 20px;
+    padding: 50px;
+    margin-top: 20px;
 }
 
 .orderList-number {
-    width: 350px;
-    height: 300px;
+    width: 100%;
+    height: 40px;
     text-align: left;
-    background-color: var(--light-green);
-    margin-right: 30px;
-
+    border-radius: 10px;
+    margin-bottom: 40px;
+    border-spacing: 0;
 }
 
-.orderList-number-t {
-    padding-left: 30px;
-    background-color: #005743;
+.orderList-number:hover {
+    scale: 1.01;
+    cursor: pointer;
+    box-shadow: -2px 2px 5px -2px rgba(0, 0, 0, 0.2);
+}
+
+.orderList-number-tr {
+    padding: 10px 0px 10px 40px;
+    border-radius: 10px 0 10px 0;
+    font-weight: 500;
+}
+
+
+.orderList-number-td1_1 {
+    padding: 10px 0px 10px 40px;
+    background-color: #538E7A;
     color: #fff;
-}
-.orderList-number-t p{
-    padding-left: 10px;
+    letter-spacing: 2px;
+    border-radius: 10px 10px 0px 0;
+
 }
 
-.orderList-number-p {
-    padding: 5px 0;
-}
-.orderList-number-p p{
-    padding-left: 10px;
-}
-.orderList-number-b {
-    background-color: #fff;
-    text-align: right;
-    padding: 0 15px;
-    color: var(--dark-green);
-    border-radius: 30px;
-}
-.orderList-number-b p{
-    padding-right: 20px;
+.orderList-number-tr2 {
+    background-color: #d9d9d9;
+    border-radius: 0 10px 10px 10px;
+    letter-spacing: 1px;
 }
 
-.orderlist-page {
-    display: flex;
+.orderList-number-td2_1 {
+    padding: 10px 0px 10px 40px;
+    border-radius: 0px 0px 0px 10px;
+    color: #000000;
+
 }
 
-.orderlist-page-btn {
-    width: 30px;
-    height: 30px;
-    /* border: 3px solid var(--dark-red); */
-    color: var(--dark-red);
-    border-radius: 99em;
-    background-color: var(--light-red);
-    border: none;
-    margin: 10px;
-}
+.orderList-number-td2_2 {
+    padding: 10px 10px 10px 0px;
+    border-radius: 0px 10px 10px 0px;
+    color: #000000;
 
-.orderlist-page-btn:hover {
-    background-color: var(--dark-red);
-    color: var(--white);
-}
-
-.orderlist-page-btn:checked {
-    background-color: var(--dark-red);
-    color: var(--white);
 }
 
 @media (max-width:768px) {
@@ -1321,63 +1297,98 @@ label {
     }
 
     .orderList-c {
-        width: 200px;
+        width: 50%;
     }
 
     .orderList-item {
         height: auto;
         display: block;
-        margin: auto;
+        margin-top:50px;
     }
 
     .orderList-number {
-        margin-left: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
-    .orderlist-page {
-        padding-left: 130px;
+}
+@media screen and (max-width: 768px) {
+    .orderList-number-tr td{
+        padding: 10px 40px;
     }
+    .orderList-number-tr2 {
+        padding: 10px 20px;
+        display: block;
+    }
+    .orderList-number-tr2 td{
+        padding: 5px 20px;
+        display: block;
+    }
+    .orderList-number-td2_2 {
+        border-radius: 0 0 10px 10px;
+    }
+
 }
 
 
 #login {
     width: 100%;
-    padding: 150px 0 70px 0;
-    text-align: center;
-    align-items: center;
     background-color: #fff;
     margin: 0 auto;
 }
 
 .loginMain {
+    padding: 80px 100px;
     width: 70%;
     display: flex;
-    margin: auto;
+    margin: 0 auto;
 }
 
 
 .loginContent {
     width: 50%;
-    overflow: hidden;
+    text-align: left;
+    word-wrap: break-word;
+}
+.loginContent p:first-child{
+    color: var(--dark-green);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 0.5;
 }
 
-.loginContent>img {
-    width: 100%;
-    /* height: auto; */
-    object-fit: fill;
-    /* transform: translateY(-10%); */
+.loginContent p {
+    width: 70%;
+    color: var(--black);
+    font-size: 18px;
+    line-height: 1.8;
+}
 
+.loginContent ul{
+    padding-top: 5px;
+    width: 50%;
+    border-top: 3px dotted var(--gray);
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    padding: 0;
+    list-style: none;
+    line-height: 1.8;
+}
+.loginContent li{
+    font-weight: 400;
 }
 
 
 .loginForm {
-    width: 50%;
+    width: 40%;
     border-style: inset;
-    border: 2px solid #92d279;
+    border: 2px solid var(--gray);
     text-align: center;
     align-items: center;
-    padding: 30px 0;
+    padding: 30px ;
+    border-radius: 30px;
+    margin: 10px;
 }
 
 .loginForm-P {
@@ -1390,22 +1401,24 @@ label {
 
 .loginForm-T {
     color: #000000;
-    width: 300px;
+    width: 100%;
     margin: auto;
     font-size: 16px;
     margin-bottom: 30px;
     text-align: center;
 
 }
-.loginForm-T input{
+
+.loginForm-T input {
     text-align: left;
 }
-.loginForm-T label{
+
+.loginForm-T label {
     text-align: left;
 }
 
 .loginForm-D {
-    width: 300px;
+    width: 100%;
     margin: 30px auto;
     text-align: center;
 }
@@ -1419,16 +1432,54 @@ label {
 }
 
 @media (max-width: 768px) {
+    .loginMain{
+        display: block;
+        width: 100%;
+        padding: 50px;
+        text-align: left;
+    }
     .loginContent {
-        display: none;
+        width: 100%;
+        margin-bottom: 30px;
+        padding-left: 50px;
     }
 
     .loginForm {
-        width: 85%;
+        width:80%;
         margin: auto;
+
+    }
+    .loginForm-D>button {
+        margin-left: 10px;
+        margin-bottom: 20px;
     }
 
 }
+.loginForm-T input[type="text"]::placeholder {
+    text-align: left;
+  }
+.loginForm-D-a{
+    color:var(--green);
+    letter-spacing: 2px;
+    text-decoration:underline !important;
+}
+.loginForm-D-a:hover{
+    color: var(--dark-green);
+    font-weight: 600;
+}
+.loginForm-D-a:visited{
+    color:var(--green);
+    text-decoration:underline !important;
+}
+.loginForm-D-a:active{
+    color:var(--green);
+    text-decoration:underline !important;
+}
+.loginForm-D-a svg {
+    color: var(--green);
+    vertical-align: middle;
+    margin-right: 5px; /* 調整圖標和文本之間的間距 */
+  }
 
 .passwordForm-T {
     border: 2px solid #d9d9d9;
@@ -1445,4 +1496,59 @@ label {
 
 .passwordForm-dd {
     margin-bottom: 40px;
+}
+
+/* ----------滾動動畫------- */
+
+/* 品牌向上滑入 */
+.scroll-effect {
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(10%);
+    transition: opacity 1.2s ease-in, transform 1s ease-in-out;
+}
+
+.show-effect {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-effect2 {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(10%);
+    transition: opacity 1.2s ease-in, transform 1s ease-in-out;
+}
+
+.show-effect2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-effect3 {
+    position: relative;
+    z-index: 3;
+    opacity: 0;
+    transform: translateY(10%);
+    transition: opacity 1.2s ease-in, transform 1s ease-in-out;
+}
+
+.show-effect3 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-effect4 {
+    position: relative;
+    z-index: 4;
+    opacity: 0;
+    transform: translateY(10%);
+    transition: opacity 1.2s ease-in, transform 1s ease-in-out;
+}
+
+.show-effect4 {
+    opacity: 1;
+    transform: translateY(0);
 }

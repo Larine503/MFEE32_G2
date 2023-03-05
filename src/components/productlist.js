@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../css/index.css';
 import axios from 'axios';
-
+axios.defaults.withCredentials = true;
 
 class Productlist extends Component {
     state = {
@@ -13,40 +13,28 @@ class Productlist extends Component {
     }
     render() {
         return (
-            <React.Fragment>
-            <div className="orderList-item">
-                {this.state.productList.map((item) =>
-                    <table className="orderList-number">
-                        <input type="hidden" id="userItemMtel"
-                            name="o_order_tel" value={item.o_order_tel} />
-                        <tr className="orderList-number-t">
-                            <p>周邊訂單編碼:{item.o_id}</p>
-                        </tr>
-                        <tr className="orderList-number-p">
-                            <p>訂單日期:{item.o_date}</p>
-                            <p>訂購金額:{item.o_total}</p>
-                            <p>寄送方式:{item.o_delivery}</p>
-                            <p>付款方式:{item.o_pay}</p>
-                        </tr>
-                        <tr className="orderList-number-b">
-                            <a href={`/member/orderList/productlist/0912345678/${item.o_id}`}><p>查看更多</p></a>
-                        </tr>
-                    </table>
-                )}
-
-
-
-                <br/>
+            <div className='orderList-item' >
+            {
+                this.state.productList.map((item, index) =>
                 
-            </div>
-            <div className="orderlist-page">
-                    <button className="orderlist-page-btn">1</button>
-                    <button className="orderlist-page-btn">2</button>
-                    <button className="orderlist-page-btn">3</button>
-                    <button className="orderlist-page-btn">4</button>
-                    <button className="orderlist-page-btn">5</button>
-                </div>
-        </React.Fragment>
+                    <table className="orderList-number" key={index} onClick={() => this.doClick(item.o_id)}>
+                        <tbody>
+                            <tr className="orderList-number-tr">
+                                <td className="orderList-number-td1_1"> 周邊訂單編碼/&nbsp; {item.o_id}</td>
+                            </tr>
+                            <tr className="orderList-number-tr2">
+                            <td className="orderList-number-td2_1">訂單日期/&nbsp; {item.o_date}</td>                                           
+                                <td >訂購金額/&nbsp; {item.o_total}元</td>   
+                                <td >寄送方式/&nbsp; {item.o_delivery}</td>                            
+                                <td className="orderList-number-td2_2">付款方式/&nbsp;{item.o_pay}</td>
+                            </tr>
+                            </tbody>
+                    </table>
+                 ).reverse()
+            }
+        </div>
+
+
         );
     }
     async componentDidMount() {
@@ -55,7 +43,12 @@ class Productlist extends Component {
           const url = `http://localhost:8000/member/orderList/productlist/${result.data.user}`;
           const fromServer = await axios.get(url);
           const newState = { ...this.state };
-          newState.productList= fromServer.data;
+          newState.productList = fromServer.data.map((item) => {
+            const date = new Date(item.o_date);
+            // const formattedDate = date.toLocaleDateString();
+            const formattedDate = date.toLocaleString(); // 格式化为日期和時間
+            return { ...item, o_date: formattedDate };
+          });
           this.setState(newState);
         } catch (error) {
           console.error(error);

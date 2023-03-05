@@ -22,19 +22,21 @@ import menuBg from '../images/home/bn_menu.jpg';
 
 class Home extends Component {
     state = {
-        translateX: 0,
-        currentIndex: 0,
+        showEffect: false,
+        showEffect2: false,
+        showEffect3: false,
+        showEffect4: false
+
     };
     render() {
-        const { translateX } = this.state;
         return (
             <body>
                 <Index />
-                <div>
+                <div >
                     <section id="home" className="">
                         <div className="homeDiv1">誠信‧創新‧用心‧惜福</div>
                         <div className="homeDiv2">
-                            <ul className="homeList" style={{ transform: `translateX(${translateX}px)` }}>
+                            <ul className="homeList" >
                                 <li className="homeItem">
                                     <img className="homeItem-img" src={homeImg1} alt="" />
                                 </li>
@@ -62,12 +64,12 @@ class Home extends Component {
                             </ul>
                         </div>
                     </section>
-                    <section id="about">
+                    <section id="about" >
                         <div className="aboutDiv">
                             <div className="aboutBg">
                                 <div className="aboutMain">
-                                    <div className="aboutCenter">
-                                        <div className="aboutText">
+                                    <div className='aboutCenter'>
+                                        <div className={`scroll-effect ${this.state.showEffect ? 'show-effect' : ''} aboutText`}>
                                             <p className="aboutText-p">
                                                 1987年3月8日趙福全夫妻
                                                 <br />
@@ -100,7 +102,6 @@ class Home extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div></div>
                         </div>
                     </section>
                     <section id="menuBg">
@@ -109,8 +110,8 @@ class Home extends Component {
                         </div>
                     </section>
                     <section id="menu">
-                        <div className="menuMain">
-                            <ul className="menuUl">
+                        <div className="menuMain" >
+                            <ul className={`scroll-effect2 ${this.state.showEffect2 ? 'show-effect2' : ''} menuUl`}>
                                 <li className="menuLi  menuLi_tr1">
                                     <div className="menuLi-div"><img src={dirnkImg1} alt="" /></div>
                                     <div className="menuLi-Text">
@@ -134,7 +135,7 @@ class Home extends Component {
                     </section>
                     <section id="news">
                         <div className="newsBg"></div>
-                        <div className="newsMain">
+                        <div className={`scroll-effect3 ${this.state.showEffect3 ? 'show-effect3' : ''} newsMain`}>
                             <div className="newsText">
                                 <div className="newsDiv">
                                     <h2 >最新消息</h2>
@@ -164,8 +165,8 @@ class Home extends Component {
                                 </div>
                             </div>
 
-                            <div className="product-T">
-                                <div className="productText">
+                            <div className="product-T" >
+                                <div className={`scroll-effect4 ${this.state.showEffect4 ? 'show-effect4' : ''} productText`}>
                                     <h2>周邊商品選購</h2>
                                     <p>收藏瓶人物臉部立體造型精細美觀，適合擺設觀賞，瓶身全彩印刷膜，顏色飽和，小巧有質感！快預備一個小空間收藏他們，兩款同時收藏更有紀念價值！</p>
                                     <h5>魯夫款/喬巴款</h5>
@@ -188,7 +189,7 @@ class Home extends Component {
                                 <div className="storeText-div">
                                     <h2>門市據點</h2>
                                     <a href="/store">
-                                    <button className="btnL_c btnR_c">
+                                        <button className="btnL_c btnR_c">
                                             <span>MORE+</span>
                                             <div className="border_c btnR_c"></div>
                                         </button>
@@ -206,22 +207,34 @@ class Home extends Component {
             </body>
         );
     }
-    componentDidMount() {
-        this.interval = setInterval(() => {
-            this.setState((prevState) => ({
-                currentIndex: prevState.currentIndex + 1,
-                translateX:
-                    prevState.currentIndex === 3
-                        ? 0
-                        : prevState.translateX - 415,
-            }));
-        }, 3000);
+    componentDidMount = () => {
+        window.addEventListener('scroll', this.handleScroll);
     }
 
-    componentWillUnmount() {
-        clearInterval(this.interval);
+    componentWillUnmount = () => {
+        window.removeEventListener('scroll', this.handleScroll);
     }
 
+    handleScroll = () => {
+        const scrollEffect = document.querySelector('.scroll-effect');
+        const triggerHeight = scrollEffect.offsetTop + window.innerHeight / 3;
+        if (window.pageYOffset > triggerHeight) {
+            this.setState({ showEffect: true });
+        }
+        const triggerHeight2 = triggerHeight+900;
+        if (window.pageYOffset > triggerHeight2) {
+            this.setState({ showEffect2: true });
+        }
+        const triggerHeight3 = triggerHeight2+300;
+        if (window.pageYOffset > triggerHeight3) {
+            this.setState({ showEffect3: true });
+        }
+        const triggerHeight4 = triggerHeight3+750;
+        if (window.pageYOffset > triggerHeight4) {
+            this.setState({ showEffect4: true });
+        }
+    }
+    
 
 }
 
