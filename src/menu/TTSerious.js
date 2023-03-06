@@ -52,7 +52,7 @@ class TTSerious extends Component {
                             <div className="cell_drinkList">
                                 {this.state.drinks.map(drink => (
                                     <div key={drink.pid} className="cell">
-                                        <div className="cell_drink_title_two">
+                                        <div className="cell_drink_title_three">
                                             {drink.pname}
                                         </div>
                                         <div className="cell_line"></div>
