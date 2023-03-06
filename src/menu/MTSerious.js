@@ -3,7 +3,7 @@ import '../css/index.css';
 import "../css/drinks.css";
 import Index from '../components/index.js';
 import 粉條奶茶 from '../images/drink/MT/粉條奶茶.png';
-import AllDriksButton from './allDriksButton.js';
+// import AllDriksButton from './allDriksButton.js';
 import axios from 'axios';
 
 
@@ -49,43 +49,43 @@ class MTSerious extends Component {
                         <div className="drinkTitlesArea">
                             <div className="drinktitlesText">奶茶系列/奶茶推薦</div>
                         </div>
-                        <div className="drinks_menu">
+                        <ul className="drinks_menu">
                             <div className="cell_drinkList">
                                 {this.state.drinks.map(drink => (
-                                    <div key={drink.pid} className="cell">
-                                        <div className="cell_drink_title">
+                                    <li key={drink.pid} className="cell">
+                                        <div className="cell_drink_title_two">
                                             {drink.pname}
                                         </div>
                                         <div className="cell_line"></div>
                                         <div className="cell_drink_note">
                                             {drink.content}
                                         </div>
-                                    </div>
+                                    </li>
                                 ))}
                             </div>
-                        </div>
+                        </ul>
                     </div>
 
-                </div >
-                <div>
                     <div>
-                        <a href="/menu/TSerious">
-                            <button className='SeriousBtn1'>
-                                <div className=''>茗品系列</div>
-                            </button>
-                        </a>
+                        <div className='SeriousBtn1Area'>
+                            <a href="/menu/TTSerious">
+                                <div className='SeriousBtn1'>
+                                    鮮奶系列<br />拿鐵系列
+                                </div>
+                            </a>
+                        </div>
+                        <div className='SeriousBtn2Area'>
+                            <a href="/menu/TSerious">
+                                <div className='SeriousBtn3'>
+                                    茗品系列
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <div>
-                        <a href="/menu/TTSerious">
-                            <button className='SeriousBtn2'>
-                                鮮奶系列<br />拿鐵系列
-                            </button>
-                        </a>
-                    </div>
-                </div>
-                <a href="/menu">
-                    <AllDriksButton />
-                </a>
+                    {/* <a href="/menu">
+                        <AllDriksButton />
+                    </a> */}
+                </div>    
             </body >
         );
     }

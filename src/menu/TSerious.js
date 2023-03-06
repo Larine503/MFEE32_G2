@@ -2,9 +2,17 @@ import React, { Component } from 'react';
 import '../css/index.css';
 import "../css/drinks.css";
 import Index from '../components/index.js';
+import 烏龍綠茶 from '../images/drink/T/烏龍綠茶.png';
+import 特級綠茶 from '../images/drink/T/特級綠茶.png';
+import 錫蘭紅茶 from '../images/drink/T/錫蘭紅茶.png';
+import 極品菁茶 from '../images/drink/T/極品菁茶.png';
 import 原鄉四季 from '../images/drink/T/原鄉四季.png';
-import AllDriksButton from './allDriksButton.js';
+import 特選普洱 from '../images/drink/T/特選普洱.png';
+import 翡翠烏龍 from '../images/drink/T/翡翠烏龍.png';
+import 嚴選高山茶 from '../images/drink/T/嚴選高山茶.png';
+// import AllDriksButton from './allDriksButton.js';
 import axios from 'axios';
+
 
 
 class TSerious extends Component {
@@ -16,16 +24,63 @@ class TSerious extends Component {
         var a = "茗品系列";
         var url = `http://localhost:8000/menu/${a}`;
         var fromServer = await axios.get(url);
-        // console.log(fromServer.data);
+         console.log(fromServer.data);
         this.setState({ drinks: fromServer.data });
+
     }
+    async componentDidUpdate(){
+
+            document.getElementById("T01").addEventListener('mouseenter', (event) => {
+
+                document.getElementById("imgtest").src=烏龍綠茶;
+                
+            })
+            document.getElementById("T02").addEventListener('mouseenter', (event) => {
+
+                document.getElementById("imgtest").src=特級綠茶;
+                
+            });
+            document.getElementById("T03").addEventListener('mouseenter', (event) => {
+
+                document.getElementById("imgtest").src=錫蘭紅茶;
+                
+            });
+            document.getElementById("T04").addEventListener('mouseenter', (event) => {
+
+                document.getElementById("imgtest").src=極品菁茶;
+                
+            });
+            document.getElementById("T05").addEventListener('mouseenter', (event) => {
+
+                document.getElementById("imgtest").src=原鄉四季;
+                
+            });
+            document.getElementById("T06").addEventListener('mouseenter', (event) => {
+
+                document.getElementById("imgtest").src=特選普洱;
+                
+            });
+            document.getElementById("T07").addEventListener('mouseenter', (event) => {
+
+                document.getElementById("imgtest").src=翡翠烏龍;
+                
+            });
+            document.getElementById("T08").addEventListener('mouseenter', (event) => {
+
+                document.getElementById("imgtest").src=嚴選高山茶;
+                
+            });
+    }
+    
+
     render() {
         return (
             <body>
                 <Index />
-                <div>
+
+                <div >
                     <div className='drinksPicture'>
-                        <img src={原鄉四季} alt='' />
+                          <img id="imgtest" src="" alt='' /> 
                     </div>
                     <div className="topping_content">
                         <div className="topping_title">
@@ -51,8 +106,8 @@ class TSerious extends Component {
                         <div className="drinks_menu">
                             <div className="cell_drinkList">
                                 {this.state.drinks.map(drink => (
-                                    <div key={drink.pid} className="cell">
-                                        <div className="cell_drink_title">
+                                    <div id={drink.pid} className="cell">
+                                        <div className="cell_drink_title_one">
                                             {drink.pname}
                                         </div>
                                         <div className="cell_line"></div>
@@ -64,25 +119,25 @@ class TSerious extends Component {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div className='SeriousBtn1Area'>
                         <a href="/menu/MTSerious">
-                            <button className='SeriousBtn1'>
+                            <div className='SeriousBtn1'>
                                 奶茶系列<br />奶茶推薦
-                            </button>
+                            </div>
                         </a>
                     </div>
-                    <div>
+                    <div className='SeriousBtn2Area'>
                         <a href="/menu/TTSerious">
-                            <button className='SeriousBtn2'>
+                            <div className='SeriousBtn2'>
                                 鮮奶系列<br />拿鐵系列
-                            </button>
+                            </div>
                         </a>
                     </div>
-                </div >
-                <a href="/menu">
+                </div>
+                {/* <a href="/menu">
                     <AllDriksButton />
-                </a>
-            </body >
+                </a> */}
+            </body>
         );
     }
 }
