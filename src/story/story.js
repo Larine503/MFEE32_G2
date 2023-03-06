@@ -12,7 +12,7 @@ import spiritTeaDec from '../images/story/about_us_images/teaLine_dec.png';
 import strictTeaDec from '../images/story/about_us_images/teaLine_dec.png';
 import persistenceTeaDec from '../images/story/about_us_images/teaLine_dec.png';
 import img_tea from '../images/story/food_images/堅持-茶葉.jpg';
-import img_person from '../images/story/food_images/堅持-店員.jpg';
+import img_person from '../images/story/food_images/堅持-店員.PNG';
 import img_drink from '../images/story/food_images/堅持-飲料.jpg';
 
 

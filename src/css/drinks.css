@@ -49,7 +49,7 @@
 
 /* 奶茶系列/奶茶推薦的飲料項目 */
 .MTmenuContent {
-    height: 290px;
+    height: 220px;
     padding-top: 370px;
     padding-left: 130px;
     font-size: 20px;
@@ -75,7 +75,7 @@
     position: absolute;
     top: 370px;
     left: 540px;
-    height: 290px;
+    height: 220px;
     font-size: 20px;
     letter-spacing: 2px;
     writing-mode: vertical-lr;
@@ -98,8 +98,8 @@
 .TTmenuContent {
     position: absolute;
     top: 370px;
-    left: 890px;
-    height: 290px;
+    left: 880px;
+    height: 220px;
     font-size: 20px;
     letter-spacing: 2px;
     writing-mode: vertical-lr;
@@ -133,10 +133,9 @@
 .drinksPicture {
     position: absolute;
     top: 120px;
-    left: 40px;
+    left: 55px;
     width: 350px;
-    height: 390px;
-    background: rgb(255, 225, 225);
+    height: 380px;
     background: radial-gradient(circle, rgba(255, 225, 225, 1) 55%, rgba(146, 210, 121, 1) 100%);
     border: 4px dashed var(--green);
 }
@@ -144,7 +143,6 @@
 /* 飲品的照片 */
 .drinksPicture>img {
     padding-left: 15px;
-    padding-top: 10px;
     width: 300px;
     height: 100%;
 }
@@ -153,27 +151,29 @@
 .topping_content {
     position: absolute;
     top: 530px;
-    left: 50px;
+    left: 100px;
     width: 300px;
-    height: 300px;
+    height: 90px;
     background-color: ver(--light-red);
-    border: 4px dashed ver(--light-red);
+    border: 4px dashed ver(--red);
     border-radius: 20px 90px 90px 20px;
     color: var(--dark-green);
+    display:inline-flex;
 }
 
 /* 加料字樣 */
 .topping_title {
-    font-size: 23px;
+    font-size: 20px;
+    writing-mode: vertical-lr;
 }
 
 /* 加料內容 */
 .toppingText {
-    display: inline-block;
     justify-content: space-between;
     writing-mode: vertical-lr;
-    font-size: 20px;
-    padding-top: 10px;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-top: 0;
 }
 
 
@@ -184,9 +184,9 @@
     background: radial-gradient(50% 50% at 50% 50%, rgba(146, 210, 121, 0.9) 68.89%, rgba(251, 224, 221, 0.0315469) 99.99%, rgba(255, 225, 225, 0) 100%);
     border-radius: 30%;
     position: absolute;
-    top: 120px;
+    top: 110px;
     left: 650px;
-    height: 70px;
+    height: 50px;
     width: 300px;
     text-align: center;
     font-family: 'Noto Sans TC', sans-serif;
@@ -203,15 +203,15 @@
     font-size: 23px;
     letter-spacing: 2px;
     color: var(--dark-green);
-    padding-top: 15px;
+    padding-top: 6px;
 }
 
 /* 飲料範圍 */
 .drinks_menu {
     position: absolute;
-    top: 200px;
+    top: 175px;
     left: 430px;
-    height: 600px;
+    height: 440px;
     width: 730px;
     padding-top: 0;
     writing-mode: vertical-rl;
@@ -226,20 +226,26 @@
     padding-right: 10px;
 }
 
+/* 飲品列表範圍 */
 .cell_drinkList { 
-    padding-top: 20px;
-    /* padding-right: 50px; */
+    padding-right: 30px;
   }
 
 /* 各項飲料名稱---茗品系列 */
 .cell_drink_title_one {
-   height: 130px;
+   height: 140px;
    font-size: 18px;
 }
 
-/* 各項飲料名稱---奶茶系列+鮮奶系列 */
+/* 各項飲料名稱---奶茶系列 */
 .cell_drink_title_two {
-    height: 130px;
+    height: 250px;
+    font-size: 18px;
+}
+
+/* 各項飲料名稱---鮮奶系列 */
+.cell_drink_title_three {
+    height: 270px;
     font-size: 18px;
 }
 
@@ -257,7 +263,7 @@
     padding-top: 15px;
     padding-right: 0px;
     height: 420px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 
