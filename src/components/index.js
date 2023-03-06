@@ -40,7 +40,7 @@ class Index extends Component {
                     {/* <a href="/contact" className='nav-t'>聯絡我們</a> */}
                     <a href="/order" className='nav-t'>線上訂餐</a>
                 </div>
-
+               
                 <adiv className="navLogin">
                     {this.state.isLoggedIn ? (
                         <div >
@@ -49,12 +49,13 @@ class Index extends Component {
                         </div>) : (
                         <div><a className="navLogin-a" href="/Login" >登入</a></div>)}
 
-                    <span><a className="navLogin-a" href="/Login" ><FontAwesomeIcon icon={faShoppingCart} /></a></span>
-                </adiv>
-                <div className="navIcon" onClick={this.myFunction} href="#">
+                    <span><a className="navLogin-a" href="/product/step2" ><FontAwesomeIcon icon={faShoppingCart} /></a></span>
+                    <div className="navIcon" onClick={this.myFunction} href="#">
                     <FontAwesomeIcon icon={faBars} />
                 </div>
 
+                </adiv>
+                
 
             </nav >
         );
