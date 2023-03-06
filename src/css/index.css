@@ -568,7 +568,7 @@ img {
 }
 
 #menu {
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
     background-color: #005743;
     padding: 100px 50px;
@@ -913,7 +913,7 @@ img {
 }
 
 .footer {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: space-between;
     align-items: center;

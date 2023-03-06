@@ -33,7 +33,6 @@
 
 .about {
     position: absolute;
-    width: 75%;
     height: 10%;
     left: 61%;
     top: 36%;
@@ -50,7 +49,6 @@
 
 .chineseLogo {
     position: absolute;
-    width: 70%;
     height: 10%;
     left: 80%;
     top: 47%;
@@ -86,10 +84,6 @@
 
 }
 
-.storyContent,
-.foodStoryContent {
-    overflow-y: scroll;
-}
 
 /* -----品牌起源----- */
 
