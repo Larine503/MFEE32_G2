@@ -9,7 +9,7 @@ class PassWord extends Component {
         currentPassword: '',
         newPassword: '',
         confirmPassword: '',
-        error: ''
+        errorMessage: ''
     }
 
     render() {
@@ -17,6 +17,7 @@ class PassWord extends Component {
             <div className="memberMain">
                 <p>密碼變更</p>
                 <form className="memberForm-T" action="/member/password" method='post' onSubmit={this.okClick}>
+                <div className='error-div'><span className='error-div-p'>{this.state.errorMessage}</span></div>
                     <div className="memberForm-D">
                         <div className="memberForm-dd">
                         <div className='inputDiv'><span className='inputSpan2'>原密碼</span>
@@ -61,7 +62,7 @@ class PassWord extends Component {
             .then((response) => {
                 if (response.data.success) {
                     if (this.state.newPassword !== this.state.confirmPassword) {
-                        alert('新密碼和確認密碼不一致');
+                        this.setState({errorMessage:'新密碼和確認密碼不一致'})
                         return;
                     }
                     axios.put("http://localhost:8000/password", {
@@ -72,17 +73,16 @@ class PassWord extends Component {
                         currentPassword: '',
                         newPassword: '',
                         confirmPassword: '',
-                        error: ''
+                        errorMessage: ''
                     });
                 } else {
                     // 驗證失敗，顯示錯誤消息
                     const errorMessage = response.data.message;
-                    alert(errorMessage);
+                    this.setState({errorMessage})
                 }
             })
 
     }
-
 }
 
 export default PassWord;

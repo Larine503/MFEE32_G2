@@ -44,13 +44,13 @@ class Member extends Component {
                                 name="mtel" value={this.state.userItem.mtel} />
                             <div className='inputDiv'><span className='inputSpan'>姓名</span>
                                 <input className='input_m' type="text" name="mname" value={this.state.userItem.mname}
-                                    onChange={this.mnameChange} required /></div>
+                                    onChange={this.mnameChange} placeholder={this.state.userItem.mname} /></div>
                                     <div className='inputDiv'><span className='inputSpan'>Email</span>
-                                    <input  className='input_m' type="email" name="email" value={this.state.userItem.email}
-                                onChange={this.emailChange} required /></div>
+                                    <input  className='input_m' type="email" name="email" value={''}
+                                onChange={this.emailChange} placeholder={this.state.userItem.email} /></div>
                                 <div className='inputDiv'><span className='inputSpan'>地址</span>
                                 <input className='input_m' type="text" name="address" value={this.state.userItem.address}
-                                    onChange={this.addressChange} required /></div>
+                                    onChange={this.addressChange} placeholder={this.state.userItem.address} /></div>
                                     
 
                         

@@ -58,11 +58,12 @@ class Login extends Component {
                             <p className="loginForm-P">會員登入</p>
 
                             <form className="loginForm-T" action="/login">
+                            <div className='error-div'><p className='error-div-p'>{userItem.errorMessage}</p></div>
                                 <input className='input_m' type="tel" name="mtel" value={userItem.mtel}
                                     onChange={this.mtelChange} placeholder='電話號碼'/><br /><br />
                                 <input className='input_m' type="password" name="mpid" value={userItem.mpid}
                                     onChange={this.mpidChange}  placeholder='密碼' />
-                                <div className='error-div'><p className='error-div-p'>{userItem.errorMessage}</p></div>
+                                
                                 <div className="loginForm-D">
                                         <button
                                             className="button"
@@ -118,7 +119,7 @@ class Login extends Component {
             })
             .catch((error) => {
                 console.log(error);
-                this.setState({ errorMessage:'資料錯誤' });
+                this.setState({ errorMessage:'※資料錯誤' });
             });
     };
 
