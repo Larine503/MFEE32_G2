@@ -63,12 +63,12 @@ app.post("/login", (req, res) => {
                         // 返回登錄成功的 JSON 響應
                         res.json({ success: true });
                     } else {
-                        res.send({ success: false, message: "※密碼錯誤" });
+                        res.send({ success: false, message: "密碼錯誤!" });
                     }
                 });
             } else {
                 req.session.isLoggedIn = false;
-                res.send({ message: "※尚未註冊資料" });
+                res.send({ message: "尚未註冊資料" });
             }
 
         }
@@ -166,7 +166,7 @@ app.post("/member/creat", function (req, res) {
                         console.log(err);
                         res.status(500).send(err.message);
                     } else if (result.length > 0) {
-                        res.json({ success: false, message: "※電話號碼已被註冊" });
+                        res.json({ success: false, message: "電話號碼已被註冊" });
                     } else {
                         db.query(
                             "INSERT INTO member (mname, mtel,pid, mpid) VALUES (?,?, ?, ?)",
@@ -259,6 +259,7 @@ app.get('/storeList/:county', function (req, res) {
     )
 })
 //----------
+
 // 郁的訂單歷史內容
 app.get('/order/billAll/:id', (req, res) => {
     const id = req.params.id;
@@ -283,6 +284,16 @@ app.get('/order/billAll/drinkName/:id', (req, res) => {
         res.json(rows);
     });
 });
+
+// 江的所有飲品
+app.get("/menu/:pidname", function (req, res) {
+    db.query("select * from drink where pidname = ? ",
+        [req.params.pidname],
+        function (err, rows) {
+            res.send(JSON.stringify(rows));
+        }
+    )
+})
 
 db.connect(function (err) {
     if (err) {

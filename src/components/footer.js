@@ -17,9 +17,9 @@ class Footer extends Component {
 
                     </div>
                     <div className="footerAddress">
-                        <p>地址:台中市黎明路二段691號
+                        <p>地址:台中市公益路二段51號
                             <br />
-                            Tel:04-72345678
+                            Tel:04-12345678
                         </p>
                     </div>
                 </footer>

@@ -3,12 +3,13 @@ import axios from 'axios';
 import '../css/index.css';
 
 class PassWord extends Component {
+
     state = {
         mtel: '0900345678',
         currentPassword: '',
         newPassword: '',
         confirmPassword: '',
-        errorMessage: ''
+        error: ''
     }
 
     render() {
@@ -24,9 +25,8 @@ class PassWord extends Component {
                                 <input className='input_m' type="password" name='newPassword' value={this.state.newPassword} onChange={this.newChange} /></div>
                             <div className='inputDiv'><span className='inputSpan'>確認密碼</span>
                                 <input className='input_m' type="password" name='mpid' value={this.state.confirmPassword} onChange={this.confirmChange} /></div>
-                        </div>            
+                        </div>
                     </div>
-                    <div className='error-div'><p className='error-div-p'>{this.state.errorMessage}</p></div>
                     <div className="memberForm-D">
                         <button className="button" type="button" onClick={this.okClick}>
                             確認
@@ -61,7 +61,7 @@ class PassWord extends Component {
             .then((response) => {
                 if (response.data.success) {
                     if (this.state.newPassword !== this.state.confirmPassword) {
-                        this.setState({errorMessage:'新密碼和確認密碼不一致'})
+                        alert('新密碼和確認密碼不一致');
                         return;
                     }
                     axios.put("http://localhost:8000/password", {
@@ -72,12 +72,12 @@ class PassWord extends Component {
                         currentPassword: '',
                         newPassword: '',
                         confirmPassword: '',
-                        errorMessage: ''
+                        error: ''
                     });
                 } else {
                     // 驗證失敗，顯示錯誤消息
                     const errorMessage = response.data.message;
-                    this.setState({errorMessage})
+                    alert(errorMessage);
                 }
             })
 
