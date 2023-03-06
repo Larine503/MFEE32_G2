@@ -36,7 +36,7 @@ class LoginCreat extends Component {
                         <div className="loginForm">
                             <p className="loginForm-P">會員註冊</p>
                             <form className="loginForm-T" action="">
-
+                            <div className='error-div'><p className='error-div-p'>{this.state.errorMessage}</p></div>
                                 <input className='input_m' type="text" name="mname" value={this.state.userItem.mname}
                                     onChange={this.mnameChange} placeholder='您的姓名' /><br /><br />
 
@@ -45,7 +45,7 @@ class LoginCreat extends Component {
 
                                 <input className='input_m' type="password" name="mpid" value={this.state.userItem.mpid}
                                     onChange={this.mpidChange} placeholder='密碼' /><br />
-                                <div className='error-div'><p className='error-div-p'>{this.state.errorMessage}</p></div>
+                          
                                 <div className="loginForm-D">
                                     <button className="button" type="button" onClick={this.okClick}>
                                         註冊

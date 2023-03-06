@@ -14,7 +14,7 @@ import productImg1 from '../images/home/product_1.jpg';
 import productImg2 from '../images/home/product_2.jpg';
 import productImg3 from '../images/home/product_3.jpg';
 import newsImg1 from '../images/home/new.jpg';
-import menuBg from '../images/home/bn_menu.jpg';
+import menuBg from '../images/home/bn_menu2.jpg';
 
 
 
