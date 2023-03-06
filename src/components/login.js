@@ -9,6 +9,7 @@ import Footer from '../components/footer.js';
 
 class Login extends Component {
     state = {
+        errorMessage:'',
         isLoggedIn: false,
         userItem: {
             mtel: '',
@@ -57,12 +58,11 @@ class Login extends Component {
                             <p className="loginForm-P">會員登入</p>
 
                             <form className="loginForm-T" action="/login">
-                                {/* <label htmlFor="">電話號碼:</label><br /> */}
                                 <input className='input_m' type="tel" name="mtel" value={userItem.mtel}
                                     onChange={this.mtelChange} placeholder='電話號碼'/><br /><br />
-                                {/* <label htmlFor="">密碼:</label><br /> */}
                                 <input className='input_m' type="password" name="mpid" value={userItem.mpid}
-                                    onChange={this.mpidChange}  placeholder='密碼' /><br />
+                                    onChange={this.mpidChange}  placeholder='密碼' />
+                                <div className='error-div'><p className='error-div-p'>{userItem.errorMessage}</p></div>
                                 <div className="loginForm-D">
                                         <button
                                             className="button"
@@ -113,12 +113,12 @@ class Login extends Component {
                 } else {
                     // 登錄失敗，顯示錯誤消息
                     const errorMessage = response.data.message;
-                    alert(errorMessage);
+                    this.setState({ errorMessage });
                 }
             })
             .catch((error) => {
                 console.log(error);
-                alert('資料錯誤');
+                this.setState({ errorMessage:'資料錯誤' });
             });
     };
 

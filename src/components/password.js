@@ -19,11 +19,11 @@ class PassWord extends Component {
                 <form className="memberForm-T" action="/member/password" method='post' onSubmit={this.okClick}>
                     <div className="memberForm-D">
                         <div className="memberForm-dd">
-                        <div className='inputDiv'><span className='inputSpan'>原密碼</span>
+                        <div className='inputDiv'><span className='inputSpan2'>原密碼</span>
                                 <input className='input_m' type="password" name='currentPassword' value={this.state.currentPassword} onChange={this.currentChange} /></div>
-                            <div className='inputDiv'><span className='inputSpan'>變更密碼</span>
+                            <div className='inputDiv'><span className='inputSpan2'>變更密碼</span>
                                 <input className='input_m' type="password" name='newPassword' value={this.state.newPassword} onChange={this.newChange} /></div>
-                            <div className='inputDiv'><span className='inputSpan'>確認密碼</span>
+                            <div className='inputDiv'><span className='inputSpan2'>確認密碼</span>
                                 <input className='input_m' type="password" name='mpid' value={this.state.confirmPassword} onChange={this.confirmChange} /></div>
                         </div>
                     </div>
