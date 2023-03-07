@@ -49,7 +49,7 @@ class Index extends Component {
                         </div>) : (
                         <div><a className="navLogin-a" href="/Login" >登入</a></div>)}
 
-                    <span><a className="navLogin-a" href="/product/step2" ><FontAwesomeIcon icon={faShoppingCart} /></a></span>
+                    <span><a className="navLogin-a" href="/product/step1" ><FontAwesomeIcon icon={faShoppingCart} /></a></span>
                 </adiv>
                 <div className="navIcon" onClick={this.myFunction} href="#">
                     <FontAwesomeIcon icon={faBars} />
