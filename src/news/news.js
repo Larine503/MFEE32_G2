@@ -10,14 +10,38 @@ class News extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeTab: null
+            activeTab: null,
+            showDialog: false,
+            newsList: [
+                {
+                    date: '2022-12-12',
+                    title: '航海王｜清心福全 雙面飲料提袋，最佳拍檔陪你喝到爽！',
+                    content: '可雙面翻轉的飲料提袋，正面是全彩熱昇華轉印，背面是精美刺繡，一次擁有兩個夥伴，優質又超值!\n雙面飲料提袋一共三款：紅款：魯夫＆娜美、綠款：喬巴＆索隆、藍款：香吉士＆羅賓，夥伴們收集開始囉！\n【販售資訊】12月16日（週5）上午11:00起，來店購買任一飲品，即可以280元加購一個。\n【注意事項】本加價購僅限來店消費,不適用於外送、電話預約及經由外送平台之消費，且當次消費限購一個。',
+                    imageSrc: require('../images/news/products/20221212.jpg'),
+                }
+            ],
+            currentNewsIndex: null,
         };
         this.defaultOpenRef = React.createRef();
     }
    
+    openDialog = (index) => {
+        this.setState({
+            currentNewsIndex: index,
+            showDialog: true,
+        });
+    };
+
+    closeDialog = () => {
+        this.setState({
+            currentNewsIndex: null,
+            showDialog: false,
+        });
+    };
 
     render() {
-        const { activeTab } = this.state;
+        const { activeTab, newsList, currentNewsIndex, showDialog } = this.state;
+        const currentNews = newsList[currentNewsIndex];
         return (
             <div>
                 <div className='setHeight'>
@@ -56,6 +80,7 @@ class News extends Component {
                     id="latestNews">
 
                     <div className="allCards">
+
                         <div className="card">
                             <div className="flexBox">
                                 <div className="imgBoxxx">
@@ -250,7 +275,7 @@ class News extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="card">
+                        {/* <div className="card">
                             <div className="flexBox">
                                 <div className="imgBoxxx">
                                     <div className="imgSize"><img src={require("../images/news/latestNews/20221027.jpg")} className="cardImg" alt=''/></div>
@@ -267,12 +292,12 @@ class News extends Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
 
 
                     </div>
-
+                    <br />
 
 
 
@@ -453,30 +478,28 @@ class News extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="card">
-                            <div className="flexBox">
-                                <div className="imgBoxxx">
-                                    <div className="imgSize"><img src={require("../images/news/products/20221212.jpg")} className="cardImg" alt=''/></div>
-                                </div>
-                                <div className="rightSide">
-                                    <div className="info">
-                                        <span className="dateFontSize">2022-12-12</span>
-                                        <h3 className="infoTitle">航海王｜清心福全 雙面飲料提袋，最佳拍檔陪你喝到爽！</h3>
-                                        <p className="infoText">自己喝太孤單，草帽海賊團來當神隊友。可雙面翻轉的飲料提袋，正面是全彩熱昇華轉印，背面是精美刺繡，一次擁有兩個夥伴，優質又超值。
-                                            雙面飲料提袋一共三款：紅款：魯夫＆娜美、綠款：喬巴＆索隆、藍款：香吉士＆羅賓，夥伴們收集開始囉！
-                                            【販售資訊】12月16日（週5）上午11:00起，來店購買任一飲品，即可以280元加購一個。
-                                            【注意事項】
-                                            本加價購僅限「來店」消費,不適用於外送、電話預約及經由外送平台之消費，且每人當次消費限購一個。
-                                            本加價購數量有限，售完為止。
-                                            本加價購可依排隊、購買先後順序挑選款式，至該款式售完為止。
-                                        </p>
+                        {newsList.map((news, index) => (
+                            <div className="card" key={index}>
+                                <div className="flexBox">
+                                    <div className="imgBoxxx">
+                                        <div className="imgSize"><img src={news.imageSrc} className="cardImg" alt='' /></div>
                                     </div>
-                                    <div className="atBtn">
-                                        <button className="moreBtn">more</button>
+                                    <div className="rightSide">
+                                        <div className="info">
+                                            <span className="dateFontSize">{news.date}</span>
+                                            <h3 className="infoTitle">{news.title}</h3>
+                                            <p className="infoText">{news.content}
+                                            </p>
+                                        </div>
+                                        <div className="atBtn">
+                                            <button className="moreBtn" onClick={() => this.openDialog(0)}>more</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        ))}
+
+
                         <div className="card">
                             <div className="flexBox">
                                 <div className="imgBoxxx">
@@ -561,11 +584,26 @@ class News extends Component {
                         </div>
 
 
+                        {showDialog && currentNews && (
+                            <div className="modal">
+                                <div className="dialog">
+                                    <div className="title">{currentNews.title}</div>
+                                    <img className="picture" src={currentNews.imageSrc} alt="" />
+                                    <div className="date">{currentNews.date}</div>
+                                    <div className="content">{currentNews.content}</div>
+                                    <div className="buttons">
+                                        <div className="cancelBtn okBtn" onClick={this.closeDialog}>返回</div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
 
 
 
 
                     </div>
+                    <br />
+
 
 
                     {/* <div className="pageCenter">

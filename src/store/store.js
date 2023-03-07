@@ -701,7 +701,12 @@ class Store extends Component {
                             </div>
                         </div>
                     ))}
-
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />  
 
 
                 </div>
