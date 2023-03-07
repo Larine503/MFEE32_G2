@@ -33,7 +33,11 @@ class Home extends Component {
                 <Index />
                 <>
                     <section id="home" className="">
-                        <div className="homeDiv1">誠信‧創新‧用心‧惜福</div>
+                        <div className="homeDiv1"><div>誠信‧創新‧用心‧惜福</div></div>
+                        <div className="homeDiv1_1">
+                            <div>誠信&nbsp;創新</div>
+                            <div>用心&nbsp;惜福</div>
+                            </div>
                         <div className="homeDiv2">
                             <ul className="homeList" >
                                 <li className="homeItem">

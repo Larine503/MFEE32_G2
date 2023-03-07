@@ -62,7 +62,7 @@ class PassWord extends Component {
             .then((response) => {
                 if (response.data.success) {
                     if (this.state.newPassword !== this.state.confirmPassword) {
-                        this.setState({errorMessage:'新密碼和確認密碼不一致'})
+                        this.setState({errorMessage:'※新密碼和確認密碼不一致'})
                         return;
                     }
                     axios.put("http://localhost:8000/password", {
