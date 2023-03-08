@@ -11,6 +11,9 @@ import t07 from '../images/story/brand_story_images/t07.png';
 import spiritTeaDec from '../images/story/about_us_images/teaLine_dec.png';
 import strictTeaDec from '../images/story/about_us_images/teaLine_dec.png';
 import persistenceTeaDec from '../images/story/about_us_images/teaLine_dec.png';
+import teaSmallPicture from '../images/story/food_images/茶葉.jpg';
+import solidSmallPicture from '../images/story/food_images/固態食材.jfif';
+import liquidSmallPicture from '../images/story/food_images/液態食材.jfif';
 import img_tea from '../images/story/food_images/堅持-茶葉.jpg';
 import img_person from '../images/story/food_images/堅持-店員.PNG';
 import img_drink from '../images/story/food_images/堅持-飲料.jpg';
@@ -42,19 +45,20 @@ class Story extends Component {
     render() {
         const { storyTab } = this.state;
         return (
-            <body>
+            <div>
                 <Index />
-                <main>
+                <body>
                     < Headernav />
                     <div className='StoryTwoBtnTab'>
                         <button
-                            ref={this.defaultOpenRef}
+                            // ref={this.defaultOpenRef}
                             className={`tabLinks ${storyTab === "tab1" ? "active" : ""}`}
                             onClick={evt => this.openIt(evt, "tab1")}
                             id='defaultOpen'>
                             品牌故事
                         </button>
                         <button
+                            ref={this.defaultOpenRef}
                             className={`tabLinks ${storyTab === "tab2" ? "active" : ""}`}
                             onClick={evt => this.openIt(evt, "tab2")}>
                             嚴選食材
@@ -129,97 +133,102 @@ class Story extends Component {
                     <div className='foodStoryContent'
                         style={{ display: storyTab === "tab2" ? "" : "none" }}
                         id='brandStrict'>
-                        <div className="brandStrictContent">
+                        <div className='brandStrictContent'>
                             <div className="titleStrict">
-                                <div className="left_title_Strict">
+                                <div className='left_title_Strict'>
                                     <span>品牌嚴選</span>
                                 </div>
-                                <img className="strict_tea_dec" src={strictTeaDec} alt=""></img>
+                                <img className='strict_tea_dec' src={strictTeaDec} alt=""></img>
                             </div>
-                            <div className="strictCollection">
-                                <div className="teaPicture">
-                                    <div className="foodText">
-                                        茶葉<br />
-                                        檢驗報告
-                                    </div>
-                                    <a href="/story/report" >
-                                        <div className='seeMoreBtn'>
-                                            <button className="smallButton">查看更多</button>
+                            <div className='reportContent'>
+                                <div className='teaReport'>
+                                    <div className='teaPicture'>
+                                        <div className='foodText'>
+                                            茶葉<br />
+                                            檢驗報告
                                         </div>
-                                    </a>
+                                        <div className='seeMoreBtn'>
+                                            <a href="/story/report" >
+                                                <button className='smallButton'>查看更多</button>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="solidPicture">
-                                    <div className="foodText">
+                                <div className='solidReport'>
+                                    <img className='solidPicture' src={solidSmallPicture} alt='' />
+                                    <div className='foodText'>
                                         固態食材<br />
                                         檢驗報告
                                     </div>
                                     <div className='seeMoreBtn'>
-                                        <button className="smallButton">查看更多</button>
+                                        <button className='smallButton'>查看更多</button>
                                     </div>
                                 </div>
-                                <div className="liquidPicture">
-                                    <div className="foodText">
+                                <div className='liquidReport'>
+                                    <img className='liquidPicture' src={liquidSmallPicture} alt='' />
+                                    <div className='foodText'>
                                         液態食材<br />
                                         檢驗報告
                                     </div>
                                     <div className='seeMoreBtn'>
-                                        <button className="smallButton">查看更多</button>
-                                    </div>
-                                </div>
-
-                                <div className="milkPicture">
-                                    <div className="foodText">
-                                        乳品及鮮果<br />
-                                        檢驗報告
-                                    </div>
-                                    <div className='seeMoreBtn'>
-                                        <button className="smallButton">查看更多</button>
-                                    </div>
-                                </div>
-                                <div className="pickPicture">
-                                    <div className="foodText">
-                                        包材<br />
-                                        檢驗報告
-                                    </div>
-                                    <div className='seeMoreBtn'>
-                                        <button className="smallButton">查看更多</button>
-                                    </div>
-                                </div>
-                                <div className="elsePicture">
-                                    <div className="foodText">
-                                        其他<br />
-                                        檢驗報告
-                                    </div>
-                                    <div className='seeMoreBtn'>
-                                        <button className="smallButton">查看更多</button>
+                                        <button className='smallButton'>查看更多</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="PersistenceContent">
-                            <div className="persistence">
-                                <img src={img_tea} alt="" />
-                                <div className="persistenceTeaText">「清心福全」落實食品安全衛生管理，不僅嚴選優質原物料，更實施自主檢驗。</div>
+
+
+                        {/* <div className="milkPicture">
+                            <div className="foodText">
+                                乳品及鮮果<br />
+                                檢驗報告
                             </div>
-                            <div className="persistence">
-                                <img src={img_person} alt="" />
-                                <div className="persistencePersonText">「清心福全」強調顧客至上、品管優先、服務第一，「用心」專注於每一環節。</div>
+                            <div className='seeMoreBtn'>
+                                <button className="smallButton">查看更多</button>
                             </div>
-                            <div className="persistence">
-                                <img src={img_drink} alt="" />
-                                <div className="persistenceDrinkText">10種系列飲品，各有獨到的風味與口感，以提供消費者全方位、多樣化的手搖飲料推薦選擇。</div>
+                        </div>
+                        <div className="pickPicture">
+                            <div className="foodText">
+                                包材<br />
+                                檢驗報告
                             </div>
-                            <div className="">
-                                <div className="left_title_persistence">
-                                    品牌堅持
-                                </div>
-                                <img className="persistence_tea_dec" src={persistenceTeaDec} alt="" />
+                            <div className='seeMoreBtn'>
+                                <button className="smallButton">查看更多</button>
                             </div>
+                        </div>
+                        <div className="elsePicture">
+                            <div className="foodText">
+                                其他<br />
+                                檢驗報告
+                            </div>
+                            <div className='seeMoreBtn'>
+                                <button className="smallButton">查看更多</button>
+                            </div>
+                        </div> */}
+                    </div>
+                    <div className="PersistenceContent">
+                        <div className="persistenceCard">
+                            <img src={img_tea} alt="" />
+                            <div className="persistenceTeaText">「清心福全」落實食品安全衛生管理，不僅嚴選優質原物料，更實施自主檢驗。</div>
+                        </div>
+                        <div className="persistenceCard">
+                            <img src={img_person} alt="" />
+                            <div className="persistencePersonText">「清心福全」強調顧客至上、品管優先、服務第一，「用心」專注於每一環節。</div>
+                        </div>
+                        <div className="persistenceCard">
+                            <img src={img_drink} alt="" />
+                            <div className="persistenceDrinkText">10種系列飲品，各有獨到的風味與口感，以提供消費者全方位、多樣化的手搖飲料推薦選擇。</div>
+                        </div>
+                        <div className="titlePersistence">
+                            <div className="left_title_persistence">
+                                品牌堅持
+                            </div>
+                            <img className="persistence_tea_dec" src={persistenceTeaDec} alt="" />
                         </div>
                     </div>
-                </main >
+                </body>
                 <Footer />
-            </body >
+            </div >
         );
     }
 

@@ -24,7 +24,7 @@ class MTSerious extends Component {
         return (
             <body>
                 <Index />
-                <div>
+                <div className='allMenuArea'>
                     <div className='drinksPicture'>
                         <img src={粉條奶茶} alt='' />
                     </div>
@@ -82,9 +82,6 @@ class MTSerious extends Component {
                             </a>
                         </div>
                     </div>
-                    {/* <a href="/menu">
-                        <AllDriksButton />
-                    </a> */}
                 </div>    
             </body >
         );

@@ -10,7 +10,6 @@ import 原鄉四季 from '../images/drink/T/原鄉四季.png';
 import 特選普洱 from '../images/drink/T/特選普洱.png';
 import 翡翠烏龍 from '../images/drink/T/翡翠烏龍.png';
 import 嚴選高山茶 from '../images/drink/T/嚴選高山茶.png';
-// import AllDriksButton from './allDriksButton.js';
 import axios from 'axios';
 
 
@@ -26,6 +25,15 @@ class TSerious extends Component {
         var fromServer = await axios.get(url);
          console.log(fromServer.data);
         this.setState({ drinks: fromServer.data });
+
+        // 滑鼠滑動功能
+        $(window).on('mousewheel', function(event) {
+            // check if the user is scrolling up
+            if (event.originalEvent.wheelDelta >= 0) {
+              // navigate back to the previous page
+              window.history.back();
+            }
+          });
 
     }
     async componentDidUpdate(){
@@ -70,15 +78,14 @@ class TSerious extends Component {
                 document.getElementById("imgtest").src=嚴選高山茶;
                 
             });
+
     }
-    
 
     render() {
         return (
             <body>
                 <Index />
-
-                <div >
+                <div className='allMenuArea'>
                     <div className='drinksPicture'>
                           <img id="imgtest" src="" alt='' /> 
                     </div>
@@ -134,9 +141,6 @@ class TSerious extends Component {
                         </a>
                     </div>
                 </div>
-                {/* <a href="/menu">
-                    <AllDriksButton />
-                </a> */}
             </body>
         );
     }

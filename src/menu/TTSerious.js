@@ -23,7 +23,7 @@ class TTSerious extends Component {
         return (
             <body>
                 <Index />
-                <div>
+                <div className='allMenuArea'>
                     <div className='drinksPicture'>
                         <img src={紅茶拿鐵} alt='' />
                     </div>

@@ -9,7 +9,7 @@ class Menu extends Component {
     state = {
 
     }
-    
+
 
     render() {
         return (
@@ -23,9 +23,9 @@ class Menu extends Component {
                         <div className='MTmenu'>
                             <div className='MTmenuTitleArea'>
                                 <a href="/menu/MTSerious">
-                                <div className='MTmenuTitle'>
-                                    奶茶系列<br />奶茶推薦
-                                </div>
+                                    <div className='MTmenuTitle'>
+                                        奶茶系列<br />奶茶推薦
+                                    </div>
                                 </a>
                             </div>
                             <div className='MTmenuContent'>
@@ -47,10 +47,10 @@ class Menu extends Component {
                         </div>
                         <div className='Tmenu'>
                             <div className='TmenuTitleArea'>
-                                <a href = "/menu/TSerious">
-                                <div className='TmenuTitle'>
-                                    茗品系列
-                                </div>
+                                <a href="/menu/TSerious">
+                                    <div className='TmenuTitle'>
+                                        茗品系列
+                                    </div>
                                 </a>
                             </div>
                             <div className='TmenuContent'>
@@ -68,10 +68,10 @@ class Menu extends Component {
                         </div>
                         <div className='TTmenu'>
                             <div className='TTmenuTitleArea'>
-                                <a href= "/menu/TTSerious">
-                                <div className='TTmenuTitle'>
-                                    鮮奶系列<br />拿鐵系列
-                                </div>    
+                                <a href="/menu/TTSerious">
+                                    <div className='TTmenuTitle'>
+                                        鮮奶系列<br />拿鐵系列
+                                    </div>
                                 </a>
                             </div>
                             <div className='TTmenuContent'>
@@ -90,20 +90,6 @@ class Menu extends Component {
                         </div>
                     </div>
                 </div>
-                {/* <div>
-                    <a href="/menu/TTSerious">
-                        <button className='SeriousBtn1'>
-                        鮮奶系列<br />拿鐵系列
-                        </button>
-                    </a>
-                </div>
-                <div>
-                    <a href="/menu/MTSerious">
-                        <button className='SeriousBtn2'>
-                        奶茶系列<br />奶茶推薦
-                        </button>
-                    </a>
-                </div> */}
             </body >
         );
     }

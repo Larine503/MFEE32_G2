@@ -13,6 +13,12 @@
     font-family: 'Noto Sans TC', sans-serif;
 }
 
+/* 全部飲品的範圍 */
+.allMenuArea {
+    background-color: var(--dark-green);
+    height: 625px;
+}
+
 /* 全部飲品字樣的綠色框邊範圍 */
 .titleArea {
     background: radial-gradient(50% 50% at 50% 50%, rgba(146, 210, 121, 0.9) 68.89%, rgba(251, 224, 221, 0.0315469) 99.99%, rgba(255, 225, 225, 0) 100%);
@@ -30,7 +36,7 @@
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: bolder;
     font-size: 30px;
-    letter-spacing: 4px;
+    letter-spacing: 7px;
     color: var(--dark-green);
     padding-top: 10px;
 }
@@ -55,7 +61,7 @@
     font-size: 20px;
     letter-spacing: 2px;
     writing-mode: vertical-lr;
-    color: var(--dark-green);
+    color: var(--white);
 }
 
 /* 全部飲品頁面中的茗品系列的字樣綠色圓形邊框 */
@@ -73,13 +79,13 @@
 /* 茗品系列的飲料項目 */
 .TmenuContent {
     position: absolute;
-    top: 370px;
+    top: 360px;
     left: 540px;
     height: 220px;
     font-size: 20px;
     letter-spacing: 2px;
     writing-mode: vertical-lr;
-    color: var(--dark-green);
+    color: var(--white);
 }
 
 /* 全部飲品頁面中的鮮奶系列/拿鐵系列的字樣綠色圓形邊框 */
@@ -103,7 +109,7 @@
     font-size: 20px;
     letter-spacing: 2px;
     writing-mode: vertical-lr;
-    color: var(--dark-green);
+    color: var(--white);
 }
 
 /* 全部飲品頁面中的奶茶系列/奶茶推薦+鮮奶系列/拿鐵系列的字樣 */
@@ -137,7 +143,8 @@
     width: 350px;
     height: 380px;
     background: radial-gradient(circle, rgba(255, 225, 225, 1) 55%, rgba(146, 210, 121, 1) 100%);
-    border: 4px dashed var(--green);
+    border: 5px dashed var(--green);
+    border-radius: 10%;
 }
 
 /* 飲品的照片 */
@@ -151,13 +158,12 @@
 .topping_content {
     position: absolute;
     top: 530px;
-    left: 100px;
+    left: 80px;
     width: 300px;
     height: 90px;
     background-color: ver(--light-red);
     border: 4px dashed ver(--red);
     border-radius: 20px 90px 90px 20px;
-    color: var(--dark-green);
     display:inline-flex;
 }
 
@@ -165,12 +171,14 @@
 .topping_title {
     font-size: 20px;
     writing-mode: vertical-lr;
+    color: var(--white);
 }
 
 /* 加料內容 */
 .toppingText {
     justify-content: space-between;
     writing-mode: vertical-lr;
+    color: var(--white);
     font-size: 18px;
     padding-left: 10px;
     padding-top: 0;
@@ -193,7 +201,6 @@
     font-weight: bolder;
     font-size: 30px;
     letter-spacing: 2px;
-    color: var(--dark-green);
 }
 
 /* 系列字樣 */
@@ -218,17 +225,23 @@
     justify-content: center;
 }
 
-.cell{
+/* 每一項飲品cell */
+.cell {
     display: flex;
     flex-direction: row;  
     font-family: 'Noto Sans TC', sans-serif;
-    color: var(--dark-green);
-    padding-right: 10px;
+    padding-right: 15px;
+    color: var(--light-red);
+}
+
+.cell:hover {
+    color: var(--light-green);
 }
 
 /* 飲品列表範圍 */
 .cell_drinkList { 
     padding-right: 30px;
+    /* justify-content: space-between; */
   }
 
 /* 各項飲料名稱---茗品系列 */
@@ -275,7 +288,7 @@
     width: 100px;
     height: 100px;
     border: none;
-    background: radial-gradient(50% 50% at 50% 50%, #92D279 0%, rgba(146, 210, 121, 0) 100%);
+    background: radial-gradient(50% 50% at 50% 50%, #92D279 55%, rgba(146, 210, 121, 0) 100%);
 }
 
 /* 往上系列btn + 往下系列btn */
@@ -293,8 +306,8 @@
     padding-top: 40px;
     padding-left: 20px;
     color: var(--dark-green);
-    font-weight: bold;
     font-size: 15px;
+    font-weight: bold;
 }
 
 /* 往下系列btn的範圍 */
@@ -305,7 +318,8 @@
     width: 100px;
     height: 100px;
     border: none;
-    background: radial-gradient(50% 50% at 50% 50%, #92D279 0%, rgba(146, 210, 121, 0) 100%);
+    font-weight: bold;
+    background: radial-gradient(50% 50% at 50% 50%, #92D279 55%, rgba(146, 210, 121, 0) 100%);
 }
 
 
