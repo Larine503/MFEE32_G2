@@ -27,22 +27,24 @@ class TTSerious extends Component {
                     <div className='drinksPicture'>
                         <img src={紅茶拿鐵} alt='' />
                     </div>
-                    <div className="topping_content">
-                        <div className="topping_title">
-                            加料
+                    <div className='toppingArea'>
+                        <div className="toppingContent">
+                            <div className="topping_title">
+                                加料選項
+                            </div>
+                            <ul className='toppingText'>
+                                <li>珍珠</li>
+                                <li>粉圓</li>
+                                <li>QQ</li>
+                                <li>布丁</li>
+                                <li>仙草凍</li>
+                                <li>暗黑水晶</li>
+                                <li>蘆薈</li>
+                                <li>冰淇淋</li>
+                                <li>茉莉茶凍</li>
+                                <li>粉條</li>
+                            </ul>
                         </div>
-                        <ul className='toppingText'>
-                            <li>珍珠</li>
-                            <li>粉圓</li>
-                            <li>QQ</li>
-                            <li>布丁</li>
-                            <li>仙草凍</li>
-                            <li>暗黑水晶</li>
-                            <li>蘆薈</li>
-                            <li>冰淇淋</li>
-                            <li>茉莉茶凍</li>
-                            <li>粉條</li>
-                        </ul>
                     </div>
                     <div className="menu_area">
                         <div className="drinkTitlesArea">

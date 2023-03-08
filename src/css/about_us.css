@@ -280,31 +280,54 @@ img.spirit_tea_dec {
     width: 115px;
 }
 
-/* 檢驗報告的範圍 */
+/* 檢驗報告的範圍
 .reportContent {
     padding-left: 300px;
     display: flex;
     gap: 150px;
-}
-
-/* 檢驗報告小圖 */
-.teaPicture,
-.solidPicture,
-.liquidPicture {
-    width: 160px;
-    height: 160px;
-    border-radius: 50px;
-    opacity: 0.5;
-}
+} */
 
 /* 各項檢驗報告字樣 */
 .foodText {
+    text-align: center;
+    padding-top: 30px;
     font-size: 20px;
     font-family: 'Noto Sans TC', sans-serif;
     color: var(--light-green);
     font-weight: bold;
-    text-align: center;
-    padding-top: -50px;
+}
+
+/* 茶葉檢驗報告小圖 */
+.teaPicture {
+    background-image: url('../images/story/food_images/茶葉.jpg');
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 160px;
+    border-radius: 50px;
+    position: absolute;
+    left: 300px;
+}
+
+/* 固態食材檢驗報告小圖 */
+.solidPicture {
+    background-image: url('../images/story/food_images/固態食材.jfif');
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 160px;
+    border-radius: 50px;
+    position: absolute;
+    left: 600px;
+}
+
+/* 液態食材檢驗報告小圖 */
+.liquidPicture {
+    background-image: url('../images/story/food_images/液態食材.jfif');
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 160px;
+    border-radius: 50px;
+    position: absolute;
+    left: 900px;
 }
 
 /* 乳品及鮮果檢驗報告小圖 */
@@ -317,7 +340,6 @@ img.spirit_tea_dec {
     position: absolute;
     top: 250px;
     left: 300px;
-    opacity: 0.5;
 }
 
 /* 包材檢驗報告小圖 */
@@ -330,7 +352,6 @@ img.spirit_tea_dec {
     position: absolute;
     top: 250px;
     left: 600px;
-    opacity: 0.5;
 }
 
 /* 其他檢驗報告小圖 */
@@ -343,7 +364,6 @@ img.spirit_tea_dec {
     position: absolute;
     top: 250px;
     left: 900px;
-    opacity: 0.5;
 }
 
 
@@ -356,7 +376,6 @@ img.spirit_tea_dec {
     justify-content: space-between;
     padding-left: 50px;
     padding-top: 20px;
-    margin-top: 500px;
     margin-bottom: 50px;
 }
 
