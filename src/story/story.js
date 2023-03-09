@@ -42,7 +42,7 @@ class Story extends Component {
     render() {
         const { storyTab } = this.state;
         return (
-            <body>
+            <div>
                 <Index />
                 <main>
                     < Headernav />
@@ -166,7 +166,6 @@ class Story extends Component {
                                         <button className="smallButton">查看更多</button>
                                     </div>
                                 </div>
-
                                 <div className="milkPicture">
                                     <div className="foodText">
                                         乳品及鮮果<br />
@@ -219,7 +218,7 @@ class Story extends Component {
                     </div>
                 </main >
                 <Footer />
-            </body >
+            </div>
         );
     }
 

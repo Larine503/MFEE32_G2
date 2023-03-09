@@ -21,7 +21,7 @@ class TTSerious extends Component {
 
     render() {
         return (
-            <body>
+            <div>
                 <Index />
                 <div className='allMenuArea'>
                     <div className='drinksPicture'>
@@ -84,7 +84,7 @@ class TTSerious extends Component {
                 {/* <a href="/menu">
                     <AllDriksButton />
                 </a> */}
-            </body >
+            </div>
         );
     }
 }

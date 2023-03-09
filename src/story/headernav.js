@@ -4,11 +4,11 @@ class Headernav extends Component {
     state = {}
     render() {
         return (
-            <header class="header_1">
-                <div class="container">
-                    <h4 class="about">ABOUT Ching Shin Fu Chuan</h4>
-                    <h5 class="chineseLogo">關於清心福全</h5>
-                    <div class="rectangle"></div>
+            <header className='header_1'>
+                <div className='container'>
+                    <h4 className='about'>ABOUT Ching Shin Fu Chuan</h4>
+                    <h5 className='chineseLogo'>關於清心福全</h5>
+                    <div className='rectangle'></div>
                 </div>
             </header>
         );

@@ -121,8 +121,10 @@
     padding-right: 10px;
     font-size: 20px;
     font-weight: bold;
-    color: var(--dark-green);
+    color: var(--light-red);
 }
+
+
 
 /* 全部飲品頁面中的茗品系列的字樣 */
 .TmenuTitle {
@@ -132,6 +134,12 @@
     padding-right: 40px;
     font-size: 20px;
     font-weight: bold;
+    color: var(--light-red);
+}
+
+.MTmenuTitle:hover,
+.TTmenuTitle:hover,
+.TmenuTitle:hover {
     color: var(--dark-green);
 }
 
@@ -303,6 +311,12 @@
     font-size: 15px;
 }
 
+.SeriousBtn1:hover,
+.SeriousBtn2:hover,
+.SeriousBtn3:hover {
+    color: var(--light-red);
+}
+
 /* 往上系列btn + 往下系列btn (茗品系列) */
 .SeriousBtn3 {
     padding-top: 40px;
@@ -311,6 +325,7 @@
     font-size: 15px;
     font-weight: bold;
 }
+
 
 /* 往下系列btn的範圍 */
 .SeriousBtn2Area {

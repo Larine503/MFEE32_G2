@@ -13,7 +13,7 @@ class Menu extends Component {
 
     render() {
         return (
-            <body>
+            <div>
                 <Index />
                 <div className="allMenuArea">
                     <div className="titleArea">
@@ -90,7 +90,7 @@ class Menu extends Component {
                         </div>
                     </div>
                 </div>
-            </body >
+            </div>
         );
     }
 }

@@ -26,14 +26,14 @@ class TSerious extends Component {
         console.log(fromServer.data);
         this.setState({ drinks: fromServer.data });
 
-        // 滑鼠滑動功能
-        window.on('mousewheel', function (event) {
-            // check if the user is scrolling up
-            if (event.originalEvent.wheelDelta >= 0) {
-                // navigate back to the previous page
-                window.history.back();
-            }
-        });
+        // // 滑鼠滑動功能
+        // window.on('mousewheel', function (event) {
+        //     // check if the user is scrolling up
+        //     if (event.originalEvent.wheelDelta >= 0) {
+        //         // navigate back to the previous page
+        //         window.history.back();
+        //     }
+        // });
 
     }
     async componentDidUpdate() {
@@ -83,7 +83,7 @@ class TSerious extends Component {
 
     render() {
         return (
-            <body>
+            <div>
                 <Index />
                 <div className='allMenuArea'>
                     <div className='drinksPicture'>
@@ -144,7 +144,7 @@ class TSerious extends Component {
                         </a>
                     </div>
                 </div>
-            </body>
+            </div>
         );
     }
 }

@@ -80,10 +80,16 @@
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    gap: 20px;
+    gap: 80px;
 
 }
 
+/* 品牌故事頁面 */
+.storyContent {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
 
 
 /*  ---------品牌起源 --------- */

@@ -52,64 +52,65 @@ class Report extends Component {
     }
     render() {
         return (
-            <body>
+            <div>
                 <Index />
-                < Headernav />
-                <div className='teaCheckText'>
-                    茶葉檢驗報告
-                </div>
-                <div className='teaCheckList'>
-                    原鄉四季茶葉、特級綠茶茶葉、錫蘭紅茶茶葉、烏龍綠茶茶葉、極品菁茶茶葉、翡翠烏龍茶葉、嚴選高山茶茶葉、特選普洱茶葉等「茶葉」類SGS檢驗報告。
-                </div>
-                {/* <div className="line_check'"></div> */}
-                <div className="teaArea1">
-                    <div className="checkText" id="checkText">
-                        <a href={Tea01} target="_blank">
-                            <img src={tea01} alt='' className='zoomable-image' />
-                            {/* 放大鏡的icon */}
-                            {/* <span className='tooltip-icon'></span> */}
-                        </a>
+                <main>
+                    < Headernav />
+                    <div className='teaCheckText'>
+                        茶葉檢驗報告
                     </div>
-                    <div className="checkText" id="checkText">
-                        <a href={Tea02} target="_blank">
-                            <img src={tea02} alt='' className='zoomable-image' />
-                        </a>
+                    <div className='teaCheckList'>
+                        原鄉四季茶葉、特級綠茶茶葉、錫蘭紅茶茶葉、烏龍綠茶茶葉、極品菁茶茶葉、翡翠烏龍茶葉、嚴選高山茶茶葉、特選普洱茶葉等「茶葉」類SGS檢驗報告。
                     </div>
-                    <div className="checkText" id="checkText">
-                        <a href={Tea03} target="_blank">
-                            <img src={tea03} alt='' className='zoomable-image' />
-                        </a>
+                    <div className="teaArea1">
+                        <div className="checkText" id="checkText">
+                            <a href={Tea01} target="_blank" rel="noreferrer">
+                                <img src={tea01} alt='' className='zoomable-image' />
+                                {/* 放大鏡的icon */}
+                                {/* <span className='tooltip-icon'></span> */}
+                            </a>
+                        </div>
+                        <div className="checkText" id="checkText">
+                            <a href={Tea02} target="_blank" rel="noreferrer">
+                                <img src={tea02} alt='' className='zoomable-image' />
+                            </a>
+                        </div>
+                        <div className="checkText" id="checkText">
+                            <a href={Tea03} target="_blank" rel="noreferrer">
+                                <img src={tea03} alt='' className='zoomable-image' />
+                            </a>
+                        </div>
+                        <div className="checkText" id="checkText">
+                            <a href={Tea04} target="_blank" rel="noreferrer">
+                                <img src={tea04} alt='' className='zoomable-image' />
+                            </a>
+                        </div>
                     </div>
-                    <div className="checkText" id="checkText">
-                        <a href={Tea04} target="_blank">
-                            <img src={tea04} alt='' className='zoomable-image' />
-                        </a>
+                    <div className="teaArea2">
+                        <div className='checkText' id="checkText">
+                            <a href={Tea05} target="_blank" rel="noreferrer">
+                                <img src={tea05} alt='' className='zoomable-image' />
+                            </a>
+                        </div>
+                        <div className="checkText" id="checkText">
+                            <a href={Tea06} target="_blank" rel="noreferrer">
+                                <img src={tea06} alt='' className='zoomable-image' />
+                            </a>
+                        </div>
+                        <div className="checkText" id="checkText">
+                            <a href={Tea07} target="_blank" rel="noreferrer">
+                                <img src={tea07} alt='' className='zoomable-image' />
+                            </a>
+                        </div>
+                        <div className="checkText" id="checkText">
+                            <a href={Tea08} target="_blank" rel="noreferrer">
+                                <img src={tea08} alt='' className='zoomable-image' />
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div className="teaArea2">
-                    <div className='checkText' id="checkText">
-                        <a href={Tea05} target="_blank">
-                            <img src={tea05} alt='' className='zoomable-image' />
-                        </a>
-                    </div>
-                    <div className="checkText" id="checkText">
-                        <a href={Tea06} target="_blank">
-                            <img src={tea06} alt='' className='zoomable-image' />
-                        </a>
-                    </div>
-                    <div className="checkText" id="checkText">
-                        <a href={Tea07} target="_blank">
-                            <img src={tea07} alt='' className='zoomable-image' />
-                        </a>
-                    </div>
-                    <div className="checkText" id="checkText">
-                        <a href={Tea08} target="_blank">
-                            <img src={tea08} alt='' className='zoomable-image' />
-                        </a>
-                    </div>
-                </div>
-                <Footer />
-            </body>
+                    <Footer />
+                </main>
+            </div>
         );
     }
 }

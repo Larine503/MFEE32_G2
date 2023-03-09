@@ -22,7 +22,7 @@ class MTSerious extends Component {
 
     render() {
         return (
-            <body>
+            <div>
                 <Index />
                 <div className='allMenuArea'>
                     <div className='drinksPicture'>
@@ -85,7 +85,7 @@ class MTSerious extends Component {
                         </div>
                     </div>
                 </div>
-            </body >
+            </div>
         );
     }
 }
