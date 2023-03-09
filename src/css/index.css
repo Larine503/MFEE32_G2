@@ -1664,7 +1664,9 @@ label {
     right: 35%;
     position: fixed;
     height: 20%;
+    min-width: 15%;
     width: 20%;
+    min-width: 15%;
     background-color: var(--white);
     z-index: 9999;
     align-items: center;
@@ -1675,8 +1677,11 @@ label {
 
 }
 .okDivmain{
+    margin: 0 auto;
+    width: 100%;
     align-items: center;
-    padding: 0 10px;
+    padding: 10px;
+    text-align: center;
 }
 @keyframes okColor {
     0% {
@@ -1688,8 +1693,9 @@ label {
     
 }
 .okDivmain p:first-child{
-    margin-top: 10%;
-    font-size: 50px;
+    margin-top: 10px;
+    margin-left: -15px;
+    font-size: 42px;
     color: var(--dark-green);
     font-weight: 600;
     line-height: 0px;
@@ -1699,7 +1705,7 @@ label {
 
 
 .okDivmain p:last-child{
-    margin-top:-30px;
+    margin-top:-20px;
     font-size: 24px;
     color: var(--dark-green);
     font-weight: 600;
