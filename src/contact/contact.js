@@ -17,6 +17,21 @@ class Contact extends Component {
         this.defaultOpenRef = React.createRef();
     }
 
+    handleClearForm = () => {
+        window.location.reload()
+        // this.setState({
+        //     name: '',
+        //     email: '',
+        //     tel: '',
+        //     subject: '',
+        //     message: '',
+        //     file: null
+        // });
+        // const inputs = document.querySelectorAll("input[type='text'], input[type='tel'], input[type='email'], textarea");
+        // inputs.forEach(input => input.value = '');
+        // alert('已送出');
+    }
+
 
     render() {
         const { activeTab } = this.state;
@@ -60,46 +75,51 @@ class Contact extends Component {
                     </div>
 
 
-                    <form onSubmit={this.handleSubmit} encType="text/plain" acceptCharset="utf-8">
+                    <form encType="text/plain" acceptCharset="utf-8">
                         <div className="formFlex">
                             <div className="formLeft">
                                 <div className="question">
                                     <label htmlFor="name" className="parallelogram">姓名</label> 
-                                    <input type="text" defaultValue={this.state.name} onInput={(event) => this.setState({ name: event.target.value })} 
+                                    <input type="text" value={this.state.name} 
+                                     onChange={(event) => this.setState({ name: event.target.value })}
                                             name="Name" id="nameText" className='nameText' required />
                                 </div>
 
                                 <div className="question">
                                     <label htmlFor="tel" className="parallelogram">電話</label> 
-                                    <input type="tel" defaultValue={this.state.tel} onInput={(event) => this.setState({ tel: event.target.value })} 
+                                    <input type="tel" value={this.state.tel}
+                                    onChange={(event) => this.setState({ tel: event.target.value })} 
                                             name="Phone" id="telText" className='telText' required />
                                 </div>
                                 <div className="question">
                                     <label htmlFor="email" className="parallelogram">e-mail</label> 
-                                    <input type="email" defaultValue={this.state.email} onInput={(event) => this.setState({ email: event.target.value })} 
+                                    <input type="email" value={this.state.email}
+                                    onChange={(event) => this.setState({ email: event.target.value })}
                                             name="Email" id="emailText" className='emailText' required />
                                 </div>
                             </div>
                             <div className="formRight">
                                 <div className="question">
                                     <label htmlFor="subject" className="parallelogram">主旨</label> 
-                                    <input type="text" defaultValue={this.state.subject} onInput={(event) => this.setState({ subject: event.target.value })} 
+                                    <input type="text" value={this.state.subject}  
+                                    onChange={(event) => this.setState({ subject: event.target.value })}
                                             name="Subject" id="subText" className='subText' required />
                                 </div>
                                 <div htmlFor="message" className="question">
                                     <label className="parallelogram">訊息</label> 
                                     <textarea className="msg" cols="16" rows="8"
                                         name="your-message" id="bodyText" required
-                                        defaultValue={this.state.message} onInput={(event) => this.setState({ message: event.target.value})}
+                                        value={this.state.message} 
+                                        onChange={(event) => this.setState({ message: event.target.value })}
                                         ></textarea>
                                 </div>
                                 <FileUploader />
                             </div>
                         </div>
                         <div className="question">
-                            <input type="button" value="確認送出" onClick={this.handleSubmit} className="submitBtn" />
-                            <p id="mailTo"></p>
-                            {/* <button type="submit" className="submitBtn">確認送出</button> */}
+                            {/* <input type="button" value="確認送出" className="submitBtn" />
+                            <p id="mailTo"></p> */}
+                            <button type="button" onClick={this.handleClearForm} className="submitBtn">確認送出</button>
                         </div>
 
 
@@ -193,32 +213,6 @@ class Contact extends Component {
         });
         this.defaultOpenRef.current.click();
     }
-
-
-    // 失敗
-    handleSubmit = (event) => {
-        event.preventDefault();
-        // const to = 'mfee32ofus@gmail.com';
-        const formData = new FormData();
-        formData.append('name', this.state.name);
-        formData.append('email', this.state.email);
-        formData.append('tel', this.state.tel);
-        formData.append('subject', this.state.subject);
-        formData.append('message', this.state.message);
-        // formData.append('file', this.state.file);
-        fetch('http://localhost:3000/contact', {
-          method: 'POST',
-          body: formData,
-        })
-        .then((response) => {
-          if (response.ok) {
-            console.log('Form submitted successfully!');
-          } else {
-            console.error('Form submission failed.');
-          }
-        })
-        .catch((error) => console.error(error));
-      }
 
 
 
