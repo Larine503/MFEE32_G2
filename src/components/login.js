@@ -135,7 +135,7 @@ class Login extends Component {
     doWrite = () => {
         var newState = { ...this.state };
         newState.userItem.mtel = '0912345678';
-        newState.userItem.mpid = 'abc1';
+        newState.userItem.mpid = '1234';
         this.setState(newState);
     }
 

@@ -110,7 +110,7 @@ class PassWord extends Component {
     //快速輸入
     doWrite = () => {
         var newState = { ...this.state };
-        newState.currentPassword= 'abc';
+        newState.currentPassword= '123';
         newState.newPassword= '12345678';
         newState.confirmPassword='1234567';
         this.setState(newState);
