@@ -155,6 +155,11 @@ class Home extends Component {
                                     <a href="/news">
                                         <button className="btnL_c btnR_c">
                                             <span>MORE+</span>
+                                            <div className="border_c btnR_c"></div>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
                             <div className="newsImg"><img src={newsImg1} alt="" /></div>
                         </div>
                     </section>
