@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import '../css/index.css';
 import axios from "axios";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { BsFillPinMapFill } from 'react-icons/bs';
+import { AiFillCheckCircle } from 'react-icons/ai';
 
 
 class Member extends Component {
@@ -14,7 +19,8 @@ class Member extends Component {
             birthday: '2023-01-01',
             email: 'zxc123@gnail.com',
             address: '台中市',
-            mimages: ''
+            mimages: '',
+            setOk: false
         }
     }
 
@@ -28,44 +34,51 @@ class Member extends Component {
     }
     render() {
         return (
-            <div className="memberMain">
-                <p>會員資料</p>
-                <form className="memberForm-T" action="/member/edit" method='post' onSubmit={this.okClick}>
-                
-                    <div className="memberForm-D">
-                    <div className="memberForm-dd">
-                    <label className='memberForm-span1'>您目前使用的手機號碼:</label><br/>
-                            <input className='input_m input_mtel'  type="tel" name="mtel" value={this.state.userItem.mtel}
-                                onChange={this.mtelChange} readonly="readonly"/><br />
+            <>
+                <div className="memberMain">
+                    <p>會員資料</p>
+                    <div className="memberForm-d">
+                        {/* <label className='memberForm-span1'>您目前使用的手機號碼:</label><br /> */}
+                        <input className='input_m input_mtel' type="tel" name="mtel" value={'您的手機號碼 : ' + this.state.userItem.mtel}
+                            onChange={this.mtelChange} readonly="readonly" /><br />
                     </div>
-                    <span className='memberForm-span' >★外送資料預設</span>
-                        <div className="memberForm-dd">
-                            <input className='input_m' type="hidden" id="userItemMtel"
-                                name="mtel" value={this.state.userItem.mtel} />
-                            <div className='inputDiv'><span className='inputSpan'>姓名</span>
-                                <input className='input_m' type="text" name="mname" value={this.state.userItem.mname}
-                                    onChange={this.mnameChange} placeholder={this.state.userItem.mname} /></div>
-                                    <div className='inputDiv'><span className='inputSpan'>Email</span>
-                                    <input  className='input_m' type="email" name="email" value={''}
-                                onChange={this.emailChange} placeholder={this.state.userItem.email} /></div>
-                                <div className='inputDiv'><span className='inputSpan'>地址</span>
-                                <input className='input_m' type="text" name="address" value={this.state.userItem.address}
-                                    onChange={this.addressChange} placeholder={this.state.userItem.address} /></div>
-                                    
+                    <form className="memberForm-T" action="/member/edit" method='post' onSubmit={this.okClick}>
 
-                        
+                        <div className="memberForm-D">
+                            <div className='memberForm-span' >★外送資料預設</div>
+                            <div className="memberForm-dd">
+                                <input className='input_m' type="hidden" id="userItemMtel"
+                                    name="mtel" value={this.state.userItem.mtel} />
+                                <div className='inputDiv'>
+                                    <span className='inputSpan'><FontAwesomeIcon icon={faUser} /></span>
+                                    <input className='input_m' type="text" name="mname" value={this.state.userItem.mname}
+                                        onChange={this.mnameChange} placeholder='姓名' /></div>
+                                <div className='inputDiv'><span className='inputSpan'><FontAwesomeIcon icon={faEnvelope} /></span>
+                                    <input className='input_m' type="email" name="email" value={this.state.userItem.email}
+                                        onChange={this.emailChange} placeholder='Eail' /></div>
+                                <div className='inputDiv'><span className='inputSpan'><BsFillPinMapFill /></span>
+                                    <input className='input_m' type="text" name="address" value={this.state.userItem.address}
+                                        onChange={this.addressChange} placeholder='地址' /></div>
+                            </div>
+
+
                         </div>
-                
-
-                    </div>
-                    <div className="memberForm-D">
-                        <button className="button" type="button" onClick={this.okClick}>
-                            更新
-                        </button>
-                    </div>
-                </form>
-
-            </div>
+                        <div className="memberForm-D">
+                            <button className="button" type="button" onClick={this.okClick}>
+                                更新
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div style={{ display: this.state.setOk ? 'block' : 'none' }} className='okDiv'>
+                    <div className='okDivmain'>
+                        <p><AiFillCheckCircle/></p>
+                        <p>更新成功!</p>
+                        </div>
+                    
+                </div>
+                <span onClick={this.doWrite} className='doWrite'></span>
+            </>
 
         );
     }
@@ -90,11 +103,23 @@ class Member extends Component {
 
     okClick = async () => {
         var fromServer = await axios.put("http://localhost:8000/member/edit", {
-            ...this.state.userItem          
+            ...this.state.userItem
         });
         console.log(fromServer);
-        alert('更新成功');
+        this.setState({ setOk: true });
+        setTimeout(() => {
+            this.setState({ setOk: false });
+        }, 1500);
     };
+    
+    //快速輸入
+    doWrite=()=>{
+        var newState = { ...this.state };
+        newState.userItem.email = 'zxcc123@gmail.com';
+        newState.userItem.address = '台中市南屯區公益路二段51號18樓';
+        this.setState(newState);
+    }
+
 
 }
 
