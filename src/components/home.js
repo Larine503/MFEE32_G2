@@ -36,11 +36,11 @@ class Home extends Component {
                         <div className="homeDiv1">
                             <div>誠信&nbsp;創新&nbsp;用心&nbsp;惜福</div>
                             {/* <div>用心·惜福</div> */}
-                            </div>
+                        </div>
                         <div className="homeDiv1_1">
                             <div>誠信&nbsp;創新</div>
                             <div>用心&nbsp;惜福</div>
-                            </div>
+                        </div>
                         <div className="homeDiv2">
                             <ul className="homeList" >
                                 <li className="homeItem">
@@ -118,23 +118,29 @@ class Home extends Component {
                     <section id="menu">
                         <div className="menuMain" >
                             <ul className='menuUl'>
-                                <li  className={`scroll-effect2 ${this.state.showEffect2 ? 'show-effect2' : ''} menuLi`} >
-                                    <div className="menuLi-div"><img src={dirnkImg1} alt="" /></div>
-                                    <div className="menuLi-Text">
-                                        <h3>奶茶系列</h3>
-                                    </div>
+                                <li className={`scroll-effect2 ${this.state.showEffect2 ? 'show-effect2' : ''} menuLi`} >
+                                    <a href='/menu/MTSerious'>
+                                        <div className="menuLi-div"><img src={dirnkImg1} alt="" /></div>
+                                        <div className="menuLi-Text">
+                                            <h3>奶茶系列</h3>
+                                        </div>
+                                    </a>
                                 </li>
                                 <li className={`scroll-effect2_1 ${this.state.showEffect2 ? 'show-effect2' : ''} menuLi`}>
-                                    <div className="menuLi-div"><img src={dirnkImg2} alt="" /></div>
-                                    <div className="menuLi-Text">
-                                        <h3>拿鐵系列</h3>
-                                    </div>
+                                    <a href='/menu/TSerious'>
+                                        <div className="menuLi-div"><img src={dirnkImg2} alt="" /></div>
+                                        <div className="menuLi-Text">
+                                            <h3>拿鐵系列</h3>
+                                        </div>
+                                    </a>
                                 </li>
-                                <li  className={`scroll-effect2_2 ${this.state.showEffect2 ? 'show-effect2' : ''} menuLi`}>
-                                    <div className="menuLi-div"><img src={dirnkImg3} alt="" /></div>
-                                    <div className="menuLi-Text">
-                                        <h3>茗品系列</h3>
-                                    </div>
+                                <li className={`scroll-effect2_2 ${this.state.showEffect2 ? 'show-effect2' : ''} menuLi`}>
+                                    <a href='/menu/TTSerious'>
+                                        <div className="menuLi-div"><img src={dirnkImg3} alt="" /></div>
+                                        <div className="menuLi-Text">
+                                            <h3>茗品系列</h3>
+                                        </div>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -149,18 +155,14 @@ class Home extends Component {
                                     <a href="/news">
                                         <button className="btnL_c btnR_c">
                                             <span>MORE+</span>
-                                            <div className="border_c btnR_c"></div>
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
                             <div className="newsImg"><img src={newsImg1} alt="" /></div>
                         </div>
                     </section>
                     <section id="productC">
                         <div className="productMainC">
                             <div className="productMain-d">
-                                <div  className={`scroll-effect5 ${this.state.showEffect4 ? 'show-effect5' : ''} productMain-div`}>
+
+                                <div className={`scroll-effect5 ${this.state.showEffect4 ? 'show-effect5' : ''} productMain-div`}>
                                     <div className="productMain-img"><img src={productImg1} alt="" /></div>
                                 </div>
                                 <div className={`scroll-effect6 ${this.state.showEffect4 ? 'show-effect6' : ''} productMain-div`}>
@@ -227,20 +229,20 @@ class Home extends Component {
         if (window.pageYOffset > triggerHeight) {
             this.setState({ showEffect: true });
         }
-        const triggerHeight2 = triggerHeight+850;
+        const triggerHeight2 = triggerHeight + 850;
         if (window.pageYOffset > triggerHeight2) {
             this.setState({ showEffect2: true });
         }
-        const triggerHeight3 = triggerHeight2+400;
+        const triggerHeight3 = triggerHeight2 + 400;
         if (window.pageYOffset > triggerHeight3) {
             this.setState({ showEffect3: true });
         }
-        const triggerHeight4 = triggerHeight3+650;
+        const triggerHeight4 = triggerHeight3 + 650;
         if (window.pageYOffset > triggerHeight4) {
             this.setState({ showEffect4: true });
         }
     }
-    
+
 
 }
 
