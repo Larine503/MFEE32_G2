@@ -35,7 +35,7 @@ class Member extends Component {
     render() {
         return (
             <>
-                <div className="memberMain">
+                <div className="memberMain" style={{ opacity: this.state.setOk ? '0.4' : '1' }}>
                     <p>會員資料</p>
                     <div className="memberForm-d">
                         {/* <label className='memberForm-span1'>您目前使用的手機號碼:</label><br /> */}
@@ -74,8 +74,7 @@ class Member extends Component {
                     <div className='okDivmain'>
                         <p><AiFillCheckCircle/></p>
                         <p>更新成功!</p>
-                        </div>
-                    
+                        </div>                   
                 </div>
                 <span onClick={this.doWrite} className='doWrite'></span>
             </>

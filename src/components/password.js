@@ -19,7 +19,7 @@ class PassWord extends Component {
     render() {
         return (
             <>
-                <div className="memberMain">
+                <div className="memberMain" style={{ opacity: this.state.setOk ? '0.4' : '1' }} >
                     <p>變更密碼</p>
                     <form className="memberForm-T" action="/member/password" method='post' onSubmit={this.okClick}>
                         <div className='error-div'><span className='error-div-p'>{this.state.errorMessage}</span></div>
