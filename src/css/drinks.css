@@ -48,8 +48,8 @@
     left: 250px;
     height: 120px;
     width: 120px;
+    border: solid var(--light-green);
     border-radius: 50%;
-    background-color: var(--light-green);
     text-align: center;
 }
 
@@ -71,8 +71,8 @@
     left: 600px;
     height: 120px;
     width: 120px;
+    border: solid var(--light-green);
     border-radius: 50%;
-    background-color: var(--light-green);
     text-align: center;
 }
 
@@ -95,9 +95,15 @@
     left: 950px;
     height: 120px;
     width: 120px;
+    border: solid var(--light-green);
     border-radius: 50%;
-    background-color: var(--light-green);
     text-align: center;
+}
+
+.TTmenuTitleArea:hover,
+.MTmenuTitleArea:hover,
+.TmenuTitleArea:hover {
+    background-color: var(--light-green);
 }
 
 /* 鮮奶系列/拿鐵系列的飲料項目 */
@@ -234,6 +240,7 @@
     padding-top: 0;
     writing-mode: vertical-rl;
     justify-content: center;
+    cursor: pointer;
 }
 
 /* 每一項飲品cell */
@@ -256,7 +263,7 @@
 
 /* 各項飲料名稱---茗品系列 */
 .cell_drink_title_one {
-    height: 140px;
+    height: 160px;
     font-size: 18px;
 }
 
@@ -268,7 +275,7 @@
 
 /* 各項飲料名稱---鮮奶系列 */
 .cell_drink_title_three {
-    height: 270px;
+    height: 320px;
     font-size: 18px;
 }
 

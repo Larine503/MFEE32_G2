@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../css/index.css';
 import "../css/drinks.css";
 import Index from '../components/index.js';
+import 粉條紅茶拿鐵 from '../images/drink/TT/粉條紅茶拿鐵.png';
+import 茉綠茶凍拿鐵 from '../images/drink/TT/茉綠茶凍拿鐵.png';
 import 紅茶拿鐵 from '../images/drink/TT/紅茶拿鐵.png';
 // import AllDriksButton from './allDriksButton.js';
 import axios from 'axios';
@@ -19,13 +21,31 @@ class TTSerious extends Component {
         this.setState({ drinks: fromServer.data });
     }
 
+    async componentDidUpdate() {
+        document.getElementById("TT01").addEventListener('mouseenter', (event) => {
+
+            document.getElementById("image").src= 粉條紅茶拿鐵;
+            
+        })
+        document.getElementById("TT02").addEventListener('mouseenter', (event) => {
+
+            document.getElementById("image").src= 茉綠茶凍拿鐵;
+
+        })
+        document.getElementById("TT03").addEventListener('mouseenter', (event) => {
+
+            document.getElementById("image").src= 紅茶拿鐵;
+
+        })
+    }
+
     render() {
         return (
             <div>
                 <Index />
                 <div className='allMenuArea'>
                     <div className='drinksPicture'>
-                        <img src={紅茶拿鐵} alt='' />
+                        <img id='image' src='' alt='' />
                     </div>
                     <div className='toppingArea'>
                         <div className="toppingContent">
@@ -51,9 +71,9 @@ class TTSerious extends Component {
                             <div className="drinktitlesText"> 鮮奶系列/拿鐵系列</div>
                         </div>
                         <div className="drinks_menu">
-                            <div className="cell_drinkList">
+                            <ul className="cell_drinkList">
                                 {this.state.drinks.map(drink => (
-                                    <div key={drink.pid} className="cell">
+                                    <li key={drink.pid} id={drink.pid} className="cell">
                                         <div className="cell_drink_title_three">
                                             {drink.pname}
                                         </div>
@@ -61,9 +81,9 @@ class TTSerious extends Component {
                                         <div className="cell_drink_note">
                                             {drink.content}
                                         </div>
-                                    </div>
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
                         </div>
                     </div>
                     <div className='SeriousBtn1Area'>

@@ -23,7 +23,7 @@ class TSerious extends Component {
         var a = "茗品系列";
         var url = `http://localhost:8000/menu/${a}`;
         var fromServer = await axios.get(url);
-        console.log(fromServer.data);
+        // console.log(fromServer.data);
         this.setState({ drinks: fromServer.data });
 
         // // 滑鼠滑動功能
@@ -40,42 +40,42 @@ class TSerious extends Component {
 
         document.getElementById("T01").addEventListener('mouseenter', (event) => {
 
-            document.getElementById("imgtest").src = 烏龍綠茶;
+            document.getElementById("image").src = 烏龍綠茶;
 
         })
         document.getElementById("T02").addEventListener('mouseenter', (event) => {
 
-            document.getElementById("imgtest").src = 特級綠茶;
+            document.getElementById("image").src = 特級綠茶;
 
         });
         document.getElementById("T03").addEventListener('mouseenter', (event) => {
 
-            document.getElementById("imgtest").src = 錫蘭紅茶;
+            document.getElementById("image").src = 錫蘭紅茶;
 
         });
         document.getElementById("T04").addEventListener('mouseenter', (event) => {
 
-            document.getElementById("imgtest").src = 極品菁茶;
+            document.getElementById("image").src = 極品菁茶;
 
         });
         document.getElementById("T05").addEventListener('mouseenter', (event) => {
 
-            document.getElementById("imgtest").src = 原鄉四季;
+            document.getElementById("image").src = 原鄉四季;
 
         });
         document.getElementById("T06").addEventListener('mouseenter', (event) => {
 
-            document.getElementById("imgtest").src = 特選普洱;
+            document.getElementById("image").src = 特選普洱;
 
         });
         document.getElementById("T07").addEventListener('mouseenter', (event) => {
 
-            document.getElementById("imgtest").src = 翡翠烏龍;
+            document.getElementById("image").src = 翡翠烏龍;
 
         });
         document.getElementById("T08").addEventListener('mouseenter', (event) => {
 
-            document.getElementById("imgtest").src = 嚴選高山茶;
+            document.getElementById("image").src = 嚴選高山茶;
 
         });
 
@@ -87,7 +87,7 @@ class TSerious extends Component {
                 <Index />
                 <div className='allMenuArea'>
                     <div className='drinksPicture'>
-                        <img id="imgtest" src="" alt='' />
+                        <img id="image" src="" alt='' />
                     </div>
                     <div className='toppingArea'>
                         <div className="toppingContent">
@@ -114,9 +114,9 @@ class TSerious extends Component {
                             <div className="drinktitlesText">茗品系列</div>
                         </div>
                         <div className="drinks_menu">
-                            <div className="cell_drinkList">
+                            <ul className="cell_drinkList">
                                 {this.state.drinks.map(drink => (
-                                    <div id={drink.pid} className="cell">
+                                    <li key={drink.pid} id={drink.pid} className="cell">
                                         <div className="cell_drink_title_one">
                                             {drink.pname}
                                         </div>
@@ -124,9 +124,9 @@ class TSerious extends Component {
                                         <div className="cell_drink_note">
                                             {drink.content}
                                         </div>
-                                    </div>
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
                         </div>
                     </div>
                     <div className='SeriousBtn1Area'>
