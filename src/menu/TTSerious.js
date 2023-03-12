@@ -87,9 +87,9 @@ class TTSerious extends Component {
                         </div>
                     </div>
                     <div className='SeriousBtn1Area'>
-                        <a href="/menu">
+                        <a href="/menu/TSerious">
                             <div className='SeriousBtn3'>
-                                全部飲品
+                                茗品系列
                             </div>
                         </a>
                     </div>

@@ -130,9 +130,9 @@ class TSerious extends Component {
                         </div>
                     </div>
                     <div className='SeriousBtn1Area'>
-                        <a href="/menu/MTSerious">
-                            <div className='SeriousBtn1'>
-                                奶茶系列<br />奶茶推薦
+                        <a href="/menu">
+                            <div className='SeriousBtn3'>
+                                全部飲品
                             </div>
                         </a>
                     </div>
